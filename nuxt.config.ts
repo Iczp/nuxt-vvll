@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   srcDir: 'src',
   appDir: 'src',
   devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
   app: {
     buildAssetsDir: 'static',
   },
@@ -51,6 +52,12 @@ export default defineNuxtConfig({
       //   prefix: '/docs', // All contents inside this source will be prefixed with `/notes`
       //   base: resolve(__dirname, './content'),
       // },
+    },
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
   routeRules: {
