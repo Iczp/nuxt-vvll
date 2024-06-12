@@ -19,7 +19,13 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxt/content'],
+  modules: [
+    //
+    '@nuxt/content',
+    '@nuxt/ui',
+    '@vueuse/nuxt',
+    'nuxt-icon',
+  ],
   content: {
     navigation: {
       fields: ['author', 'date', 'tags', 'categories', 'description', 'title'],

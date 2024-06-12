@@ -1,6 +1,9 @@
-# Content v2 Minimal Starter
+# VVLL.NET
 
-Look at the [Content documentation](https://content.nuxt.com/) to learn more.
+> Look at the [Content documentation](https://content.nuxt.com/) to learn more.
+
+
+
 
 ## Setup
 

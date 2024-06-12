@@ -1,5 +1,9 @@
 <template>
-  <h1>Index</h1>
+  <!-- <NuxtLayout> -->
+    <!-- <NuxtPage /> -->
 
-  <NuxtLink to="about">About</NuxtLink>
+    <h1>Index</h1>
+
+    <NuxtLink to="about">About</NuxtLink>
+  <!-- </NuxtLayout> -->
 </template>
