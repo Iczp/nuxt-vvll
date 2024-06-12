@@ -1,18 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
-    "./src/components/**/*.{js,vue,ts}",
-    "./src/layouts/**/*.vue",
-    "./src/pages/**/*.vue",
-    "./src/plugins/**/*.{js,ts}",
-    "./src/app.vue",
-    "./src/error.vue",
+    './src/components/**/*.{js,vue,ts}',
+    './src/layouts/**/*.vue',
+    './src/pages/**/*.vue',
+    './src/plugins/**/*.{js,ts}',
+    './src/app.vue',
+    './src/error.vue',
   ],
   theme: {
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-}
-
+  plugins: [require('@tailwindcss/typography')],
+};

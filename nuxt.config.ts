@@ -80,16 +80,16 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    // '/': { prerender: true },
-    // '/tags/**': { prerender: true },
+    '/': { prerender: true },
+    '/tags/**': { prerender: true },
   },
   // nitro: {
   //   prerender: {
   //     routes: ['/tags/vue'],
   //   },
   // },
-  generate: {
+  // generate: {
     
-    routes: ['/tags/vue'],
-  },
+  //   routes: ['/tags/vue'],
+  // },
 });
