@@ -1,6 +1,6 @@
 <template>
-  <main class="bg-red-600">
-    <h1>Article Layout</h1>
+  <main>
+    <h1 class="bg-red-600 p-4">Article Layout</h1>
     <ul>
       <li>
         <NuxtLink to="/">HOME</NuxtLink>

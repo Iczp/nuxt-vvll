@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- <NuxtLayout name="article"> -->
-      <ContentDoc />
+    <ContentDoc class="prose" />
     <!-- </NuxtLayout> -->
   </main>
 </template>

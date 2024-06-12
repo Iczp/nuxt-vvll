@@ -5,10 +5,12 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "updatecss": "npx tailwindcss build -o ./src/public/css/main.css",
     "preview": "nuxt preview"
   },
   "dependencies": {
     "@nuxt/content": "^2.12.1",
+    "@tailwindcss/typography": "^0.5.13",
     "nuxt": "^3.12.1"
   },
   "devDependencies": {

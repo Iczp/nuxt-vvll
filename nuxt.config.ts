@@ -4,9 +4,20 @@ export default defineNuxtConfig({
   srcDir: 'src',
   appDir: 'src',
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: [
+    // '/css/main.css',
+    '~/assets/css/main.css',
+  ],
   app: {
     buildAssetsDir: 'static',
+    head: {
+      link: [
+        // {
+        //   rel: 'stylesheet',
+        //   href: '~/assets/css/main.css', // 引用生成的静态样式文件
+        // },
+      ],
+    },
   },
   modules: ['@nuxt/content'],
   content: {
