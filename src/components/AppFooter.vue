@@ -18,7 +18,7 @@ const setctions = ref([
   },
   {
     title: 'VScode插件',
-    description: '“工欲善其事，必先利其器”',
+    description: '“工欲善其事，必先利其器”——《论语·卫灵公》',
     items: [
       {
         url: 'https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss',
@@ -39,7 +39,7 @@ const setctions = ref([
   },
   {
     title: '个人链接',
-    description: '“莫愁前路无知己，天下谁人不识君。”——高适',
+    description: '“不积跬步，无以至千里；不积小流，无以成江海。”——荀子',
     items: [
       {
         url: 'https://github.com/iczp',
@@ -55,7 +55,7 @@ const setctions = ref([
   },
   {
     title: '友情链接',
-    description: '“工欲善其事，必先利其器”',
+    description: '“莫愁前路无知己，天下谁人不识君。”——高适《别董大》',
     items: [
       {
         url: 'https://ui.nuxt.com/components/card',

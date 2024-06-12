@@ -52,11 +52,11 @@ export default defineNuxtConfig({
     //   baseURL: '/api/content',
     // },
     // documentDriven: true,
-    documentDriven: {
-      layoutFallbacks: ['article'],
-      // page: true, // Keep page fetching enabled
-      // surround: false, // Disable surround fetching
-    },
+    // documentDriven: {
+    //   layoutFallbacks: ['article'],
+    //   // page: true, // Keep page fetching enabled
+    //   // surround: false, // Disable surround fetching
+    // },
     markdown: {
       toc: {
         depth: 5,
@@ -71,14 +71,25 @@ export default defineNuxtConfig({
       // },
     },
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   routeRules: {
-    '/': { prerender: true },
-    '/sub/**': { prerender: true },
+    // '/': { prerender: true },
+    // '/tags/**': { prerender: true },
+  },
+  // nitro: {
+  //   prerender: {
+  //     routes: ['/tags/vue'],
+  //   },
+  // },
+  generate: {
+    
+    routes: ['/tags/vue'],
   },
 });
