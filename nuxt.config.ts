@@ -49,9 +49,9 @@ export default defineNuxtConfig({
         },
       },
     },
-    // api: {
-    //   baseURL: '/api/content',
-    // },
+    api: {
+      baseURL: '/api/content',
+    },
     // documentDriven: true,
     // documentDriven: {
     //   layoutFallbacks: ['article'],

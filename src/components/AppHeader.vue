@@ -9,7 +9,7 @@ const links = [
   },
   {
     label: 'Tags',
-    icon: 'i-heroicons-chart-bar',
+    icon: 'ic:outline-tag',
     to: `/tags`,
   },
 
@@ -20,7 +20,7 @@ const links = [
   },
   {
     label: 'Author',
-    icon: 'i-heroicons-command-line',
+    icon: 'material-symbols:frame-person',
     to: '/author',
   },
   // {

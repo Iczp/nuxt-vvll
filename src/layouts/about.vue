@@ -16,10 +16,10 @@ const depGroups = ref([
 
 <template>
   <AppHeader />
-  <main class="flex flex-col gap-4">
-    <h1>About:Index</h1>
-
-    <slot></slot>
+  <main class="flex flex-col gap-4 m-4">
+    <UCard>
+      <slot></slot>
+    </UCard>
 
     <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
       <li>
