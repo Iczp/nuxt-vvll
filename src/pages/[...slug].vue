@@ -3,7 +3,7 @@
 const layout = 'article';
 
 definePageMeta({
-  layout: 'article',
+  layout: 'about',
 });
 </script>
 <template>
@@ -11,8 +11,7 @@ definePageMeta({
   <main class="flex flex-col flex-1">
     <ContentDoc :excerpt="true">
       <template v-slot="{ doc, excerpt }">
-        
-        <h3 class="text-red-500">doc.layout:{{ doc.layout }} </h3>
+        <h3 class="text-red-500">doc.layout:{{ doc.layout }}</h3>
 
         <h3 class="text-red-500">doc.tags:{{ doc.tags }}</h3>
         <!-- doc:

@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   srcDir: 'src',
   appDir: 'src',
   devtools: { enabled: true },
@@ -99,8 +100,9 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': { prerender: true },
+    '/about': { prerender: true },
     '/author': { prerender: true },
-    // '/other': { prerender: true },
+    '/author/**': { prerender: true },
     '/tags': { prerender: true },
     '/tags/**': { prerender: true },
   },

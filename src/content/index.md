@@ -5,5 +5,3 @@ This page corresponds to the `/` route of your website. You can delete it or cre
 Try to navigate to [about](about.md). These 2 pages are rendered by the `pages/[...slug].vue` component.
 
 ---
-
-[Tailwind Css](./nuxt-tailwind.md)

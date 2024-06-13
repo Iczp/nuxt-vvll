@@ -15,8 +15,11 @@ const depGroups = ref([
 </script>
 
 <template>
+  <AppHeader />
   <main class="flex flex-col gap-4">
     <h1>About:Index</h1>
+
+    <slot></slot>
 
     <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
       <li>
@@ -50,8 +53,12 @@ const depGroups = ref([
       </ul>
     </UCard>
 
-    <UAlert icon="i-heroicons-command-line" title="Heads up!">
-      components
+    <UAlert
+      icon="i-heroicons-command-line"
+      title="Heads up!"
+      description="description"
+    >
     </UAlert>
   </main>
+  <AppFooter />
 </template>
