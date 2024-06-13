@@ -2,7 +2,7 @@
 layout: article
 ---
 
-
+# Nuxt3 中使用 Tailwind CSS
 
 1. ## 创建项目
 

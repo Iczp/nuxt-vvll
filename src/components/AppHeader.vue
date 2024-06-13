@@ -1,20 +1,48 @@
-<template>
-  <nav>
-    <ContentNavigation v-slot="{ navigation }">
-      <ul>
-        <li>
-          <NuxtLink to="/">HOME</NuxtLink>
-        </li>
-        <li v-for="link of navigation" :key="link._path">
-          <NuxtLink :to="link._path + (link.children ? '/' : '')">
-            {{ link.title }}
-          </NuxtLink>
-        </li>
-      </ul>
-    </ContentNavigation>
-  </nav>
+<script setup lang="ts">
+const route = useRoute();
 
-  <aside>
-    <ThemeMode />
-  </aside>
+const links = [
+  {
+    label: 'Home',
+    icon: 'i-heroicons-home',
+    to: '/',
+  },
+  {
+    label: 'Tags',
+    icon: 'i-heroicons-chart-bar',
+    to: `/tags`,
+  },
+
+  {
+    label: 'About',
+    icon: 'i-heroicons-command-line',
+    to: '/about',
+  },
+  {
+    label: 'Author',
+    icon: 'i-heroicons-command-line',
+    to: '/author',
+  },
+  // {
+  //   label: 'iczp',
+  //   avatar: {
+  //     src: 'https://avatars.githubusercontent.com/u/18003280?v=4',
+  //   },
+  //   // badge: 5,
+  //   to: 'https://github.com/iczp',
+  //   target: '_blank',
+  // },
+];
+</script>
+<template>
+  <header
+    class="flex items-center justify-between border-b border-gray-200 dark:border-gray-800"
+  >
+    <Logo />
+    <UHorizontalNavigation :links="links" class="justify-center" />
+
+    <aside>
+      <ThemeMode />
+    </aside>
+  </header>
 </template>

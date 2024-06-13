@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 可以基于 API 调用或登录状态进行选择
-const layout = 'custom';
+const layout = 'article';
 
 definePageMeta({
   layout: 'article',
@@ -11,6 +11,10 @@ definePageMeta({
   <main class="flex flex-col flex-1">
     <ContentDoc :excerpt="true">
       <template v-slot="{ doc, excerpt }">
+        
+        <h3 class="text-red-500">doc.layout:{{ doc.layout }} </h3>
+
+        <h3 class="text-red-500">doc.tags:{{ doc.tags }}</h3>
         <!-- doc:
         <pre>
            
@@ -25,6 +29,7 @@ definePageMeta({
       </template>
       <template #not-found>
         <h1>Document not found!!!</h1>
+        <p>{{ $route.path }}</p>
       </template>
       <template #empty>
         <h1>Document is empty</h1>
