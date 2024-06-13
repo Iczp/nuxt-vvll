@@ -1,7 +1,7 @@
 ---
 name: 'csharp'
 title: 'C#'
-icon: 'mdi:language-csharp'
+icon: 'logos:c-sharp'
 description: 'C#是一种功能强大且灵活的编程语言，适用于各种类型的应用开发，包括桌面应用、Web应用、游戏开发等。其丰富的特性和工具使得开发者能够快速构建高质量的应用程序，并在不同平台上实现应用程序的部署和运行。'
 ---
 

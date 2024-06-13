@@ -46,7 +46,7 @@ const showFullText = () => {
 </script>
 
 <template>
-  <div class="flex flex-row gap-4 mt-8">
+  <div class="flex flex-row max-w-screen-xl gap-4 mx-auto mt-8">
     <aside class="flex flex-col w-48">
       <!-- <TagNav /> -->
 

@@ -8,6 +8,11 @@ const links = [
     to: '/',
   },
   {
+    label: 'Notes',
+    icon: 'pixelarticons:notes-multiple',
+    to: `/notes`,
+  },
+  {
     label: 'Tags',
     icon: 'ic:outline-tag',
     to: `/tags`,
@@ -15,7 +20,7 @@ const links = [
 
   {
     label: 'About',
-    icon: 'i-heroicons-command-line',
+    icon: 'material-symbols:lab-profile-outline',
     to: '/about',
   },
   {
@@ -36,13 +41,19 @@ const links = [
 </script>
 <template>
   <header
-    class="flex items-center justify-between border-b border-gray-200 dark:border-gray-800"
+    class="sticky top-0 flex items-center justify-around max-w-screen-xl mx-auto border-b border-gray-200 dark:border-gray-800 backdrop-blur-md"
   >
     <Logo />
     <UHorizontalNavigation :links="links" class="justify-center" />
 
-    <aside>
+    <aside class="flex flex-row items-center gap-4 text-xl">
       <ThemeMode />
+      <a>
+        <Icon name="mdi:github" class="" />
+      </a>
+      <a>
+        <Icon name="mdi:magnify" class="" />
+      </a>
     </aside>
   </header>
 </template>

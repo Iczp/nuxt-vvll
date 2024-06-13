@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <main class="flex flex-col mt-4">
+  <main class="flex flex-col max-w-screen-xl mx-auto mt-4">
     <div>
       <UCard>
         <!-- {{ data }} -->

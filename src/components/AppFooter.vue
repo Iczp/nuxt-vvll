@@ -83,14 +83,16 @@ const setctions = ref([
 </script>
 
 <template>
-  <footer class="app-footer flex flex-col mx-auto box-border">
+  <footer
+    class="box-border flex flex-col max-w-screen-xl mx-auto app-footer"
+  >
     <UCard class="p-0">
       <main
         class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 border-dark-300"
       >
         <section v-for="(section, index) in setctions">
           <h3 class="">{{ section.title }}</h3>
-          <p class="text-cyan-900 text-sm">{{ section.description }}</p>
+          <p class="text-sm text-cyan-900">{{ section.description }}</p>
           <ul>
             <li v-for="item in section.items" :key="item.url" class="py-1">
               <a :href="item.url" :target="item.target">{{ item.title }}</a>
