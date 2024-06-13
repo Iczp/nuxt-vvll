@@ -2,7 +2,7 @@
 const setctions = ref([
   {
     title: '站点地图',
-    description: '“山重水复疑无路，柳暗花明又一村。”——陆游《游山西村》',
+    description: '“山重水复疑无路,柳暗花明又一村。”——陆游《游山西村》',
     items: [
       {
         url: '/sitemap.xml',
@@ -17,8 +17,8 @@ const setctions = ref([
     ],
   },
   {
-    title: 'VScode插件',
-    description: '“工欲善其事，必先利其器”——《论语·卫灵公》',
+    title: '开发插件',
+    description: '“工欲善其事,必先利其器”——《论语·卫灵公》',
     items: [
       {
         url: 'https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss',
@@ -39,7 +39,7 @@ const setctions = ref([
   },
   {
     title: '个人链接',
-    description: '“不积跬步，无以至千里；不积小流，无以成江海。”——荀子',
+    description: '“不积跬步,无以至千里；不积小流,无以成江海。”——荀子',
     items: [
       {
         url: 'https://github.com/iczp',
@@ -55,7 +55,7 @@ const setctions = ref([
   },
   {
     title: '友情链接',
-    description: '“莫愁前路无知己，天下谁人不识君。”——高适《别董大》',
+    description: '“莫愁前路无知己,天下谁人不识君。”——高适《别董大》',
     items: [
       {
         url: 'https://ui.nuxt.com/components/card',
@@ -91,8 +91,8 @@ const setctions = ref([
         class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 border-dark-300"
       >
         <section v-for="(section, index) in setctions">
-          <h3 class="">{{ section.title }}</h3>
-          <p class="text-sm text-cyan-900">{{ section.description }}</p>
+          <h3 class="py-2 text-lg">{{ section.title }}</h3>
+          <p class="text-xs text-gray-500">{{ section.description }}</p>
           <ul>
             <li v-for="item in section.items" :key="item.url" class="py-1">
               <a :href="item.url" :target="item.target">{{ item.title }}</a>
@@ -107,9 +107,9 @@ const setctions = ref([
 
 <style scoped>
 .app-footer a {
-  @apply text-green-300;
+  @apply text-sky-700 ;
 }
 .app-footer a:hover {
-  @apply text-green-500 underline;
+  @apply text-sky-500 underline;
 }
 </style>

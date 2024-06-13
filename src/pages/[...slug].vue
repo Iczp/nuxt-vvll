@@ -9,7 +9,8 @@ definePageMeta({
 <template>
   <!-- <NuxtLayout> -->
   <main class="flex flex-col flex-1">
-   
+    <ContentSilder />
+
     <ContentDoc :excerpt="true">
       <template v-slot="{ doc, excerpt }">
         <!-- <pre>{{ doc }}</pre> -->

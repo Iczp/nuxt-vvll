@@ -62,7 +62,7 @@ const showFullText = () => {
             </h3>
             <div class="flex flex-row items-center gap-1">
               <span class="text-slate-400">{{ item.count }}</span>
-              <ArrowRight class="size-3" />
+              <Arrow dir="right" class="size-3" />
             </div>
           </a>
         </template>

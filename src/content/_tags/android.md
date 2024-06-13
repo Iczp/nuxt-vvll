@@ -1,6 +1,6 @@
 ---
 name: 'android'
-title: 'android'
+title: 'Android'
 icon: 'f7:logo-android'
 description: 'Android作为全球最流行的移动操作系统之一，为用户提供了丰富的功能和服务，为开发者提供了广阔的应用开发平台，同时也为设备制造商提供了灵活的定制化选择，成为移动设备领域的重要一员。'
 ---
