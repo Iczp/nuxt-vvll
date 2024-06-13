@@ -13,10 +13,10 @@ export type NavListItem = NavItem & {
   children?: NavListItem[];
 };
 export const useNavigationList = async () => {
-  // const { data } = await useAsyncData('navigation', () =>
-  //   fetchContentNavigation()
-  // );
-  const data = await fetchContentNavigation();
+  const { data: navigation } = await useAsyncData('navigation', () =>
+    fetchContentNavigation()
+  );
+  // const data = await fetchContentNavigation();
 
   const list = ref<NavListItem[]>([]);
 
@@ -42,8 +42,8 @@ export const useNavigationList = async () => {
       return item;
     });
   };
-  if (data) {
-    toList(data);
+  if (navigation.value) {
+    toList(navigation.value);
   }
 
   const getAllByTags = (tags: string[]): NavListItem[] => {

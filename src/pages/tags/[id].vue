@@ -7,17 +7,18 @@ const route = useRoute();
 
 const { params, query } = route;
 
-const runtimeConfig = await useRuntimeConfig();
+// const runtimeConfig = await useRuntimeConfig();
 
-const { integrity, api } = runtimeConfig.public.content;
+// const { integrity, api } = runtimeConfig.public.content;
 
 const { list, getAllByTags } = await useNavigationList();
 
 const items = ref(getAllByTags([params.id]));
 
-const key = `/_tags/${params.id}`;
+const tagName = params.id as string;
+const key = `/_tags/${tagName}`;
 
-const { data: tag } = await useAsyncData(key, () =>
+const { data: tag, error } = await useAsyncData(key, () =>
   queryContent(key).findOne()
 );
 
@@ -69,12 +70,14 @@ const showFullText = () => {
     </aside>
 
     <article class="flex flex-col flex-1 gap-4">
-      <!-- <header>tag :{{ tag }}</header> -->
+      <header>tag :{{ tag == null }}</header>
+
+      <div>error[{{ key }}]:{{ error }}</div>
 
       <section v-if="tag">
         <UCard :title="tag.title || params.id">
           <template #header>
-            <div class="flex flex-col gap-2 ">
+            <div class="flex flex-col gap-2">
               <h3>
                 <Icon :name="tag.icon" class="mr-2 size-4" />
                 <span>{{ tag.title || params.id }}</span>

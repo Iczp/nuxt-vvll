@@ -101,9 +101,8 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/author': { prerender: true },
     // '/other': { prerender: true },
+    '/tags': { prerender: true },
     '/tags/**': { prerender: true },
-    '/tags/android': { prerender: false },
-    
   },
   // nitro: {
   //   prerender: {
