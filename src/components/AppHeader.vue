@@ -9,7 +9,7 @@ const links = [
   },
   {
     label: 'Notes',
-    icon: 'pixelarticons:notes-multiple',
+    icon: 'solar:notebook-broken',
     to: `/notes`,
   },
   {

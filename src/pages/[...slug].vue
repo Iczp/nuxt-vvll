@@ -3,40 +3,19 @@
 const layout = 'article';
 
 definePageMeta({
-  layout: 'about',
+  layout: 'article',
 });
 </script>
 <template>
   <!-- <NuxtLayout> -->
-  <main class="flex flex-col flex-1">
-    <ContentSilder />
+  <main
+    class="flex flex-row items-stretch w-full max-w-screen-xl gap-8 mx-auto"
+  >
+    <ContentSilder class="pr-8 border-r w-72 border-slate-800" />
 
-    <ContentDoc :excerpt="true">
-      <template v-slot="{ doc, excerpt }">
-        <!-- <pre>{{ doc }}</pre> -->
-        <h3 class="text-red-500">doc.layout:{{ doc.layout }}</h3>
-
-        <h3 class="text-red-500">doc.tags:{{ doc.tags }}</h3>
-        <!-- doc:
-        <pre>
-           
-            {{ doc }}
-          </pre
-        > -->
-        <article
-          class="w-full space-y-12 prose no-underline max-w-none prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline dark:prose-dark"
-        >
-          <ContentRenderer :value="doc" />
-        </article>
-      </template>
-      <template #not-found>
-        <h1>Document not found!!!</h1>
-        <p>{{ $route.path }}</p>
-      </template>
-      <template #empty>
-        <h1>Document is empty</h1>
-      </template>
-    </ContentDoc>
+    <ContentDoc
+      class="w-full space-y-12 prose no-underline max-w-none prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline dark:prose-dark"
+    />
   </main>
   <!-- </NuxtLayout> -->
 </template>

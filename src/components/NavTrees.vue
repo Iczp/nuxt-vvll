@@ -1,5 +1,13 @@
 <script setup lang="ts">
 const route = useRoute();
+const props = withDefaults(
+  defineProps<{
+    path?: string;
+  }>(),
+  {
+    path: undefined,
+  }
+);
 
 const { data: navigation } = await useAsyncData('navigation', () =>
   fetchContentNavigation()
@@ -9,12 +17,14 @@ const { data: navigation } = await useAsyncData('navigation', () =>
 
 const { navBottomLink, navDirFromPath, navPageFromPath, navKeyFromPath } =
   useContentHelpers();
-
+const defaultPath = route.fullPath
+  .split('/')
+  .filter((x) => !!x)
+  .join('/');
 //one of ['/docs', '/notes']
-const dir = navDirFromPath(
-  route.fullPath.split('/').slice(0, 2).join('/'),
-  navigation.value!
-);
+const dir =
+  navDirFromPath(props.path || defaultPath, navigation.value!) ||
+  navigation.value;
 // console.log('dir',route.path, dir);
 
 const { items, toggleOpen } = useTrees({
@@ -55,8 +65,13 @@ const navClick = (item: any) => {
       >
         <section class="flex flex-row items-center overflow-hidden">
           <div class="px-1.5 text-lg">
+            <!-- {{ item }} -->
             <Folder v-if="item.$isDir" :open="item.$isOpen" />
-            <Icon name="material-symbols:article-outline" v-else />
+            
+            <Icon
+              :name="item.icon || 'material-symbols:article-outline'"
+              v-else
+            />
           </div>
           <p class="truncate">
             <NuxtLink
