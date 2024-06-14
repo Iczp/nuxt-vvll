@@ -17,10 +17,7 @@ const { data: navigation } = await useAsyncData('navigation', () =>
 
 const { navBottomLink, navDirFromPath, navPageFromPath, navKeyFromPath } =
   useContentHelpers();
-const defaultPath = route.fullPath
-  .split('/')
-  .filter((x) => !!x)
-  .join('/');
+const defaultPath = '/';
 //one of ['/docs', '/notes']
 const dir =
   navDirFromPath(props.path || defaultPath, navigation.value!) ||
@@ -55,7 +52,7 @@ const navClick = (item: any) => {
 
 <template>
   <!-- dir {{ dir }} -->
-  {{ route.params.slug[0] }}
+  {{ route.params.slug }}
   <Trees :items="items" class="max-w-72">
     <template v-slot="{ item, depth, index, parents }">
       <h3
@@ -67,7 +64,7 @@ const navClick = (item: any) => {
           <div class="px-1.5 text-lg">
             <!-- {{ item }} -->
             <Folder v-if="item.$isDir" :open="item.$isOpen" />
-            
+
             <Icon
               :name="item.icon || 'material-symbols:article-outline'"
               v-else

@@ -19,7 +19,7 @@ const items = tagList.value?.map((x) => ({
     {{ items }}
   </pre> -->
 
-  <ul>
+  <ul class="not-prose">
     <li v-for="(item, index) in items" :key="item.title">
       <!-- <b v-if="!item.name || index==0">{{ item }}</b> -->
       <slot :item="item">

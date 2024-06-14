@@ -1,10 +1,15 @@
 <template>
   <Layout>
-    <main class="flex flex-col max-w-screen-xl gap-4 mx-auto">
-      <div><h1 class="text-xl text-green-400">layout:Article</h1></div>
+    <main
+      class="flex flex-row items-stretch w-full max-w-screen-xl gap-8 mx-auto mt-8"
+    >
+      <ContentSilder class="pr-8 border-r w-72 border-slate-200 dark:border-slate-800" />
 
-      <div>ddd</div>
+      <slot>
+        <ContentDoc
+          class="w-full space-y-12 prose no-underline max-w-none prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline dark:prose-dark"
+        />
+      </slot>
     </main>
-    <slot></slot>
   </Layout>
 </template>

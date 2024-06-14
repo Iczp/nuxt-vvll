@@ -20,6 +20,15 @@ export default defineNuxtConfig({
       ],
     },
   },
+  components: {
+    /**
+     * 要禁用自动导入的话，components.dirs设置为空数组
+     * 但请注意，这不会影响模块添加的组件
+     */
+    // dirs: [],
+    global: true,
+    dirs: ['~/components', '~/components-mdc', '@nuxt/ui'],
+  },
   modules: [
     //
     '@nuxt/content',
