@@ -1,15 +1,19 @@
 import { resolve } from 'path';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devServer: {
+    port: 3456,
+  },
   ssr: true,
   srcDir: 'src',
-  appDir: 'src',
+  // appDir: 'src',
   devtools: { enabled: true },
   css: [
     // '/css/main.css',
     // '~/assets/css/main.css',
   ],
   app: {
+    rootId: 'app',
     buildAssetsDir: 'static',
     head: {
       link: [
@@ -27,7 +31,7 @@ export default defineNuxtConfig({
      */
     // dirs: [],
     global: true,
-    dirs: ['~/components', '~/components-mdc', '@nuxt/ui'],
+    dirs: ['~/components', '~/components-mdc'],
   },
   modules: [
     //
@@ -87,6 +91,41 @@ export default defineNuxtConfig({
       //   prefix: '/docs', // All contents inside this source will be prefixed with `/notes`
       //   base: resolve(__dirname, './content'),
       // },
+    },
+    highlight: {
+      // Theme used in all color schemes.
+      // theme: 'github-light',
+      // OR
+      theme: {
+        // Default theme (same as single string)
+        // github-light | github-dark
+        default: 'github-dark',
+        // Theme used if `html.dark`
+        dark: 'github-dark',
+        // Theme used if `html.sepia`
+        sepia: 'monokai',
+      },
+      langs: [
+        'diff',
+        'bash',
+        'ts',
+        'js',
+        'java',
+        'javascript',
+        'cmd',
+        'json',
+        'css',
+        'less',
+        'scss',
+        'sass',
+        'html',
+        'json5',
+        'yaml',
+        'vue',
+        'csharp',
+        'c#',
+        'xml',
+      ],
     },
   },
 
