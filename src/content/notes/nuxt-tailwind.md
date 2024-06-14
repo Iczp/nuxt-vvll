@@ -10,7 +10,7 @@ layout: article
 
    终端
 
-   ```
+   ```bash
    npx nuxi init my-projectcd my-project
    ```
 
@@ -30,7 +30,7 @@ layout: article
 
    nuxt.config.js
 
-   ```
+   ```ts
    // https://nuxt.com/docs/api/configuration/nuxt-config
    export default defineNuxtConfig({
      devtools: { enabled: true },
@@ -85,7 +85,7 @@ layout: article
 
    nuxt.config.js
 
-   ```
+   ```ts
    // https://nuxt.com/docs/api/configuration/nuxt-config
    export default defineNuxtConfig({
      devtools: { enabled: true },

@@ -1,0 +1,69 @@
+<script lang="ts" setup>
+// const countries = ['United States', 'Canada', 'Mexico'];
+
+// const country = ref(countries[0]);
+</script>
+
+<template>
+  <div
+    class="container flex flex-col my-3 overflow-hidden border rounded-lg border-color"
+  >
+  <!-- $attrs.d{{ $props }}
+        {{ $attrs }}
+        {{ $slots }} -->
+    <header class="flex flex-row justify-between h-10 px-2">
+      <div class="flex flex-row items-center gap-1">
+        <!-- <MdiCodeJson /> -->
+        <!-- <span
+          :l="`{ :${$attrs.language || '...'} }`"
+          class="tag-item language after:mx-2 after:content-[attr(l)] after:text-sm"
+        >
+          <IconCode :lang="$attrs.language" />
+        </span> -->
+
+        
+        <IconCode :lang="$attrs.language" />
+        <span class="tag-item filename">{{ $attrs.filename }}</span>
+      </div>
+      <div class="flex flex-row items-center">
+        <ContentCopy :value="$attrs.code" />
+      </div>
+    </header>
+
+    <main class="code-content">
+      <pre class="m-0 break-words break-all rounded-none"><slot></slot></pre>
+    </main>
+    <!-- <footer class="flex flex-row justify-between p-2"></footer> -->
+  </div>
+</template>
+
+<style scoped>
+.border-color {
+  @apply border-gray-300 dark:border-gray-700;
+}
+
+pre code .line {
+  white-space: pre-wrap;
+}
+
+.title-left {
+  @apply flex gap-4 flex-row items-center;
+}
+.title-right {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+}
+
+.tag-item {
+  /* display: flex;
+  border: var(--card-border);
+  padding: 0 8px;
+  border-radius: 4px;
+  background-color: rgb(23, 26, 39); */
+}
+
+.language {
+  font-weight: bold;
+}
+</style>

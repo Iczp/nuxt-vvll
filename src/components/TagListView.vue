@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-4 tags ">
+  <div class="w-full m-0 tags">
     <TagList
       class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
     >
@@ -13,7 +13,9 @@
             <span class="mx-2">{{ item.title }}</span>
             <span class="text-sm text-slate-400">({{ item.count }})</span>
           </h3>
-          <p class="text-sm !text-slate-400 dark:!text-slate-600 line-clamp-2 min-h-10 not-porse">
+          <p
+            class="text-sm !text-slate-400 dark:!text-slate-600 line-clamp-2 min-h-10 not-porse"
+          >
             {{ item.description }}
           </p>
         </a>

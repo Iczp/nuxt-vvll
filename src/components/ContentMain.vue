@@ -72,7 +72,7 @@ const tocItems = [
           </pre>
           <!-- {{ doc }} -->
           <article
-            class="w-full space-y-12 prose no-underline prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline dark:prose-dark"
+            class="w-full prose no-underline prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline dark:prose-dark"
           >
             <ContentRenderer :value="doc" />
           </article>

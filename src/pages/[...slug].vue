@@ -9,7 +9,7 @@ definePageMeta({
 <template>
   <!-- <NuxtLayout> -->
   <ContentDoc
-    class="w-full space-y-12 prose no-underline max-w-none prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline dark:prose-dark"
+    class="w-full space-y-4 prose no-underline max-w-none prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline dark:prose-dark"
   />
   <!-- </NuxtLayout> -->
 </template>
