@@ -54,8 +54,8 @@ withDefaults(
 .dark .trees {
   --trees-border-color: #3f3f3f;
   --trees-border-active-color: #91cdee;
-  --trees-border-hover-color: #059d0f;
-  --trees-border-hover-active-color: #9d18c5;
+  --trees-border-hover-color: #2de439;
+  --trees-border-hover-active-color: #0594ed;
 }
 
 .border-color {
@@ -73,21 +73,21 @@ withDefaults(
 }
 
 ul {
-  @apply border-l border-l pl-8;
+  @apply border-l border-l pl-7;
 }
 
 ul[depth='0'] > li:only-child > .div {
   @apply pl-0;
 }
 ul[depth='0'] > li:only-child > ul {
-  @apply pl-4;
+  @apply pl-3;
 }
 ul[depth='0'] {
   @apply p-0 mx-0;
 }
 
 .div {
-  @apply relative pl-4;
+  @apply relative pl-3;
 }
 
 .div::before {

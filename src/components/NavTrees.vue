@@ -75,7 +75,7 @@ const navClick = (item: any) => {
         @click="toggleOpen(item)"
       >
         <section class="flex flex-row items-center overflow-hidden">
-          <div class="px-1.5 text-lg">
+          <div class="px-1.5 text-lg inline-flex tree-icon">
             <!-- {{ item }} -->
             <Folder v-if="item.$isDir" :open="item.$isOpen" />
 
@@ -111,7 +111,8 @@ const navClick = (item: any) => {
 </template>
 
 <style scoped>
-.active:not(.dir) a {
+.active:not(.dir) a,
+.active:not(.dir) .tree-icon {
   @apply text-blue-600 dark:text-blue-400;
 }
 </style>
