@@ -6,6 +6,7 @@ export type ItemType = {
   $isActive?: boolean;
   $isDir?: boolean;
   children?: ItemType[];
+  $parents?: () => ItemType[];
 
   $totalFileCount?: number;
   $totalDirCount?: number;
@@ -60,6 +61,8 @@ export const useTrees = ({
     return item;
   };
 
+  const activeItem = ref<ItemType>();
+
   const formatItems = (
     items?: any[] | null,
     depth: number = 0,
@@ -71,19 +74,29 @@ export const useTrees = ({
       row++;
       action && action(x, depth, i, parents);
       let children: ItemType[] | undefined;
+
+      const $parents = () => [x, ...parents];
+
       if (x.children) {
-        children = formatItems(x.children, depth + 1, [x, ...parents]);
+        children = formatItems(x.children, depth + 1, $parents());
         x.$total = children.reduce(
           (acc, item) => acc + Number(item.$totalFileCount),
           x.$total
         );
       }
+      const $isActive = active(x, depth, i, $parents());
+      if ($isActive) {
+        activeItem.value = x;
+
+        console.log('activeItem', activeItem.value);
+      }
       return {
         ...x,
         $row: row,
-        $isOpen: open(x, depth, i, [x, ...parents]),
-        $isActive: active(x, depth, i, [x, ...parents]),
+        $isOpen: open(x, depth, i, $parents()),
+        $isActive,
         children,
+        $parents,
       };
     });
     if (sort) {
@@ -99,11 +112,35 @@ export const useTrees = ({
 
   const refItems = ref(formatItems(arr));
 
+  const setParents = (item: ItemType | undefined, isActive: boolean) => {
+    if (!item) return;
+    item.$isActive = isActive;
+
+    const parents = item?.$parents;
+    if (parents) {
+      parents().map((x) => {
+        x.$isActive = isActive;
+        // console.log('x:', x, isActive);
+      });
+    } else {
+      console.warn('parents', parents);
+    }
+  };
+
+  const setActive = (item?: ItemType) => {
+    // console.log('setActive', activeItem.value);
+    if (activeItem.value) {
+      setParents(activeItem.value, false);
+    }
+    setParents(item, true);
+    activeItem.value = item;
+  };
+
   //   console.log(items);
   const toggleOpen = (item: ItemType) => {
     // console.log(item);
     item.$isOpen = !item.$isOpen;
   };
 
-  return { formatItems, toggleOpen, items: refItems };
+  return { formatItems, toggleOpen, items: refItems, activeItem, setActive };
 };

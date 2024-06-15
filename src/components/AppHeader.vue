@@ -44,15 +44,18 @@ const links = [
     class="sticky top-0 flex items-center justify-between max-w-screen-xl px-4 mx-auto border-b border-gray-200 md:justify-around dark:border-gray-800 backdrop-blur-md"
   >
     <Logo />
-    <UHorizontalNavigation :links="links" class="justify-center hidden md:flex" />
+    <UHorizontalNavigation
+      :links="links"
+      class="justify-center hidden md:flex"
+    />
 
     <aside class="flex flex-row items-center gap-4 text-xl">
+      <a>
+        <Icon name="mdi:magnify" class="" />
+      </a>
       <ThemeMode />
       <a>
         <Icon name="mdi:github" class="" />
-      </a>
-      <a>
-        <Icon name="mdi:magnify" class="" />
       </a>
     </aside>
   </header>

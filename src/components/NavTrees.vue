@@ -24,12 +24,12 @@ const dir =
   navigation.value;
 // console.log('dir',route.path, dir);
 
-const { items, toggleOpen } = useTrees({
+const { items, toggleOpen, activeItem, setActive } = useTrees({
   items: dir,
   // open: (x) => x.open || true,
-  action: (x) => {
-    x.$isDir = isDir(x);
-  },
+  // action: (x) => {
+  //   x.$isDir = isDir(x);
+  // },
   active: (item, depth, index, parents) => item._path === route.path,
   // sort: (a, b, depth) => {
   //   if (depth > 1) {
@@ -44,13 +44,23 @@ const { items, toggleOpen } = useTrees({
   //   }
   // },
 });
+
+// onMounted(() => {
+//   // setActive(activeItem.value);
+
+//   // console.log('activeItem.value', activeItem.value);
+//   setTimeout(() => {
+//     setActive(activeItem.value);
+//   }, 1000);
+// });
 const navToLink = (item: any) => {
   // console.log('navToLink', item);
 
   return !isDir(item) ? item._path : undefined;
 };
 const navClick = (item: any) => {
-  // console.log('navClick', item);
+  console.log('navClick', item.$parents());
+  setActive(item);
 };
 </script>
 
@@ -78,7 +88,7 @@ const navClick = (item: any) => {
             <NuxtLink
               :to="navToLink(item)"
               @click="navClick(item)"
-              class="cursor-pointer"
+              class="truncate cursor-pointer"
             >
               <!-- {{ item.$row }} /{{ depth }}.{{ index }}  -->
               {{ item.title }}
