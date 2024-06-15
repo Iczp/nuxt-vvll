@@ -5,7 +5,7 @@
 
 @layer components {
   .box {
-    @apply border border-slate-200 rounded-lg p-2 dark:border-slate-700;
+    @apply border border-slate-300 rounded-lg p-2 dark:border-slate-700;
   }
   .box-hover {
     @apply border-green-100 dark:border-green-700;

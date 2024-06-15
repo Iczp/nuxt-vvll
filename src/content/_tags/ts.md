@@ -1,8 +1,8 @@
 ---
-name: 'ts'
-title: 'TS'
-icon: 'vscode-icons:file-type-typescript'
-description: 'TypeScript（TS）是一种由微软开发的开源编程语言，通过引入静态类型和其他高级特性，使得JavaScript代码更加健壮、可维护和可读。TypeScript在现代Web开发中越来越受欢迎，成为许多开发团队的首选语言之一'
+name: ts
+title: TS
+icon: vscode-icons:file-type-typescript
+description: TypeScript（TS）是一种由微软开发的开源编程语言，通过引入静态类型和其他高级特性，使得JavaScript代码更加健壮、可维护和可读。TypeScript在现代Web开发中越来越受欢迎，成为许多开发团队的首选语言之一
 ---
 
 TypeScript（TS）是一种由微软开发的开源编程语言，是JavaScript的一个超集，添加了静态类型和其他高级特性。以下是TypeScript的一些关键特点：

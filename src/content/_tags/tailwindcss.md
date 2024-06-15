@@ -1,8 +1,8 @@
 ---
-name: 'tailwindcss'
-title: 'tailwindcss'
-icon: 'logos:tailwindcss-icon'
-description: 'Tailwind CSS是一个功能强大且易于定制的CSS框架，适用于快速构建现代化的网页界面。它的原子类和响应式设计特性使得开发者能够快速实现各种样式效果，提高开发效率。'
+name: tailwindcss
+title: tailwindcss
+icon: logos:tailwindcss-icon
+description: Tailwind CSS是一个功能强大且易于定制的CSS框架，适用于快速构建现代化的网页界面。它的原子类和响应式设计特性使得开发者能够快速实现各种样式效果，提高开发效率。
 ---
 
 Tailwind CSS是一个实用的CSS框架，它提供了一组预定义的样式类，可以帮助开发者快速构建现代化的网页界面。以下是Tailwind CSS的一些关键特点：

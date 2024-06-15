@@ -10,7 +10,7 @@
         >
           <h3 class="flex flex-row items-center text-lg not-porse">
             <Icon :name="item.icon" class="size-6" />
-            <span class="mx-2">{{ item.title }}</span>
+            <span class="mx-2 truncate">{{ item.title }}</span>
             <span class="text-sm text-slate-400">({{ item.count }})</span>
           </h3>
           <p

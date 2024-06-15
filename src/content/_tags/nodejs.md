@@ -1,8 +1,8 @@
 ---
-name: 'nodejs'
-title: 'Nodejs'
-icon: 'logos:nodejs-icon-alt'
-description: 'Node.js是一个强大且灵活的后端开发工具，通过其事件驱动、非阻塞I/O和模块化等特性，使得开发者能够构建高性能、可扩展的网络应用程序，并在前后端开发中实现更好的协作和一致性。Node.js在现代Web开发中扮演着重要的角色。'
+name: nodejs
+title: Nodejs
+icon: logos:nodejs-icon-alt
+description: Node.js是一个强大且灵活的后端开发工具，通过其事件驱动、非阻塞I/O和模块化等特性，使得开发者能够构建高性能、可扩展的网络应用程序，并在前后端开发中实现更好的协作和一致性。Node.js在现代Web开发中扮演着重要的角色。
 
 ---
 

@@ -1,7 +1,7 @@
 ---
-name: 'html'
-title: 'HTML'
-icon: 'material-symbols:format-h5'
+name: html
+title: HTML
+icon: material-symbols:format-h5
 description: 'HTML是构建Web页面的基础，通过合适的标签和属性描述页面结构和内容，使得页面具有良好的结构化和语义化，为用户提供良好的浏览体验。'
 ---
 

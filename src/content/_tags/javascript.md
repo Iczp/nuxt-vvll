@@ -1,8 +1,8 @@
 ---
-name: 'javascript'
-title: 'JS'
-icon: 'logos:javascript'
-description: 'JavaScript是一种强大且灵活的编程语言，广泛应用于Web开发、移动应用开发、游戏开发等领域。其动态特性、事件驱动模型和丰富的生态系统使得JavaScript成为现代Web开发中不可或缺的一部分。'
+name: javascript
+title: JS
+icon: logos:javascript
+description: JavaScript是一种强大且灵活的编程语言，广泛应用于Web开发、移动应用开发、游戏开发等领域。其动态特性、事件驱动模型和丰富的生态系统使得JavaScript成为现代Web开发中不可或缺的一部分。
 ---
 
 JavaScript是一种高级的、解释型的编程语言，用于在网页上实现交互式的功能和动态效果。以下是JavaScript的一些关键特点：

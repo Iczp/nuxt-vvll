@@ -1,7 +1,7 @@
 ---
-name: 'css'
-title: 'CSS'
-icon: vscode-icons:file-type-class
+name: css
+title: CSS
+icon: logos:css-3
 description: 'CSS（Cascading Style Sheets）是用于描述文档样式和布局的样式表语言，用于控制网页的外观和样式。CSS定义了各种属性和值，用于设置元素的样式，如颜色、字体、间距、边框等'
 ---
 

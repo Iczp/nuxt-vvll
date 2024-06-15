@@ -1,9 +1,9 @@
 ---
-name: 'vs'
-title: 'Visual Studio'
-group: 'IDE'
-icon: 'logos:visual-studio'
-description: 'Visual Studio是一款功能强大且全面的集成开发环'
+name: vs
+title: Visual Studio
+group: IDE
+icon: logos:visual-studio
+description: Visual Studio是一款功能强大且全面的集成开发环
 ---
 
 Visual Studio是由微软推出的集成开发环境（IDE），用于开发各种类型的应用程序，包括桌面应用、Web应用、移动应用等。以下是Visual Studio的一些关键特点：

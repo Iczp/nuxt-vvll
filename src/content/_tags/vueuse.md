@@ -1,8 +1,8 @@
 ---
-name: 'vueuse'
-title: 'Vue Use'
-icon: 'logos:vueuse'
-description: 'Vue 2 和 3 的基本 Vue Composition API 实用程序集合'
+name: vueuse
+title: Vue Use
+icon: logos:vueuse
+description: Vue 2 和 3 的基本 Vue Composition API 实用程序集合
 ---
 
 `vueuse.org`是一个网站，提供了Vue.js生态系统中常用的一些功能性函数和组合的集合，旨在帮助开发者更高效地构建Vue.js应用程序。

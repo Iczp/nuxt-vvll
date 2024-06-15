@@ -1,8 +1,8 @@
 ---
-name: 'vscode'
-title: 'VScode'
-group: 'IDE'
-icon: 'logos:visual-studio-code'
+name: vscode
+title: VScode
+group: IDE
+icon: logos:visual-studio-code
 description: 'Visual Studio Code（简称VSCode）是由微软开发的免费开源跨平台代码编辑器。它具有丰富的功能和扩展生态系统，适用于多种编程语言和技术栈。'
 ---
 

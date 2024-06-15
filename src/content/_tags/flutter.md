@@ -1,8 +1,8 @@
 ---
-name: 'flutter'
-title: 'Flutter'
-icon: 'logos:flutter'
-description: 'Flutter是一个强大且现代化的移动应用开发框架，通过其跨平台特性、快速开发能力和优秀的性能表现，使得开发者能够轻松构建高质量的移动应用，并且在不同平台上实现一致的用户体验。'
+name: flutter
+title: Flutter
+icon: logos:flutter
+description: Flutter是一个强大且现代化的移动应用开发框架，通过其跨平台特性、快速开发能力和优秀的性能表现，使得开发者能够轻松构建高质量的移动应用，并且在不同平台上实现一致的用户体验。
 ---
 
 Flutter是由Google开发的跨平台移动应用开发框架，可以用来构建高性能、美观且流畅的移动应用。以下是Flutter的一些关键特点：

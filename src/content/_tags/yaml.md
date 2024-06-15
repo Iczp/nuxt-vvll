@@ -1,8 +1,8 @@
 ---
-name: 'yaml'
-title: 'YAML'
-icon: 'file-icons:yaml-alt1'
-description: 'YAML是一种简洁、易读且功能丰富的数据序列化格式，适用于配置文件、数据交换和其他场景，为开发者提供了一种方便和直观的数据表示方式.'
+name: yaml
+title: YAML
+icon: file-icons:yaml-alt1
+description: YAML是一种简洁、易读且功能丰富的数据序列化格式，适用于配置文件、数据交换和其他场景，为开发者提供了一种方便和直观的数据表示方式.
 ---
 
 YAML（YAML Ain't Markup Language）是一种人类可读的数据序列化格式，常用于配置文件和数据交换。以下是YAML的一些关键特点：

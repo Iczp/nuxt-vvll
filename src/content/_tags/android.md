@@ -1,8 +1,8 @@
 ---
-name: 'android'
-title: 'Android'
-icon: 'f7:logo-android'
-description: 'Android作为全球最流行的移动操作系统之一，为用户提供了丰富的功能和服务，为开发者提供了广阔的应用开发平台，同时也为设备制造商提供了灵活的定制化选择，成为移动设备领域的重要一员。'
+name: android
+title: Android
+icon: f7:logo-android
+description: Android作为全球最流行的移动操作系统之一，为用户提供了丰富的功能和服务，为开发者提供了广阔的应用开发平台，同时也为设备制造商提供了灵活的定制化选择，成为移动设备领域的重要一员。
 ---
 
 Android是由Google开发的移动操作系统，主要用于智能手机和平板电脑等移动设备。以下是Android的一些关键特点：

@@ -42,18 +42,10 @@ const onChange = (index: number) => {
 
 <style scoped>
 .tabs {
-  display: flex;
-  flex-direction: column;
+  @apply flex flex-col;
 }
 .tab-ul {
-  display: flex;
-  flex-direction: row;
-
-  font-size: 16px;
-  gap: 12px;
-  position: relative;
-  padding: 0;
-  margin: 0;
+  @apply relative flex flex-row gap-4 p-0 m-0;
 }
 
 .tab-ul a:hover {
@@ -62,13 +54,8 @@ const onChange = (index: number) => {
 }
 
 .tab-li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  list-style: none;
-  font-size: 16px;
-  padding: 8px;
+  @apply flex justify-center items-center p-0 relative m-0 ;
+  /* list-style: none; */
   cursor: pointer;
 }
 
@@ -93,6 +80,5 @@ const onChange = (index: number) => {
 }
 
 .active {
-
 }
 </style>

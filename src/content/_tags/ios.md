@@ -1,8 +1,8 @@
 ---
-name: 'ios'
-title: 'iOS'
-icon: 'f7:logo-ios'
-description: 'iOS作为一个成熟、稳定且功能丰富的移动操作系统，为用户提供了优质的用户体验和开发者友好的开发环境，成为全球最受欢迎的移动操作系统之一。'
+name: ios
+title: iOS
+icon: f7:logo-ios
+description: iOS作为一个成熟、稳定且功能丰富的移动操作系统，为用户提供了优质的用户体验和开发者友好的开发环境，成为全球最受欢迎的移动操作系统之一。
 ---
 
 iOS是由苹果公司开发的移动操作系统，专门用于iPhone、iPad、iPod Touch等设备。以下是iOS的一些关键特点：
