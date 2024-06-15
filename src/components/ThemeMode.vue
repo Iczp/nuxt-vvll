@@ -6,7 +6,7 @@ const colorMode = useColorMode();
 
 <template>
   <button @click="toggleDark()">
-    <Icon v-if="isDark" name="ic:baseline-mode-night" />
+    <Icon v-if="!isDark" name="ic:baseline-mode-night" />
     <Icon v-else name="ic:baseline-light-mode" />
   </button>
 </template>

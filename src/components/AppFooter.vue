@@ -84,7 +84,7 @@ const setctions = ref([
 
 <template>
   <footer
-    class="box-border flex flex-col max-w-screen-xl mx-auto mt-8 app-footer"
+    class="box-border flex flex-col max-w-screen-xl px-4 mx-auto mt-8 app-footer"
   >
     <UCard class="p-0">
       <main

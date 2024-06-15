@@ -44,16 +44,20 @@ const { items, toggleOpen } = useTrees({
   //   }
   // },
 });
-const navToLink = (item: any) => (!isDir(item) ? item._path : undefined);
+const navToLink = (item: any) => {
+  // console.log('navToLink', item);
+
+  return !isDir(item) ? item._path : undefined;
+};
 const navClick = (item: any) => {
-  console.log('navClick', item);
+  // console.log('navClick', item);
 };
 </script>
 
 <template>
   <!-- dir {{ dir }} -->
   {{ route.params.slug }}
-  <Trees :items="items" class="max-w-72">
+  <Trees :items="items">
     <template v-slot="{ item, depth, index, parents }">
       <h3
         class="flex flex-row justify-between gap-2 py-1"
@@ -85,10 +89,11 @@ const navClick = (item: any) => {
           </p>
         </section>
         <section v-if="item.$isDir">
-          <Arrow
-            :dir="item.$isOpen ? 'down' : 'right'"
-            class="cursor-pointer"
-          />
+          <div
+            class="inline-flex items-center justify-center p-0 border rounded-sm cursor-pointer size-6 border-slate-300 bg-slate-200 dark:border-slate-700 dark:bg-slate-800"
+          >
+            <Arrow :dir="item.$isOpen ? 'down' : 'right'" />
+          </div>
         </section>
       </h3>
     </template>

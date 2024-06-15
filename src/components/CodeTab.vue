@@ -35,7 +35,7 @@ const setActive = (slot: string) => {
 };
 onMounted(() => {
   // 在组件挂载后获取插槽键名，并将其设置为响应式引用
-  changeSlot();
+  // changeSlot();
 });
 
 const current = ref(0);

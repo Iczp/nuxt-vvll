@@ -49,9 +49,9 @@ defineShortcuts({
     </header>
 
     <section>
-      <h2 class="my-4">文单目录</h2>
-      <nav>
-        <NavTrees path="/"/>
+      <!-- <h2 class="my-4">文单目录</h2> -->
+      <nav class="mt-3">
+        <NavTrees path="/" />
       </nav>
     </section>
 
