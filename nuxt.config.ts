@@ -31,7 +31,7 @@ export default defineNuxtConfig({
      */
     // dirs: [],
     global: true,
-    dirs: ['~/components', '~/components-mdc'],
+    dirs: ['~/components', '~/components-mdc', '~/logos'],
   },
   modules: [
     //

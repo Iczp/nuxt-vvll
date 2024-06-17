@@ -4,4 +4,4 @@ layout: article
 
 # sub other.md
 
-[sub index](./index.md)
+[sub index](./guide.md)

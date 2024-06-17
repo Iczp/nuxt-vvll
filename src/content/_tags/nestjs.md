@@ -5,6 +5,9 @@ icon: logos:nestjs
 description: NestJS是一个基于TypeScript和Node.js的后端框架，主要用于构建可维护且高效的服务器端应用程序。功能强大、灵活且易于使用的后端框架，适用于各种规模和复杂度的Web应用程序开发。
 ---
 
+
+:Icon{name=devicon:nestjs-wordmark .size-32}
+
 NestJS是一个基于TypeScript和Node.js的后端框架，主要用于构建可维护且高效的服务器端应用程序。以下是NestJS的详细介绍：
 
 1. **模块化架构**：NestJS采用了模块化的设计，将应用程序分割成多个可重用的模块。这种结构不仅使得代码的组织结构更加清晰，便于团队协作，还支持快速开发和测试。每个模块都可以独立开发、测试和维护，从而大大提高了代码的可扩展性和可维护性。

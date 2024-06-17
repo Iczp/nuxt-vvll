@@ -88,7 +88,7 @@ export const useTrees = ({
       if ($isActive) {
         activeItem.value = x;
 
-        console.log('activeItem', activeItem.value);
+        // console.log('activeItem', activeItem.value);
       }
       return {
         ...x,

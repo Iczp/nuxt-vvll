@@ -1,5 +1,5 @@
 ---
-name: nuxt
+name: nuxtjs
 title: Nuxt
 icon: logos:nuxt-icon
 description: 'Nuxt.js是一个功能强大且灵活的Vue.js应用框架，适用于构建各种类型的Web应用程序，包括单页面应用（SPA）、多页面应用（MPA）、静态站点等。其服务端渲染和静态站点生成功能使得开发者能够快速构建高性能、SEO友好的Web应用。'
