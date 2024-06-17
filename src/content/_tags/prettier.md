@@ -1,6 +1,6 @@
 ---
 name: prettier
-title: PostCSS
+title: Prettier
 icon: logos:prettier
 description: Prettier 是一个强大而灵活的代码格式化工具，它能够帮助开发者快速、方便地实现一致的代码风格，提高代码质量和开发效率。
 ---
