@@ -5,7 +5,15 @@
 // const { getAllByTags } = await useNavigationList();
 
 const { data: tagList } = await useAsyncData('_tags', () =>
-  queryContent('/_tags').find()
+  queryContent('/_tags')
+    .where({
+      _path: {
+        $not: {
+          $regex: '.*_dir$',
+        },
+      },
+    })
+    .find()
 );
 
 const items = tagList.value?.map((x) => ({
