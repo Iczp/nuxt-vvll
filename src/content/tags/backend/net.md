@@ -1,11 +1,11 @@
 ---
-name: 'net'
-title: '.Net'
-icon: 'logos:dotnet'
+name: net
+title: .Net
+icon: logos:dotnet
 description: '.NET 是一个功能强大、易于使用且高度可定制的应用程序开发框架，适用于各种规模和复杂度的项目。无论是初学者还是经验丰富的开发者，都可以通过 .NET 框架快速构建高质量的应用程序'
 ---
 
-:Icon{name=devicon:netcore-wordmark .size-32}
+:Icon{name=logos:dotnet .size-32}
 
 .NET 是一个由 Microsoft 开发的跨平台应用程序开发框架，它提供了一个统一的编程模型，以及丰富的类库和工具集，用于构建各种类型的应用程序，包括 Web、桌面、移动、游戏、物联网等。
 

@@ -1,12 +1,12 @@
 ---
-name: figma
-title: Gitlab
+name: d3js
+title: D3.js
 icon: devicon:d3js
 description: D3.js是一个功能强大、灵活且社区活跃的JavaScript数据可视化库，它可以帮助开发者创建出丰富多样的数据可视化作品，提升数据的展示效果和用户体验。
 ---
 
 
-:Icon{name=devicon:d3js-wordmark .size-32}
+:Icon{name=devicon:d3js .size-32}
 
 D3.js是一个强大的JavaScript数据可视化库，提供了丰富的API和工具，用于创建交互式的数据图表、地图等可视化效果。它的核心理念是将数据绑定到DOM元素上，并使用数据驱动的方式来更新元素的样式、位置和属性。
 
