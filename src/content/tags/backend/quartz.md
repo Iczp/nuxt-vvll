@@ -2,111 +2,122 @@
 name: quartz
 title: Quartz
 icon: Quartz
-description: Hangfire 是一个功能强大的后台任务管理工具，适用于各种 .NET 应用程序。它提供了丰富的任务调度和管理功能，支持任务的持久化存储和分布式执行，简化了后台任务的开发和维护工作。通过 Hangfire，开发人员可以轻松实现高效、可靠的后台任务处理，提高应用程序的性能和用户体验。
+description: Quartz 是一个强大且灵活的作业调度框架，适用于各种复杂的调度需求。通过其丰富的功能和易用的 API，开发人员可以轻松实现各种定时任务和后台作业，提升应用程序的自动化和可靠性。Quartz 的持久化支持和分布式调度能力使得它在高可用性和大规模系统中表现出色。
 ---
 
 
 :Icon{name=Quartz .size-32}
 
-Hangfire 是一个开源的 .NET 库，旨在简化和管理后台任务的执行。它允许开发人员轻松地将定时任务、延迟任务和持续运行的后台任务集成到他们的应用程序中，而无需编写复杂的代码。Hangfire 提供了强大的功能和易用的 API，使得任务调度和管理变得简单和高效。
+Quartz 是一个功能强大的开源作业调度库，主要用于 Java 应用程序。它允许开发人员在应用程序中调度和管理各种任务，例如定时任务、周期性任务和复杂的工作流任务。Quartz 具有高度的灵活性和可扩展性，可以在单机和分布式环境中使用。
 
 ### 主要特点和功能
 
-1. **持久化任务存储**：
-   Hangfire 支持将任务持久化存储在各种后端数据库中，如 SQL Server、PostgreSQL、MongoDB 和 Redis。这意味着即使应用程序重启或崩溃，任务也不会丢失，能够在恢复后继续执行。
-
-2. **多种任务类型**：
-   - **火即执行任务（Fire-and-forget job）**：立即执行一次的任务。
-   - **延迟任务（Delayed job）**：在指定时间后执行的任务。
-   - **定时任务（Recurring job）**：按计划周期性执行的任务。
-   - **连续任务（Continuations）**：在另一个任务完成后执行的任务。
-
-3. **自动重试机制**：
-   任务失败时，Hangfire 会自动重试任务执行，确保任务最终完成。重试策略可以根据需要进行配置。
-
-4. **分布式处理**：
-   Hangfire 支持在多个服务器上分布式执行任务，利用多个工作节点共同处理任务队列，从而提高任务处理的并发性和可靠性。
-
-5. **实时监控**：
-   提供一个基于 Web 的仪表板，允许开发人员监控任务的执行状态、任务队列、任务历史记录和任务失败原因等。仪表板还支持重新排队和删除任务。
-
-6. **简便的集成**：
-   通过简单的 NuGet 包安装和配置，即可将 Hangfire 集成到现有的 .NET 应用程序中。其直观的 API 使得任务的定义和管理变得非常容易。
-
-### 使用场景
-
-1. **电子邮件通知**：
-   在后台处理电子邮件发送任务，避免阻塞主线程，提高应用程序响应速度。
-
-2. **数据处理和分析**：
-   在后台执行数据处理、转换和分析任务，如批量数据导入、定期数据清理等。
-
-3. **报告生成**：
-   定期生成报表并将结果发送给用户或存储在系统中。
-
-4. **定时任务**：
-   例如，每天凌晨执行系统备份，定期发送提醒通知等。
-
-5. **任务工作流**：
-   组合多个任务形成复杂的工作流，每个任务依赖于前一个任务的完成。
-
-### 简单示例
-
-下面是一个简单的 ASP.NET Core 项目中集成 Hangfire 的示例：
-
-1. **安装 Hangfire**：
-   在项目中通过 NuGet 包管理器安装 Hangfire：
-   ```bash
-   Install-Package Hangfire
+1. **丰富的调度能力**：
+   Quartz 支持各种调度需求，包括简单的时间间隔调度、复杂的 Cron 表达式调度、以及基于日历的调度等。
+   ```java
+   // 使用简单的时间间隔调度任务
+   Trigger trigger = TriggerBuilder.newTrigger()
+           .withSchedule(SimpleScheduleBuilder.simpleSchedule()
+           .withIntervalInSeconds(10)
+           .repeatForever())
+           .build();
    ```
 
-2. **配置 Hangfire**：
-   在 `Startup.cs` 文件中进行配置：
-   ```csharp
-   public void ConfigureServices(IServiceCollection services)
-   {
-       // 配置 Hangfire 使用内存存储（仅用于开发和测试）
-       services.AddHangfire(config => config.UseMemoryStorage());
-       services.AddHangfireServer();
-   }
-
-   public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-   {
-       app.UseHangfireDashboard(); // 启用 Hangfire 仪表板
-       app.UseHangfireServer();    // 启用 Hangfire 服务器
-   }
-   ```
-
-3. **定义任务**：
-   在应用程序中定义一个简单的任务并进行调度：
-   ```csharp
-   public class EmailService
-   {
-       public void SendWelcomeEmail(string userEmail)
-       {
-           // 发送电子邮件的逻辑
-           Console.WriteLine($"Sending welcome email to {userEmail}");
+2. **作业和触发器**：
+   Quartz 通过作业（Job）和触发器（Trigger）来定义和控制任务的执行。作业是实际执行的任务逻辑，而触发器则定义了任务的执行时间和条件。
+   ```java
+   // 定义一个简单的作业
+   public class MyJob implements Job {
+       public void execute(JobExecutionContext context) throws JobExecutionException {
+           System.out.println("Hello, Quartz!");
        }
    }
 
-   public class HomeController : Controller
-   {
-       private readonly IBackgroundJobClient _backgroundJobs;
-
-       public HomeController(IBackgroundJobClient backgroundJobs)
-       {
-           _backgroundJobs = backgroundJobs;
-       }
-
-       public IActionResult Index()
-       {
-           // 调度一个立即执行的任务
-           _backgroundJobs.Enqueue<EmailService>(emailService => emailService.SendWelcomeEmail("user@example.com"));
-           return View();
-       }
-   }
+   // 定义作业细节
+   JobDetail job = JobBuilder.newJob(MyJob.class)
+           .withIdentity("myJob", "group1")
+           .build();
    ```
+
+3. **持久化支持**：
+   Quartz 可以将调度信息持久化到数据库中，支持多种数据库，包括 MySQL、PostgreSQL、Oracle 等。这使得任务调度信息可以在应用程序重启后恢复。
+   ```xml
+   <property name="org.quartz.jobStore.class" value="org.quartz.impl.jdbcjobstore.JobStoreTX" />
+   <property name="org.quartz.jobStore.driverDelegateClass" value="org.quartz.impl.jdbcjobstore.StdJDBCDelegate" />
+   <property name="org.quartz.jobStore.dataSource" value="myDS" />
+   ```
+
+4. **分布式调度**：
+   Quartz 支持分布式部署，能够在多个节点之间协调任务调度和执行，提高系统的可靠性和可扩展性。
+
+5. **错过处理和异常处理**：
+   Quartz 提供了灵活的机制来处理任务的错过执行和异常情况，可以配置重试策略、错误处理逻辑等。
+
+6. **插件和扩展**：
+   Quartz 提供了一些内置的插件，并允许开发人员创建自定义插件，以扩展其功能。例如，Quartz 支持邮件通知、JMX 集成等。
+
+### 使用方法
+
+1. **引入 Quartz 库**：
+   在 Maven 项目中引入 Quartz 依赖：
+   ```xml
+   <dependency>
+       <groupId>org.quartz-scheduler</groupId>
+       <artifactId>quartz</artifactId>
+       <version>2.3.2</version>
+   </dependency>
+   ```
+
+2. **创建调度器**：
+   创建和启动一个调度器实例：
+   ```java
+   // 获取调度器实例
+   Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+   // 启动调度器
+   scheduler.start();
+   ```
+
+3. **定义作业和触发器**：
+   定义一个简单的作业和触发器，并将其调度：
+   ```java
+   // 定义作业
+   JobDetail job = JobBuilder.newJob(MyJob.class)
+           .withIdentity("myJob", "group1")
+           .build();
+
+   // 定义触发器
+   Trigger trigger = TriggerBuilder.newTrigger()
+           .withIdentity("myTrigger", "group1")
+           .startNow()
+           .withSchedule(SimpleScheduleBuilder.simpleSchedule()
+           .withIntervalInSeconds(10)
+           .repeatForever())
+           .build();
+
+   // 调度作业
+   scheduler.scheduleJob(job, trigger);
+   ```
+
+4. **停止调度器**：
+   当不再需要时，可以停止调度器：
+   ```java
+   scheduler.shutdown();
+   ```
+
+### 示例应用场景
+
+1. **定时报告生成**：
+   定期生成并发送报告，例如每周一早上生成上周的销售报告并发送到相关人员的邮箱。
+
+2. **系统监控和维护任务**：
+   定期执行系统监控和维护任务，例如每晚执行数据库备份、磁盘清理等。
+
+3. **提醒和通知系统**：
+   基于时间的提醒和通知，例如每天下午提醒用户完成每日任务、到期日提醒等。
+
+4. **数据同步**：
+   定期同步不同系统之间的数据，确保数据一致性和及时性。
 
 ### 总结
 
-Hangfire 是一个功能强大的后台任务管理工具，适用于各种 .NET 应用程序。它提供了丰富的任务调度和管理功能，支持任务的持久化存储和分布式执行，简化了后台任务的开发和维护工作。通过 Hangfire，开发人员可以轻松实现高效、可靠的后台任务处理，提高应用程序的性能和用户体验。
+Quartz 是一个强大且灵活的作业调度框架，适用于各种复杂的调度需求。通过其丰富的功能和易用的 API，开发人员可以轻松实现各种定时任务和后台作业，提升应用程序的自动化和可靠性。Quartz 的持久化支持和分布式调度能力使得它在高可用性和大规模系统中表现出色。

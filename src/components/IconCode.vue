@@ -39,6 +39,7 @@ switch (props.lang?.toLowerCase()) {
   case undefined:
     name.value = 'bx:code-block';
     break;
+  case 'sh':
   case 'bash':
     name.value = 'bi:terminal';
     break;
@@ -47,8 +48,8 @@ switch (props.lang?.toLowerCase()) {
 
 <template>
   <span
-    :l="`{.${lang || '..'}}`"
-    class="after:mx-2 after:content-[attr(l)] after:text-sm"
+    :l="`{ ${lang || '..'} }`"
+    class="after:mx-2 after:content-[attr(l)] after:text-sm after:capitalize after:text-slate-300 dark:after:text-slate-700"
   >
     <!-- <IconCode :lang="$attrs.language" /> -->
     <Icon v-if="lang" :name="name" />

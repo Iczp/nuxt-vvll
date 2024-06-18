@@ -4,9 +4,10 @@
 
 // const { getAllByTags } = await useNavigationList();
 
-const { data: tagList } = await useAsyncData('_tags', () =>
-  queryContent('/_tags')
+const { data: tagList } = await useAsyncData('tags', () =>
+  queryContent('/tags/')
     .where({
+      name: {},
       _path: {
         $not: {
           $regex: '.*_dir$',
@@ -31,17 +32,17 @@ const items = tagList.value?.map((x) => ({
     <li v-for="(item, index) in items" :key="item.title">
       <!-- <b v-if="!item.name || index==0">{{ item }}</b> -->
       <slot :item="item">
-        <a
-          :href="`/tags/${item.name}`"
+        <!-- <a
+          :href="`/tags/${item?.name}`"
           class="flex flex-col card hover:card-hover"
         >
           <h3 class="flex flex-row items-center text-lg">
-            <Icon :icon="item.icon" class="overflow-hidden size-6" />
+            <Icon v-if="item.icon" :name="item.icon" class="overflow-hidden size-6" />
             <span class="mx-2">{{ item.title }}</span>
             <span class="text-slate-400">({{ item.count }})</span>
           </h3>
           <p class="text-slate-600">{{ item.description }}</p>
-        </a>
+        </a> -->
       </slot>
     </li>
   </ul>

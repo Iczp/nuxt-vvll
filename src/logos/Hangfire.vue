@@ -1,4 +1,5 @@
 <template>
+  <!-- <ClientOnly> -->
   <svg
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
@@ -22,6 +23,7 @@
       />
     </g>
   </svg>
+  <!-- </ClientOnly> -->
 </template>
 
 <script lang="ts">
