@@ -1,6 +1,6 @@
 <template>
   <span
-    class="items-center leading-5 text-center text-white align-middle rounded select-none size-5 bg-sky-900"
+    class="items-center text-sm leading-5 text-center text-white align-middle rounded select-none size-5 bg-sky-900"
     >H</span
   >
   <!-- <ClientOnly> -->

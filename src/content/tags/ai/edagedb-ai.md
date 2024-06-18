@@ -6,15 +6,11 @@ icon: arcticons:openai-chatgpt
 description: ChatGPT 是由 OpenAI 开发的一种基于 GPT（Generative Pre-trained Transformer）架构的自然语言处理模型。它通过大量的文本数据进行预训练，并能够生成类似人类的文本响应。
 ---
 
-
-
 :Icon{name=arcticons:openai-chatgpt .size-32}
 
 EdgeDB 并不是一个与人工智能（AI）直接相关的产品或技术。EdgeDB 实际上是一个现代化的面向对象关系数据库管理系统（RDBMS），旨在提供强大的数据建模、查询和持久化能力。以下是对 EdgeDB 的简要介绍：
 
-::alert{}
-> 此数据更新截至2022年1月
-::
+> 此数据更新截至 2022 年 1 月
 
 ### EdgeDB 的特点和功能
 
@@ -43,5 +39,3 @@ EdgeDB 并不是一个与人工智能（AI）直接相关的产品或技术。Ed
 ### 总结
 
 EdgeDB 是一种现代化的关系型数据库管理系统，提供了强大的数据建模和查询能力。它适合于开发人员构建复杂的应用程序和服务，尤其在需要高度结构化和类型安全的数据存储时特别有用。虽然 EdgeDB 自身并不涉及人工智能领域，但在支持和优化人工智能应用程序的数据管理方面，数据库技术具有重要的作用。
-
-

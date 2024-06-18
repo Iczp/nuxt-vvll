@@ -1,7 +1,7 @@
 ---
 name: minio
 title: MinIO
-icon: simple-icons:minio
+icon: MinioIcon
 description: MinIO 是一个强大且灵活的对象存储解决方案，兼容 S3 API，提供高性能、高可用性和可扩展性，适用于各种大规模数据存储和处理场景。通过简单的安装和配置，开发人员和运维人员可以快速部署和管理 MinIO，构建可靠的数据存储基础设施。
 ---
 
