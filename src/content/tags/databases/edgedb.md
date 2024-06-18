@@ -1,7 +1,7 @@
 ---
 name: edgedb
 title: EdgeDB
-icon: Edgedb
+icon: file-icons:edge
 description: EdgeDB 是一种新一代的图关系数据库，设计为关系数据库的精神继承者。 是一种现代的数据库管理系统，旨在解决传统关系型数据库和NoSQL数据库的一些局限性。它结合了关系数据库和图数据库的优点，提供了强大的数据建模能力和灵活的查询语言。
 ---
 

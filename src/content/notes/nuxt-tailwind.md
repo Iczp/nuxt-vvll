@@ -20,7 +20,7 @@ layout: article
 
    终端
 
-   ```
+   ```sh
    npm install -D tailwindcss postcss autoprefixernpx tailwindcss init
    ```
 
@@ -28,7 +28,7 @@ layout: article
 
    将`tailwindcss`和添加`autoprefixer`到文件中的对象。 ` postcss.plugins``nuxt.config.js `
 
-   nuxt.config.js
+   `nuxt.config.js`
 
    ```ts
    // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -47,9 +47,9 @@ layout: article
 
    在您的文件中添加所有模板文件的路径`tailwind.config.js` 。
 
-   tailwind.config.js
+   `tailwind.config.js`
 
-   ```
+   ```ts [tailwind.config.js]
    /** @type {import('tailwindcss').Config} */
    module.exports = {
      content: [
@@ -73,7 +73,7 @@ layout: article
 
    主.css
 
-   ```
+   ```css [./assets/css/main.css]
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
@@ -83,9 +83,9 @@ layout: article
 
    将新创建的内容添加`./assets/css/main.css`到文件`css`中的数组中`nuxt.config.js`。
 
-   nuxt.config.js
+   `nuxt.config.js`
 
-   ```ts
+   ```ts [nuxt.config.js]
    // https://nuxt.com/docs/api/configuration/nuxt-config
    export default defineNuxtConfig({
      devtools: { enabled: true },
@@ -105,17 +105,15 @@ layout: article
 
    终端
 
-   ```
+   ```sh
    npm run dev
    ```
 
 8. ## 开始在你的项目中使用 Tailwind
 
-   开始使用 Tailwind 的实用程序类来设置您的内容样式。
+   开始使用 Tailwind 的实用程序类来设置您的内容样式。   `app.vue`
 
-   应用程序.vue
-
-   ```
+   ```vue [app.vue]
    <template>
      <h1 class="text-3xl font-bold underline">
        Hello world!

@@ -73,8 +73,8 @@ const setctions = ref([
         target: '_blank',
       },
       {
-        url: 'https://icones.js.org/collection/mdi',
-        title: 'Materia Icons',
+        url: 'https://icones.js.org/collection/all',
+        title: 'Icones',
         target: '_blank',
       },
     ],
