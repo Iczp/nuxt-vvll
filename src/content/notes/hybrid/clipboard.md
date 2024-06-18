@@ -35,7 +35,7 @@ const { text, copy, copied, isSupported } = useClipboard({ source });
 
 > 该函数还通过包提供了无渲染组件版本@vueuse/components。详细了解用法。
 
-```Vue
+```vue
 <template>
   <UseClipboard v-slot="{ copy, copied }" source="copy me">
     <button @click="copy()">
