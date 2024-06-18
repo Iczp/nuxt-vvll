@@ -53,7 +53,7 @@ const showFullText = () => {
       <TagList class="flex flex-col gap-2">
         <template v-slot="{ item }">
           <a
-            :href="`/tags/${item.name}`"
+            :href="item._path"
             class="flex flex-row items-center justify-between py-1"
           >
             <h3 class="flex flex-row items-center text-sm">

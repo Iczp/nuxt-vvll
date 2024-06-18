@@ -1,6 +1,10 @@
 <template>
+  <span
+    class="items-center leading-5 text-center text-white align-middle rounded select-none size-5 bg-sky-900"
+    >H</span
+  >
   <!-- <ClientOnly> -->
-  <svg
+  <!-- <svg
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
     width="192.000000pt"
@@ -22,7 +26,7 @@
 72 -3 3 -252z"
       />
     </g>
-  </svg>
+  </svg> -->
   <!-- </ClientOnly> -->
 </template>
 
