@@ -5,11 +5,44 @@ const layout = 'article';
 definePageMeta({
   layout: 'article',
 });
+
+// const {
+//   // Global references
+//   globals,
+//   navigation,
+//   surround,
+//   page,
+//   // Computed properties from `page` key
+//   excerpt,
+//   toc,
+//   type,
+//   // layout,
+//   // Computed properties from `surround` key
+//   next,
+//   prev
+// } = useContent()
+
+const { getTags } = useTags('tags');
 </script>
 <template>
   <!-- <NuxtLayout> -->
-  <ContentDoc
-    class="w-full space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
-  />
+
+  <article class="w-full">
+    <ContentDoc
+      class="space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
+    />
+
+    <!-- <section class="flex flex-row items-center tags">
+      <h3 class="mr-2">标签:</h3>
+      <ul class="flex flex-row gap-2">
+        <li v-for="(tag, index) in tags" :key="index">
+          <a :href="`/tags/${tag}`">
+            {{ tag }}
+          </a>
+        </li>
+      </ul>
+    </section> -->
+  </article>
+
   <!-- </NuxtLayout> -->
 </template>

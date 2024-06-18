@@ -13,7 +13,7 @@ const { params, query } = route;
 
 const { list, getAllByTags } = await useNavigationList();
 
-const items = ref(getAllByTags([params.id]));
+const items = ref(getAllByTags([params.id as string]));
 
 const tagName = params.id as string;
 const key = `/_tags/${tagName}`;

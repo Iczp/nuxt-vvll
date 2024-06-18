@@ -29,7 +29,7 @@ const {
 
 const article = await queryContent(route.path).findOne();
 
-const { items: tagItems, getInfo: getTag } = await useTags('tags');
+const { getTags } = useTags('tags');
 
 const tags = ref(formatTags(article?.tags));
 
