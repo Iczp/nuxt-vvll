@@ -5,6 +5,7 @@ icon: logos:elasticsearch
 description: Elasticsearch 是一个强大且灵活的搜索和分析引擎，适用于各种需要快速搜索和实时数据分析的应用场景。通过其分布式架构、丰富的查询语言和强大的集成功能，Elasticsearch 成为现代数据驱动应用中不可或缺的工具。
 ---
 
+# Elasticsearch 
 
 :Icon{name=devicon:elasticsearch-wordmark .size-32}
 
