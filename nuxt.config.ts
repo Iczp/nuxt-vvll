@@ -73,7 +73,7 @@ export default defineNuxtConfig({
     api: {
       baseURL: '/api/content',
     },
-    // documentDriven: true,
+    documentDriven: true,
     // documentDriven: {
     //   layoutFallbacks: ['article'],
     //   // page: true, // Keep page fetching enabled
@@ -161,10 +161,14 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
     '/about': { prerender: true },
-    '/author': { prerender: true },
+    // '/author': { prerender: true },
     '/author/**': { prerender: true },
     '/tags': { prerender: true },
     '/tags/**': { prerender: true },
+
+    '/author': { prerender: false },
+    '/_index': { prerender: false },
+    '/tags/_all': { prerender: false },
   },
   // nitro: {
   //   prerender: {
