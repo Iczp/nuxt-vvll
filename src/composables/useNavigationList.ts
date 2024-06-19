@@ -6,6 +6,7 @@ import { formatTags } from '@/utils/formatTags';
 export type NavListItem = NavItem & {
   tags: string[];
   categories: string[];
+  count?: number;
   $depth: number;
   $index: number;
   $isDir: boolean;
@@ -19,6 +20,8 @@ export const useNavigationList = async () => {
   // const data = await fetchContentNavigation();
 
   const list = ref<NavListItem[]>([]);
+
+  const tags = ref<{ [key: string]: number }>({});
 
   const toList = (
     items: any[],
@@ -42,6 +45,7 @@ export const useNavigationList = async () => {
       return item;
     });
   };
+
   if (navigation.value) {
     toList(navigation.value);
   }

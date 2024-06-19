@@ -26,19 +26,9 @@ const menuIcon = ref('mdi:menu');
       <ContentSilder
         class="md:pr-6 md:border-r border-slate-200 dark:border-slate-800 md:flex md:max-w-72"
       />
-      <section
-        v-if="$route.path.startsWith('/tags/')"
-        class="flex flex-col w-full gap-4"
-      >
-        {{ $route.path }}
-        <Box class="line-clamp-2">
-          <slot> </slot>
-        </Box>
-        <h3>相关文章</h3>
-        <PostList />
-      </section>
-      <section v-else class="w-full">
+      <section class="w-full">
         <slot> </slot>
+        <PostList />
       </section>
     </main>
   </Layout>

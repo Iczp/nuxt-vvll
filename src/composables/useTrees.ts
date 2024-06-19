@@ -1,10 +1,13 @@
 import { isDir } from '@/utils/isDir';
+import type { NavItem } from '@nuxt/content/types';
 
-export type ItemType = {
+export type ItemType = NavItem & {
   // id: number;
   $isOpen?: boolean;
   $isActive?: boolean;
   $isDir?: boolean;
+  $index: number;
+  $depth: number;
   children?: ItemType[];
   $parents?: () => ItemType[];
 
@@ -34,6 +37,15 @@ export const useTrees = ({
 }) => {
   let row = 0;
 
+  const activeItem = ref<ItemType>();
+  const refItems = ref<ItemType[]>();
+  const list = ref<ItemType[]>([]);
+
+  /**
+   * 文件数量统计
+   * @param item
+   * @returns
+   */
   const statItem = (item: ItemType | undefined | null) => {
     if (!item) return;
     item.$isDir = isDir(item);
@@ -45,7 +57,11 @@ export const useTrees = ({
     item.$dirCount = folders?.length;
     folders?.forEach((x: any) => statItem(x));
   };
-
+  /**
+   *
+   * @param item 文件总数统计
+   * @returns
+   */
   const statTotal = (item: ItemType) => {
     if (item.$isDir) {
       item.$totalFileCount = item.$fileCount || 0;
@@ -61,8 +77,13 @@ export const useTrees = ({
     return item;
   };
 
-  const activeItem = ref<ItemType>();
-
+  /**
+   * formatItems
+   * @param items
+   * @param depth
+   * @param parents
+   * @returns
+   */
   const formatItems = (
     items?: any[] | null,
     depth: number = 0,
@@ -79,43 +100,37 @@ export const useTrees = ({
 
       if (x.children) {
         children = formatItems(x.children, depth + 1, $parents());
-        x.$total = children.reduce(
-          (acc, item) => acc + Number(item.$totalFileCount),
-          x.$total
-        );
       }
-      const $isActive = active(x, depth, i, $parents());
-      if ($isActive) {
-        activeItem.value = x;
 
-        // console.log('activeItem', activeItem.value);
-      }
-      return {
+      const $isActive = active(x, depth, i, $parents());
+
+      const item = {
         ...x,
+        $index: i,
+        $depth: depth,
         $row: row,
         $isOpen: open(x, depth, i, $parents()),
         $isActive,
         children,
         $parents,
       };
+
+      if ($isActive) {
+        activeItem.value = item;
+        // console.log('activeItem', activeItem.value);
+      }
+      list.value.push(item);
+      return item;
     });
     if (sort) {
       arr.sort((a, b) => sort(a, b, depth));
     }
     return arr;
   };
-  const arr = Array.isArray(items) ? Array.from(items) : [];
-  arr.forEach((x) => {
-    statItem(x);
-    statTotal(x);
-  });
-
-  const refItems = ref(formatItems(arr));
 
   const setParents = (item: ItemType | undefined, isActive: boolean) => {
     if (!item) return;
     item.$isActive = isActive;
-
     const parents = item?.$parents;
     if (parents) {
       parents().map((x) => {
@@ -128,7 +143,7 @@ export const useTrees = ({
   };
 
   const setActive = (item?: ItemType) => {
-    // console.log('setActive', activeItem.value);
+    // console.log('setActive', JSON.stringify(activeItem.value));
     if (activeItem.value) {
       setParents(activeItem.value, false);
     }
@@ -136,11 +151,34 @@ export const useTrees = ({
     activeItem.value = item;
   };
 
-  //   console.log(items);
   const toggleOpen = (item: ItemType) => {
     // console.log(item);
     item.$isOpen = !item.$isOpen;
   };
 
-  return { formatItems, toggleOpen, items: refItems, activeItem, setActive };
+  /**
+   * 初始化
+   */
+  const init = () => {
+    // if (refItems.value) {
+    //   return;
+    // }
+    const arr = Array.isArray(items) ? Array.from(items) : [];
+    arr.forEach((x) => {
+      statItem(x);
+      statTotal(x);
+    });
+    refItems.value = formatItems(arr);
+  };
+
+  init();
+
+  return {
+    formatItems,
+    toggleOpen,
+    items: refItems,
+    activeItem,
+    setActive,
+    list,
+  };
 };

@@ -24,9 +24,10 @@ const dir =
   navigation.value;
 // console.log('dir',route.path, dir);
 
+const { items: navItems } = await useNav();
 const { items, toggleOpen, activeItem, setActive } = useTrees({
   items: dir,
-  // open: (x) => x.open || true,
+  // open: (x) => (route.path + '/').startsWith(x._path + '/'),
   // action: (x) => {
   //   x.$isDir = isDir(x);
   // },
@@ -59,7 +60,8 @@ const navToLink = (item: any) => {
   return !isDir(item) ? item._path : undefined;
 };
 const navClick = (item: any) => {
-  console.log('navClick', item.$parents());
+  // console.log('navClick', JSON.stringify(item));
+  console.log('navClick', item);
   setActive(item);
 };
 </script>
@@ -67,7 +69,7 @@ const navClick = (item: any) => {
 <template>
   <!-- dir {{ dir }} -->
   {{ route.params.slug }}
-  <Trees :items="items">
+  <Trees :items="navItems">
     <template v-slot="{ item, depth, index, parents }">
       <h3
         class="flex flex-row justify-between gap-2 py-1"
@@ -92,9 +94,10 @@ const navClick = (item: any) => {
             >
               <!-- {{ item.$row }} /{{ depth }}.{{ index }}  -->
               {{ item.title }}
-              <template v-if="item.$isDir">
-                ({{ item.$totalFileCount }})
-              </template>
+              <span v-if="item.$isDir"> ({{ item.$totalFileCount }}) </span>
+              <span v-else-if="!item.$isDir && item.$count != 0">
+                ({{ item.$count }})</span
+              >
             </NuxtLink>
           </p>
         </section>

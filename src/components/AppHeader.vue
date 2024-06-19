@@ -4,28 +4,28 @@ const route = useRoute();
 const links = [
   {
     label: 'Home',
-    icon: 'i-heroicons-home',
+    // icon: 'i-heroicons-home',
     to: '/',
   },
   {
     label: 'Notes',
-    icon: 'solar:notebook-broken',
+    // icon: 'solar:notebook-broken',
     to: `/notes`,
   },
   {
     label: 'Tags',
-    icon: 'ic:outline-tag',
+    // icon: 'ic:outline-tag',
     to: `/tags`,
   },
 
   {
     label: 'About',
-    icon: 'material-symbols:lab-profile-outline',
+    // icon: 'material-symbols:lab-profile-outline',
     to: '/about',
   },
   {
     label: 'Author',
-    icon: 'material-symbols:frame-person',
+    // icon: 'material-symbols:frame-person',
     to: '/author',
   },
   // {
@@ -41,7 +41,7 @@ const links = [
 </script>
 <template>
   <header
-    class="sticky top-0 flex items-center justify-between max-w-screen-xl px-4 mx-auto border-b border-gray-200 md:justify-around dark:border-gray-800 backdrop-blur-md"
+    class="sticky top-0 z-[99] flex items-center justify-between max-w-screen-xl px-4 mx-auto border-b border-gray-200 md:justify-around dark:border-gray-800 backdrop-blur-md"
   >
     <Logo />
     <UHorizontalNavigation
