@@ -11,7 +11,7 @@ const dateTime = ref('');
 </script>
 
 <template>
-  <slot :date="id">
+  <slot v-if="id" :date="id">
     <NuxtLink :to="`/authors/${id}`">
       {{ name || id }}
     </NuxtLink>

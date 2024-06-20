@@ -17,6 +17,7 @@
     "@nuxt/ui": "^2.16.0",
     "@tailwindcss/typography": "^0.5.13",
     "@vueuse/nuxt": "^10.10.1",
+    "dayjs": "^1.11.11",
     "nuxt": "^3.12.1",
     "nuxt-icon": "^0.6.10",
     "sitemap": "^8.0.0"

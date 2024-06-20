@@ -24,8 +24,8 @@ const {
   prev,
 } = useContent();
 
-const { data } = useAsyncData(route.path, () =>
-  queryContent(route.path).find()
+const { data: doc } = await useAsyncData(route.path, () =>
+  queryContent(route.path).findOne()
 );
 
 const { getTags } = useTags('tags');
@@ -40,7 +40,22 @@ const { list } = await useNav();
       List:{{ list.length }}
       <PostList />
     </div> -->
-    <div class="">
+
+    <!-- <div
+      class="space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
+    >
+      <ContentDoc>
+        <template v-slot="{ doc, excerpt }">
+          <ContentRenderer :value="doc">
+            <h1>{{ doc.title }}</h1>
+            <ContentRendererMarkdown :value="doc" />
+          </ContentRenderer>
+        </template>
+      </ContentDoc>
+    </div> -->
+    <div
+      class="space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
+    >
       <ContentDoc>
         <template v-slot="{ doc, excerpt }">
           <article class="flex flex-col gap-4">
@@ -52,19 +67,20 @@ const { list } = await useNav();
               </h1>
 
               <div
-                class="flex flex-row justify-between text-sm text-slate-400 dark:text-slate-700"
+                class="flex flex-row items-center justify-between text-sm text-slate-400 dark:text-slate-700"
               >
                 <section class="flex flex-row gap-4">
                   <div>作者: <Author :id="doc.author" /></div>
                   <div>日期:<Date :value="doc.date" /></div>
                 </section>
-                <section>right</section>
+                <section class="flex flex-row gap-2">
+                  <Star :fill="true" class="size-6" />
+                  <Share :fill="true" class="size-6" />
+                </section>
               </div>
             </header>
 
-            <main
-              class="space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
-            >
+            <main>
               <ContentRenderer :value="doc" />
             </main>
           </article>
@@ -73,21 +89,10 @@ const { list } = await useNav();
         <template #not-found>
           <h1>Document not found!</h1>
           <h2>{{ $route.params.slug }}</h2>
-          <pre>{{ data }}</pre>
+          <pre>{{ doc }}</pre>
         </template>
       </ContentDoc>
     </div>
-
-    <!-- <section class="flex flex-row items-center tags">
-      <h3 class="mr-2">标签:</h3>
-      <ul class="flex flex-row gap-2">
-        <li v-for="(tag, index) in tags" :key="index">
-          <a :href="`/tags/${tag}`">
-            {{ tag }}
-          </a>
-        </li>
-      </ul>
-    </section> -->
   </main>
 
   <!-- </NuxtLayout> -->

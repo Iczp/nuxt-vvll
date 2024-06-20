@@ -77,6 +77,14 @@
     @apply bg-slate-800  border-slate-700 hover:border-green-300 hover:bg-green-950 hover:text-gray-500;
   }
 
+  .prose
+    :where(.prose > :first-child):not(
+      :where([class~='not-prose'], [class~='not-prose'] *)
+    )
+    h1:first-child {
+    /* @apply !text-red-500 hidden p-0; */
+  }
+
   .dark .prose,
   .dark .prose h1,
   .dark .prose h2,

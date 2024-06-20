@@ -1,20 +1,25 @@
 <script lang="ts" setup>
+import dayjs from 'dayjs';
 const props = withDefaults(
   defineProps<{
     value?: string | Date | number;
     format?: string;
   }>(),
   {
-    format: 'yyyy-MM-dd',
+    format: 'YYYY-MM-DD',
   }
 );
 
-const dateTime = ref('');
+const date = computed(() => dayjs(props.value));
+
+const output = computed(() => {
+  return date.value.format(props.format);
+});
 </script>
 
 <template>
-  <slot :date="value">
-    {{ value }}
+  <slot :date="date">
+    {{ output }}
   </slot>
 </template>
 <style scoped></style>
