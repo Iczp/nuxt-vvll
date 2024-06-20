@@ -1,5 +1,5 @@
 ---
-title: TypeScript 中的数组转换成对象字典
+title: 数组转换成对象字典
 description: '使用 `reduce` 方法遍历数组，并将每个用户对象添加到字典中。`reduce` 的初始值是一个空对象 `{}`，类型是 `{ [key: number]: User }`。'
 tags: vue ts
 author: iczp
