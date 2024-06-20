@@ -170,11 +170,14 @@ export default defineNuxtConfig({
     '/_index': { prerender: false },
     '/tags/_all': { prerender: false },
   },
-  // nitro: {
-  //   prerender: {
-  //     routes: ['/tags/vue'],
-  //   },
-  // },
+  nitro: {
+    prerender: {
+      routes: [
+        // '/tags/vue',
+        '/sitemap.xml',
+      ],
+    },
+  },
   // generate: {
 
   //   routes: ['/tags/vue'],

@@ -109,5 +109,5 @@ export const useNav = async () => {
     }
   };
   init();
-  return { list, items, tagDict };
+  return { list, items, tagDict, toggleOpen, activeItem, setActive };
 };

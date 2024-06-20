@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const route = useRoute();
 const props = withDefaults(
   defineProps<{
     path?: string;
@@ -9,56 +8,15 @@ const props = withDefaults(
   }
 );
 
-const { data: navigation } = await useAsyncData('navigation', () =>
-  fetchContentNavigation()
-);
+// const route = useRoute();
 
-// const navigation = await fetchContentNavigation()
+const { items: navItems, toggleOpen, activeItem, setActive } = await useNav();
 
-const { navBottomLink, navDirFromPath, navPageFromPath, navKeyFromPath } =
-  useContentHelpers();
-const defaultPath = '/';
-//one of ['/docs', '/notes']
-const dir =
-  navDirFromPath(props.path || defaultPath, navigation.value!) ||
-  navigation.value;
-// console.log('dir',route.path, dir);
-
-const { items: navItems } = await useNav();
-const { items, toggleOpen, activeItem, setActive } = useTrees({
-  items: dir,
-  // open: (x) => (route.path + '/').startsWith(x._path + '/'),
-  // action: (x) => {
-  //   x.$isDir = isDir(x);
-  // },
-  active: (item, depth, index, parents) => item._path === route.path,
-  // sort: (a, b, depth) => {
-  //   if (depth > 1) {
-  //     return 0; // a和b位置不变
-  //   }
-  //   if (a.$isDir && !b.$isDir) {
-  //     return -1; // a应该在b前面
-  //   } else if (!a.$isDir && b.$isDir) {
-  //     return 1; // b应该在a前面
-  //   } else {
-  //     return 0; // a和b位置不变
-  //   }
-  // },
-});
-
-// onMounted(() => {
-//   // setActive(activeItem.value);
-
-//   // console.log('activeItem.value', activeItem.value);
-//   setTimeout(() => {
-//     setActive(activeItem.value);
-//   }, 1000);
-// });
 const navToLink = (item: any) => {
   // console.log('navToLink', item);
-
   return !isDir(item) ? item._path : undefined;
 };
+
 const navClick = (item: any) => {
   // console.log('navClick', JSON.stringify(item));
   console.log('navClick', item);
@@ -68,7 +26,7 @@ const navClick = (item: any) => {
 
 <template>
   <!-- dir {{ dir }} -->
-  {{ route.params.slug }}
+  <!-- {{ route.params.slug }} -->
   <Trees :items="navItems ?? []">
     <template v-slot="{ item, depth, index, parents }">
       <h3
@@ -95,7 +53,7 @@ const navClick = (item: any) => {
               <!-- {{ item.$row }} /{{ depth }}.{{ index }}  -->
               {{ item.title }}
               <span v-if="item.$isDir"> ({{ item.$totalFileCount }}) </span>
-              <span v-else-if="!item.$isDir && item.$count != 0">
+              <span v-else-if="!item.$isDir && item.$count">
                 ({{ item.$count }})</span
               >
             </NuxtLink>

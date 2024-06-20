@@ -1,5 +1,8 @@
 ---
-title: 剪切版(Clipboard)的使用
+title: 剪切版(Clipboard)的使用 剪切版(Clipboard)的使用剪切版(Clipboard)的使用
+tags: ts js
+author: iczp
+date: 2024-06-20
 ---
 
 # Clipboard 使用
