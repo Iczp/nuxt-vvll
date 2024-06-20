@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { RouteLocationNormalizedLoaded } from '#vue-router';
+
 const isOpen = ref(false);
 
 const toggleMenu = () => {
@@ -7,6 +9,19 @@ const toggleMenu = () => {
 };
 
 const menuIcon = ref('mdi:menu');
+
+// const articleCount = ref('');
+
+const listFn = (list: NavItemType[], route: RouteLocationNormalizedLoaded) => {
+  // const tagCode = getTagCode(route.path) ?? '';
+
+  const q = list.filter(
+    (x) => !x.$isDir && x.tags?.includes(getTagCode(route.path) ?? '')
+  );
+
+  // articleCount.value = `(${q.length})`;
+  return q;
+};
 </script>
 
 <template>
@@ -30,12 +45,26 @@ const menuIcon = ref('mdi:menu');
         v-if="$route.path.startsWith('/tags/')"
         class="flex flex-col w-full gap-4"
       >
-        {{ $route.path }}
-        <Box class="line-clamp-2">
-          <slot> </slot>
-        </Box>
-        <h3>相关文章</h3>
-        <PostList />
+        <CodeTab
+          :active="0"
+          default="详细"
+          :list="`相关文章`"
+          class="!p-0 not-box"
+        >
+          <template #default>
+            <!-- <Box class="line-clamp-2"> -->
+            <div class="py-4">
+              {{ $route.path }}
+              <slot> </slot>
+            </div>
+
+            <!-- </Box> -->
+          </template>
+          <template #list>
+            <h3>相关文章</h3>
+            <PostList :list="listFn" :filter="(x) => !x.$isDir" />
+          </template>
+        </CodeTab>
       </section>
       <section v-else class="w-full">
         <slot> </slot>

@@ -41,15 +41,17 @@ switch (props.lang?.toLowerCase()) {
     break;
   case 'sh':
   case 'bash':
+  case 'shell':
     name.value = 'bi:terminal';
     break;
 }
 </script>
 
 <template>
+  <!-- after:capitalize -->
   <span
     :l="`{ ${lang || '..'} }`"
-    class="after:mx-2 after:content-[attr(l)] after:text-sm after:capitalize after:text-slate-300 dark:after:text-slate-700"
+    class="after:mx-2 after:content-[attr(l)] after:text-sm after:text-slate-300 dark:after:text-slate-700"
   >
     <!-- <IconCode :lang="$attrs.language" /> -->
     <Icon v-if="lang" :name="name" />

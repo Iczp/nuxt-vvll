@@ -69,7 +69,7 @@ const navClick = (item: any) => {
 <template>
   <!-- dir {{ dir }} -->
   {{ route.params.slug }}
-  <Trees :items="navItems">
+  <Trees :items="navItems ?? []">
     <template v-slot="{ item, depth, index, parents }">
       <h3
         class="flex flex-row justify-between gap-2 py-1"

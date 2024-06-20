@@ -68,17 +68,17 @@ const onTabChang = (index: number) => {
             class=""
             v-if="$attrs[`${item}-icon`]"
             :name="$attrs[`${item}-icon`] as string"
-          />
+          >
+          </Icon>
 
           {{ $attrs[item] || item }}
         </div>
       </template>
       <template v-slot="{ index }">
         <!-- <div>index:{{ index }}</div> -->
-        <slot
-          :name="slotsKeys[index]"
-          :props="getCustomProp(slotsKeys[index])"
-        ></slot>
+        <div v-for="(key, i) in slotsKeys" v-show="i == index" :id="key">
+          <slot :name="key" :props="getCustomProp(key)"></slot>
+        </div>
       </template>
     </Tabs>
 

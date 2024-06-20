@@ -23,14 +23,11 @@ withDefaults(
       </div>
 
       <Trees
-        v-if="
-          !!item?.$isOpen &&
-          Array.isArray(item.children) &&
-          item.children.length != 0
-        "
+        v-if="Array.isArray(item.children) && item.children.length != 0"
         :items="item.children"
         :depth="depth + 1"
         :parents="[item, ...parents]"
+        :class="{ hidden: !item?.$isOpen }"
       >
         <template v-slot="{ item, depth, index }">
           <slot :item="item" :depth="depth" :index="index" :parents="parents">

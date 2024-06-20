@@ -66,20 +66,20 @@ export const useNav = async () => {
       )
     ).length;
   };
-  const getTagName = (path: string): string | undefined => {
-    const trimmedPath = path.endsWith('/') ? path.slice(0, -1) : path; // 去掉末尾的斜杠（如果有的话）
-    const parts = trimmedPath.split('/');
-    const lastPart = parts[parts.length - 1];
-    return lastPart;
-  };
+  // const getTagCode = (path: string): string | undefined => {
+  //   const trimmedPath = path.endsWith('/') ? path.slice(0, -1) : path; // 去掉末尾的斜杠（如果有的话）
+  //   const parts = trimmedPath.split('/');
+  //   const lastPart = parts[parts.length - 1];
+  //   return lastPart;
+  // };
 
   const formatItems = (items?: NavItemType[] | null): NavItemType[] => {
     if (!items) return [];
 
     return items.map((x, i) => {
       if (!x.$isDir && x._path.startsWith('/tags/')) {
-        const tagName = getTagName(x._path);
-        x.$count = getCount(tagName);
+        const tagCode = getTagCode(x._path);
+        x.$count = getCount(tagCode);
       }
       list.value.push(x);
 
@@ -94,7 +94,7 @@ export const useNav = async () => {
     return list.value
       .filter((x) => !x.$isDir && x._path.startsWith('/tags/'))
       .reduce((dict, nav) => {
-        const tagName = getTagName(nav._path);
+        const tagName = getTagCode(nav._path);
         if (tagName) {
           dict[tagName] = nav;
         }
