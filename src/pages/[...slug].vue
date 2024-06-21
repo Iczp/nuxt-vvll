@@ -57,11 +57,11 @@ const { getTags } = useTags('tags');
     <!-- {{ doc?.body?.toc }} -->
     <ContentHeader :doc="doc" />
 
-    <div class="relative flex flex-col sm:flex-row-reverse">
-      <section class="z-10 sm:fixed">
+    <div class="flex flex-col">
+      <section class="z-10 flex self-end sm:fixed">
         <Toc
           :value="toc"
-          class="mb-8 bg-transparent shadow-md dark:bg-transparent backdrop-blur-lg drak:shadow-white sm:mb-0"
+          class="bg-transparent shadow dark:shadow-slate-700 dark:bg-transparent backdrop-blur-lg drak:shadow-white"
         />
       </section>
       <article
@@ -76,6 +76,11 @@ const { getTags } = useTags('tags');
         </template>
       </ContentDoc> -->
       </article>
+    </div>
+
+    <div class="flex flex-col justify-between gap-4 mt-4 sm:flex-row">
+      <PageLink :page="prev" dir="left" />
+      <PageLink :page="next" />
     </div>
   </main>
 
