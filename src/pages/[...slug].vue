@@ -24,18 +24,23 @@ const {
   prev,
 } = useContent();
 
-const { data: doc } = await useAsyncData(route.path, () =>
-  queryContent(route.path).findOne()
-);
+// const { data: doc } = await useAsyncData(route.path, () =>
+//   queryContent(route.path).findOne()
+// );
 
-const { getTags } = useTags('tags');
+const { list, tagDict, doc, tagItems } = await useDocuments({
+  path: route.path,
+});
 
-// const { list } = await useNav();
+// const tagItems = computed(() =>
+//   doc.value?.tags?.map(x => tagDict.value[x]).filter((x) => x)
+// );
 </script>
 <template>
   <!-- <NuxtLayout> -->
 
   <main class="flex flex-col w-full gap-4">
+    {{ doc }}
     <!-- <div>
       List:{{ list.length }}
       <PostList />
@@ -77,6 +82,8 @@ const { getTags } = useTags('tags');
       </ContentDoc> -->
       </article>
     </div>
+
+    <Tags :items="tagItems" label="标签"> </Tags>
 
     <div class="flex flex-col justify-between gap-4 mt-4 sm:flex-row">
       <PageLink :page="prev" dir="left" />

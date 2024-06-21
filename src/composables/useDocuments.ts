@@ -15,7 +15,7 @@ export type NavItemType = ItemType &
     title?: string;
     author?: string;
   };
-export const useNav = async () => {
+export const useDocuments = async ({ path }: { path?: string }) => {
   const { data: navigation } = await useAsyncData('navigation', () =>
     fetchContentNavigation()
   );
@@ -101,6 +101,19 @@ export const useNav = async () => {
         return dict;
       }, {} as { [key: string]: NavItemType });
   });
+  /**
+   * document
+   */
+  const doc = computed(() => {
+    return list.value.find((x) => x._path == path);
+  });
+
+  /**
+   * tag items
+   */
+  const tagItems = computed(() => {
+    return doc.value?.tags?.map(x => tagDict.value[x]).filter((x) => x)
+  });
 
   const items = ref<NavItemType[]>();
   const init = () => {
@@ -109,5 +122,5 @@ export const useNav = async () => {
     }
   };
   init();
-  return { list, items, tagDict, toggleOpen, activeItem, setActive };
+  return { list, items, tagDict, toggleOpen, activeItem, setActive, doc, tagItems };
 };

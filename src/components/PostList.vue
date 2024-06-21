@@ -24,7 +24,7 @@ const props = withDefaults(
 
 const route = useRoute();
 
-const { list, tagDict } = await useNav();
+const { list, tagDict } = await useDocuments({});
 
 const items = computed(() =>
   props.list!(list.value, route)
@@ -75,21 +75,14 @@ const q = ref('');
               <div class="text-base">
                 <span :to="`${item._path}`">{{ item.title }}</span>
               </div>
-              <div class="flex flex-row items-center gap-2">
-                <span
-                  v-for="(tagItem, index) in item.tagItems"
-                  :key="index"
-                  :to="tagItem._path"
-                  :title="tagItem.title"
-                >
-                  <Icon
-                    v-if="tagItem?.icon"
-                    :name="tagItem?.icon"
-                    class="size-4"
-                  ></Icon>
+              <Tags :items="item.tagItems">
+                <template v-slot="{ item: tagItem }">
+                  <span v-if="tagItem?.icon" :title="tagItem?.title">
+                    <Icon :name="tagItem?.icon" class="size-4"></Icon>
+                  </span>
                   <span v-else>{{ tagItem?.title }}</span>
-                </span>
-              </div>
+                </template>
+              </Tags>
             </h3>
             <div class="text-sm text-gray-600">
               <p class="line-clamp-2 min-h-10">

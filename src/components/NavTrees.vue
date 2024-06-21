@@ -10,7 +10,9 @@ const props = withDefaults(
 
 // const route = useRoute();
 
-const { items: navItems, toggleOpen, activeItem, setActive } = await useNav();
+const { items: navItems, toggleOpen, activeItem, setActive } = await useDocuments({
+  
+});
 
 const navToLink = (item: any) => {
   // console.log('navToLink', item);
