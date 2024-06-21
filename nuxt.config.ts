@@ -170,7 +170,7 @@ export default defineNuxtConfig({
 
     '/author': { prerender: false },
     '/_index': { prerender: false },
-    '/notes/js': { prerender: true },
+    '/notes/js': { prerender: false },
     '/sub': { prerender: false },
   },
   nitro: {
