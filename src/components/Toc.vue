@@ -58,7 +58,9 @@ const toggleToc = () => {
     >
       <div>
         <Icon name="ic:outline-list-alt" class="" />
-        <span class="truncate text-ellipsis"> Table of Contents</span>
+        <span class="truncate text-ellipsis" :class="{ hidden: !isOpen }">
+          Table of Contents</span
+        >
       </div>
       <Arrow :dir="isOpen ? 'down' : 'right'" class="ml-1" />
     </h2>
@@ -74,7 +76,7 @@ const toggleToc = () => {
               <div class="inline-flex">
                 <Icon
                   :name="
-                    item.$row == 1
+                    item.$row == 0
                       ? 'ic:outline-list-alt'
                       : 'ic:outline-numbers'
                   "

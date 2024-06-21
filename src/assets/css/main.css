@@ -81,8 +81,9 @@
     :where(.prose > :first-child):not(
       :where([class~='not-prose'], [class~='not-prose'] *)
     )
-    h1:first-child {
-    @apply hidden;
+    h1
+    /* :first-child */ {
+    @apply !text-3xl;
   }
 
   .dark .prose,

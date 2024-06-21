@@ -29,7 +29,7 @@ const props = withDefaults(
         <slot :item="item">
           <NuxtLink
             :to="`${item._path}?tab=1`"
-            class="flex flex-row items-center space-x-2 box hover:box-hover"
+            class="flex flex-row items-center !py-1 space-x-2 box hover:box-hover"
             :title="item?.title"
           >
             <Icon v-if="item?.icon" :name="item?.icon" class="size-4"></Icon>

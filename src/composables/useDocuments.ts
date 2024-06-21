@@ -23,8 +23,6 @@ export const useDocuments = async ({ path }: { path?: string }) => {
   // const route = useRoute();
   const list = ref<NavItemType[]>([]);
 
-  const tags = ref<{ [key: string]: number }>({});
-
   const {
     items: treeItems,
     toggleOpen,
@@ -117,9 +115,9 @@ export const useDocuments = async ({ path }: { path?: string }) => {
 
   const items = ref<NavItemType[]>();
   const init = () => {
-    if (!items.value) {
+    // if (!items.value) {
       items.value = formatItems(treeItems.value);
-    }
+    // }
   };
   init();
   return { list, items, tagDict, toggleOpen, activeItem, setActive, doc, tagItems };
