@@ -37,9 +37,22 @@ const { list, tagDict, doc, tagItems } = await useDocuments({
 // );
 </script>
 <template>
-  <main class="flex flex-col w-full gap-4">
-    <!-- {{ doc }} -->
-
+  <main v-if="doc?.$isDir" class="flex flex-col w-full gap-4">
+    <h1>
+      {{ doc?.title }}
+    </h1>
+    {{ doc }}
+    <ul v-if="doc?.children" class="grid grid-cols-1 gap-4 not-prose">
+      <li
+        v-for="item in doc?.children"
+        :key="item._path"
+        class="flex flex-col p-6 card hover:card-hover"
+      >
+        <PostItem :item="item" />
+      </li>
+    </ul>
+  </main>
+  <main v-if="!doc?.$isDir" class="flex flex-col w-full gap-4">
     <ContentHeader :doc="doc" />
 
     <div class="flex flex-col">

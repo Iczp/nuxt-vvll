@@ -165,10 +165,13 @@ export default defineNuxtConfig({
     '/author/**': { prerender: true },
     '/tags': { prerender: true },
     '/tags/**': { prerender: true },
+    '/notes/**': { prerender: true },
+    '/sub/**': { prerender: true },
 
     '/author': { prerender: false },
     '/_index': { prerender: false },
-    '/tags/_all': { prerender: false },
+    '/notes/js': { prerender: true },
+    '/sub': { prerender: false },
   },
   nitro: {
     prerender: {

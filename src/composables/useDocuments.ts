@@ -6,6 +6,7 @@ import { formatTags } from '@/utils/formatTags';
 export type NavItemType = ItemType &
   NavItem & {
     tags?: string[];
+    tagEntities?: NavItemType[];
     categories?: string[] | string;
     children?: NavItemType[] | string;
     $count?: number;
@@ -79,6 +80,7 @@ export const useDocuments = async ({ path }: { path?: string }) => {
         const tagCode = getTagCode(x._path);
         x.$count = getCount(tagCode);
       }
+
       list.value.push(x);
 
       if (x.children) {
@@ -110,15 +112,31 @@ export const useDocuments = async ({ path }: { path?: string }) => {
    * tag items
    */
   const tagItems = computed(() => {
-    return doc.value?.tags?.map(x => tagDict.value[x]).filter((x) => x)
+    return doc.value?.tags?.map((x) => tagDict.value[x]).filter((x) => x);
   });
 
   const items = ref<NavItemType[]>();
   const init = () => {
     // if (!items.value) {
-      items.value = formatItems(treeItems.value);
+    items.value = formatItems(treeItems.value);
+    list.value = list.value.map((x) => {
+      if (!x.$isDir) {
+        x.tagEntities = x.tags?.map((x) => tagDict.value[x]).filter((x) => x);
+      }
+      return x;
+    });
+
     // }
   };
   init();
-  return { list, items, tagDict, toggleOpen, activeItem, setActive, doc, tagItems };
+  return {
+    list,
+    items,
+    tagDict,
+    toggleOpen,
+    activeItem,
+    setActive,
+    doc,
+    tagItems,
+  };
 };

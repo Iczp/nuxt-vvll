@@ -20,7 +20,7 @@ const props = withDefaults(
     >
       {{ label }}
     </h3>
-    <slot v-if="items?.length == 0" name="empty">无</slot>
+    <slot v-if="items?.length == 0" name="empty"></slot>
     <ul
       v-if="items?.length != 0"
       class="flex flex-row flex-wrap items-center gap-2"

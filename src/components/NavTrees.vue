@@ -8,11 +8,14 @@ const props = withDefaults(
   }
 );
 
-// const route = useRoute();
+const route = useRoute();
 
-const { items: navItems, toggleOpen, activeItem, setActive } = await useDocuments({
-  
-});
+const {
+  items: navItems,
+  toggleOpen,
+  activeItem,
+  setActive,
+} = await useDocuments({ path: route.path });
 
 const navToLink = (item: any) => {
   // console.log('navToLink', item);
@@ -48,7 +51,7 @@ const navClick = (item: any) => {
           </div>
           <p class="truncate">
             <NuxtLink
-              :to="navToLink(item)"
+              :to="item._path"
               @click="navClick(item)"
               class="truncate cursor-pointer"
             >
