@@ -6,8 +6,6 @@ const props = withDefaults(
   }>(),
   {}
 );
-
-const dateTime = ref('');
 </script>
 
 <template>

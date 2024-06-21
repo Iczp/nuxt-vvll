@@ -82,7 +82,7 @@
       :where([class~='not-prose'], [class~='not-prose'] *)
     )
     h1:first-child {
-    /* @apply !text-red-500 hidden p-0; */
+    @apply hidden;
   }
 
   .dark .prose,

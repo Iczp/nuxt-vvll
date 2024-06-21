@@ -40,8 +40,8 @@ const navClick = (item: any) => {
             <Folder v-if="item.$isDir" :open="item.$isOpen" />
 
             <Icon
-              :name="item.icon || 'material-symbols:article-outline'"
               v-else
+              :name="item.icon || 'material-symbols:article-outline'"
             />
           </div>
           <p class="truncate">

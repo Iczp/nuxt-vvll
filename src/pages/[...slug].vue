@@ -30,12 +30,12 @@ const { data: doc } = await useAsyncData(route.path, () =>
 
 const { getTags } = useTags('tags');
 
-const { list } = await useNav();
+// const { list } = await useNav();
 </script>
 <template>
   <!-- <NuxtLayout> -->
 
-  <main class="flex flex-col w-full">
+  <main class="flex flex-col w-full gap-4">
     <!-- <div>
       List:{{ list.length }}
       <PostList />
@@ -53,45 +53,29 @@ const { list } = await useNav();
         </template>
       </ContentDoc>
     </div> -->
-    <div
-      class="space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
-    >
-      <ContentDoc>
-        <template v-slot="{ doc, excerpt }">
-          <article class="flex flex-col gap-4">
-            <header class="flex flex-col gap-4">
-              <h1
-                class="text-4xl font-bold leading-normal dark:text-slate-400 text-slate-800"
-              >
-                {{ doc.title }}
-              </h1>
 
-              <div
-                class="flex flex-row items-center justify-between text-sm text-slate-400 dark:text-slate-700"
-              >
-                <section class="flex flex-row gap-4">
-                  <div>作者: <Author :id="doc.author" /></div>
-                  <div>日期:<Date :value="doc.date" /></div>
-                </section>
-                <section class="flex flex-row gap-2">
-                  <Star :fill="true" class="size-6" />
-                  <Share :fill="true" class="size-6" />
-                </section>
-              </div>
-            </header>
+    <!-- {{ doc?.body?.toc }} -->
+    <ContentHeader :doc="doc" />
 
-            <main>
-              <ContentRenderer :value="doc" />
-            </main>
-          </article>
-        </template>
-
+    <div class="relative flex flex-col sm:flex-row-reverse">
+      <section class="z-10 sm:fixed">
+        <Toc
+          :value="toc"
+          class="mb-8 bg-transparent shadow-md dark:bg-transparent backdrop-blur-lg drak:shadow-white sm:mb-0"
+        />
+      </section>
+      <article
+        class="space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
+      >
+        <ContentDoc></ContentDoc>
+        <!-- <ContentDoc>
         <template #not-found>
           <h1>Document not found!</h1>
           <h2>{{ $route.params.slug }}</h2>
           <pre>{{ doc }}</pre>
         </template>
-      </ContentDoc>
+      </ContentDoc> -->
+      </article>
     </div>
   </main>
 

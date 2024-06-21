@@ -27,7 +27,7 @@ withDefaults(
         :items="item.children"
         :depth="depth + 1"
         :parents="[item, ...parents]"
-        :class="{ hidden: !item?.$isOpen }"
+        :class="{ hidden: item?.$isOpen === false }"
       >
         <template v-slot="{ item, depth, index }">
           <slot :item="item" :depth="depth" :index="index" :parents="parents">
