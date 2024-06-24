@@ -54,15 +54,17 @@ const listFn = (list: NavItemType[], route: RouteLocationNormalizedLoaded) => {
           <template #default>
             <!-- <Box class="line-clamp-2"> -->
             <div class="py-4">
-              {{ $route.path }}
+              <!-- {{ $route.path }} -->
               <slot> </slot>
             </div>
 
             <!-- </Box> -->
           </template>
           <template #list>
-            <h3>相关文章</h3>
-            <PostList :list="listFn" :filter="(x) => !x.$isDir" />
+            <!-- <h3>相关文章</h3> -->
+            <PostList :list="listFn" :filter="(x) => !x.$isDir" class="pt-4">
+             
+            </PostList>
           </template>
         </CodeTab>
       </section>

@@ -38,7 +38,7 @@ const q = ref('');
 </script>
 
 <template>
-  <div class="flex flex-col w-full">
+  <div class="flex flex-col w-full gap-4">
     <div>
       <UInput
         :loading="isPending"
@@ -51,6 +51,11 @@ const q = ref('');
         class="w-64"
       />
     </div>
+
+    <slot v-if="items.length == 0" name="empty">
+      <Empty class="min-h-24" />
+    </slot>
+
     <ul class="grid grid-cols-1 gap-4 not-prose">
       <li
         v-for="item in items"
