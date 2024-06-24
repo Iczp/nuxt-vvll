@@ -55,12 +55,14 @@ const { list, tagDict, doc, tagItems } = await useDocuments({
   <main v-if="!doc?.$isDir" class="flex flex-col w-full gap-4">
     <ContentHeader :doc="doc" />
 
-    <div class="flex flex-col gap-4">
-      <section class="fixed z-10 flex self-end top-20">
-        <Toc
-          :value="toc"
-          class="bg-transparent shadow dark:shadow-slate-700 dark:bg-transparent backdrop-blur-lg drak:shadow-white"
-        />
+    <div class="relative flex flex-col gap-4">
+      <section class="sticky z-10 flex top-20">
+        <div class="absolute right-0">
+          <Toc
+            :value="toc"
+            class="bg-transparent shadow dark:shadow-slate-700 dark:bg-transparent backdrop-blur-lg drak:shadow-white"
+          />
+        </div>
       </section>
 
       <article

@@ -41,13 +41,9 @@ const links = [
 </script>
 <template>
   <header
-    class="sticky top-0 z-[99] flex items-center justify-between max-w-screen-xl px-4 mx-auto border-b border-gray-200 md:justify-around dark:border-gray-800 backdrop-blur-md"
+    class="sticky top-0 z-[99] flex items-center justify-between h-16 max-w-screen-xl box-border px-4 mx-auto border-b border-gray-200 dark:border-gray-800 backdrop-blur-md"
   >
     <Logo />
-    <UHorizontalNavigation
-      :links="links"
-      class="justify-center hidden md:flex"
-    />
 
     <aside class="flex flex-row items-center gap-4 text-xl">
       <a>
@@ -59,4 +55,9 @@ const links = [
       </a>
     </aside>
   </header>
+  <div
+    class="sm:left-1/2 sm:-translate-x-1/2 w-full fixed sm:flex bottom-0 sm:bottom-auto sm:top-0 flex flex-col h-16 sm:w-auto z-[99] backdrop-blur-sm items-center border-t border-gray-200 dark:border-gray-800"
+  >
+    <UHorizontalNavigation :links="links" class="justify-center" />
+  </div>
 </template>
