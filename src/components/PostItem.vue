@@ -24,7 +24,8 @@ const props = withDefaults(
       <h3
         class="flex flex-col justify-between gap-4 text-base md:items-center md:flex-row"
       >
-        <div class="text-base">
+        <div class="flex flex-row items-center text-base">
+          <Icon v-if="item.icon" :name="item.icon" class="mr-2 size-6" />
           <span>{{ item.title }}</span>
         </div>
         <Tags :items="item.tagEntities">

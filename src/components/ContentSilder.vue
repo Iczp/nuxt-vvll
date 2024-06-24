@@ -24,7 +24,7 @@ defineShortcuts({
 
 <template>
   <main class="flex flex-col flex-shrink-0 break-words">
-    <header>
+    <header class="sticky top-4 z-10 p-0.5 rounded-lg dark:bg-slate-800">
       <UModal v-model="isOpen">
         <UCard>UCard</UCard>
       </UModal>

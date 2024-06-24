@@ -24,7 +24,7 @@ export const useTrees = ({
 
   const activeItem = ref<ItemType>();
 
-  const currentLocation = useCurrentLocation();
+  const site = useSite();
 
   const refItems = ref<ItemType[]>();
   const list = ref<ItemType[]>([]);
@@ -105,7 +105,7 @@ export const useTrees = ({
 
       if ($isActive) {
         activeItem.value = item;
-        currentLocation.setPaths(
+        site.setPaths(
           activeItem.value?.$parents ? activeItem.value?.$parents() : []
         );
         // console.log('activeItem', activeItem.value);
@@ -140,9 +140,10 @@ export const useTrees = ({
     }
     setParents(item, true);
     activeItem.value = item;
-    currentLocation.setPaths(
+    site.setPaths(
       activeItem.value?.$parents ? activeItem.value?.$parents() : []
     );
+    site.close();
   };
 
   const toggleOpen = (item: ItemType) => {

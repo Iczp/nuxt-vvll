@@ -1,67 +1,40 @@
 <script setup lang="ts">
 import type { RouteLocationNormalizedLoaded } from '#vue-router';
 import type { NavItemType } from '../types/NavItemType';
-const isOpen = ref(false);
-
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
-  menuIcon.value = isOpen.value ? 'mdi:menu-open' : 'mdi:menu';
-};
-
-const menuIcon = ref('mdi:menu');
-
-// const articleCount = ref('');
 
 const listFn = (list: NavItemType[], route: RouteLocationNormalizedLoaded) => {
-  // const tagCode = getTagCode(route.path) ?? '';
-
   const q = list.filter(
     (x) => !x.$isDir && x.tags?.includes(getTagCode(route.path) ?? '')
   );
-
-  // articleCount.value = `(${q.length})`;
   return q;
 };
-const route = useRoute();
-
-const { activeItem } = await useDocuments({ path: route.path });
 
 onUnmounted(() => {
   console.log('onUnmounted');
 });
 
-const currentLocation = useCurrentLocation();
-const parents = computed(() =>
-  activeItem.value?.$parents ? activeItem.value?.$parents() : []
-);
-const links = computed(() =>
-  currentLocation.paths
-    .map((x) => ({
-      label: x.title,
-      // icon: x.icon,
-      to: x._path,
-    }))
-    .reverse()
-);
+const site = useSite();
 </script>
 
 <template>
   <Layout>
-    <div class="mx-auto mt-8 text-center">
+    <!-- <div class="mx-auto text-center">
       <h1>Layout:Article</h1>
-    </div>
+    </div> -->
 
     <div
-      class="flex flex-col items-stretch w-full max-w-screen-xl gap-6 px-4 mx-auto mt-8"
+      class="fixed z-20 flex flex-col items-stretch max-w-screen-xl gap-6 p-4 mx-auto sm:position-unset top-16 backdrop-blur-md"
     >
       <SiteLocation />
     </div>
 
     <main
-      class="flex flex-col items-stretch w-full max-w-screen-xl gap-6 px-4 mx-auto mt-8 md:flex-row"
+      class="box-border flex flex-col items-stretch max-w-screen-xl gap-6 px-4 mx-auto sm:flex-row"
     >
+      <!-- isOpen:{{ isOpen }} -->
       <ContentSilder
-        class="md:pr-6 md:border-r border-slate-200 dark:border-slate-800 md:flex md:max-w-72"
+        :class="{ hidden: !site.isOpen }"
+        class="fixed left-0 right-0 z-10 p-4 overflow-y-scroll sm:flex sm:overflow-y-auto bottom-16 top-24 sm:top-0 sm:p-0 backdrop-blur-lg sm:relative sm:pr-6 sm:border-r border-slate-200 dark:border-slate-800 sm:max-w-72"
       />
 
       <section

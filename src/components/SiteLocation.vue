@@ -8,10 +8,10 @@ const toggleMenu = () => {
 
 const menuIcon = ref('mdi:menu');
 
-const currentLocation = useCurrentLocation();
+const site = useSite();
 
 const links = computed(() =>
-  currentLocation.paths
+  site.location
     .map((x) => ({
       label: x.title,
       //   icon: x.icon,
@@ -29,13 +29,13 @@ const links = computed(() =>
 </script>
 
 <template>
-  <section class="flex flex-row items-center site-location">
+  <div class="flex flex-row items-center site-location">
     <a @click="toggleMenu" class="mr-2">
       <Icon :name="menuIcon" class="size-6" />
     </a>
 
     <UBreadcrumb :links="links" />
-  </section>
+  </div>
 </template>
 
 <style scoped></style>

@@ -45,6 +45,9 @@
   .prose :not(pre) > code {
     @apply bg-slate-200 p-1 rounded-md border border-dashed border-slate-300 hover:border-green-500 hover:bg-green-300;
   }
+  .position-unset {
+    position: unset;
+  }
 }
 
 @layer base {

@@ -56,7 +56,7 @@ const { list, tagDict, doc, tagItems } = await useDocuments({
     <ContentHeader :doc="doc" />
 
     <div class="relative flex flex-col gap-4">
-      <section class="sticky z-10 flex top-20">
+      <section class="sticky flex z-1 top-20">
         <div class="absolute right-0">
           <Toc
             :value="toc"
