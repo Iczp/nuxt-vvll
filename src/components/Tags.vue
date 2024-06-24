@@ -12,11 +12,11 @@ const props = withDefaults(
 </script>
 
 <template>
-  <section class="flex flex-row gap-4 tags">
+  <section class="flex flex-col gap-4 tags sm:flex-row">
     <h3
       v-if="label"
       t=":"
-      class="flex flex-shrink-0 after:mx-2 after:content-[attr(t)]"
+      class="flex flex-shrink-0 py-1 after:mx-2 after:content-[attr(t)]"
     >
       {{ label }}
     </h3>

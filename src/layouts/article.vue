@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { RouteLocationNormalizedLoaded } from '#vue-router';
-
+import type { NavItemType } from '../types/NavItemType';
 const isOpen = ref(false);
 
 const toggleMenu = () => {
@@ -22,6 +22,27 @@ const listFn = (list: NavItemType[], route: RouteLocationNormalizedLoaded) => {
   // articleCount.value = `(${q.length})`;
   return q;
 };
+const route = useRoute();
+
+const { activeItem } = await useDocuments({ path: route.path });
+
+onUnmounted(() => {
+  console.log('onUnmounted');
+});
+
+const currentLocation = useCurrentLocation();
+const parents = computed(() =>
+  activeItem.value?.$parents ? activeItem.value?.$parents() : []
+);
+const links = computed(() =>
+  currentLocation.paths
+    .map((x) => ({
+      label: x.title,
+      // icon: x.icon,
+      to: x._path,
+    }))
+    .reverse()
+);
 </script>
 
 <template>
@@ -30,21 +51,25 @@ const listFn = (list: NavItemType[], route: RouteLocationNormalizedLoaded) => {
       <h1>Layout:Article</h1>
     </div>
 
-    <div>
-      <a @click="toggleMenu">
-        <Icon :name="menuIcon" class="size-6" />
-      </a>
+    <div
+      class="flex flex-col items-stretch w-full max-w-screen-xl gap-6 px-4 mx-auto mt-8"
+    >
+      <SiteLocation />
     </div>
+
     <main
       class="flex flex-col items-stretch w-full max-w-screen-xl gap-6 px-4 mx-auto mt-8 md:flex-row"
     >
       <ContentSilder
         class="md:pr-6 md:border-r border-slate-200 dark:border-slate-800 md:flex md:max-w-72"
       />
+
       <section
         v-if="$route.path.startsWith('/tags/')"
         class="flex flex-col w-full gap-4"
       >
+        <!-- <SiteLocation /> -->
+
         <CodeTab
           :active="0"
           default="详细"
@@ -63,12 +88,12 @@ const listFn = (list: NavItemType[], route: RouteLocationNormalizedLoaded) => {
           <template #list>
             <!-- <h3>相关文章</h3> -->
             <PostList :list="listFn" :filter="(x) => !x.$isDir" class="pt-4">
-             
             </PostList>
           </template>
         </CodeTab>
       </section>
       <section v-else class="w-full">
+        <!-- <SiteLocation /> -->
         <slot> </slot>
       </section>
     </main>

@@ -39,6 +39,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@vueuse/nuxt',
     'nuxt-icon',
+    '@pinia/nuxt',
   ],
   content: {
     navigation: {

@@ -21,7 +21,9 @@ const props = withDefaults(
       <span>{{ item.title }}</span>
     </aside> -->
     <section class="flex flex-col flex-1 gap-1 min-h-24">
-      <h3 class="flex flex-row items-center justify-between text-base">
+      <h3
+        class="flex flex-col justify-between gap-4 text-base md:items-center md:flex-row"
+      >
         <div class="text-base">
           <span>{{ item.title }}</span>
         </div>

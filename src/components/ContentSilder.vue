@@ -42,10 +42,6 @@ defineShortcuts({
           </div>
         </template>
       </UInput>
-
-      <!-- <h3>$route.params.slug</h3>
-      <p>{{ $route.params.slug }}</p>
-      <h2>$route.path:{{ $route.path }}</h2> -->
     </header>
 
     <section>

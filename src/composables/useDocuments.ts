@@ -7,6 +7,7 @@ export const useDocuments = async ({ path }: { path?: string }) => {
   );
 
   // const route = useRoute();
+
   const list = ref<NavItemType[]>([]);
 
   const {
@@ -22,7 +23,7 @@ export const useDocuments = async ({ path }: { path?: string }) => {
       x.tags = formatTags(x.tags);
       x.categories = formatTags(x.categories);
     },
-    // active: (item, depth, index, parents) => item._path === route.path,
+    active: (item, depth, index, parents) => item._path === path,
     // sort: (a, b, depth) => {
     //   if (depth > 1) {
     //     return 0; // a和b位置不变
@@ -37,8 +38,9 @@ export const useDocuments = async ({ path }: { path?: string }) => {
     // },
   });
 
-  // .filter((x) => !x.$isDir && x._path.startsWith('/tags/'))
-  // .map((x) => {});
+  // const active = useState('active', () => activeItem.value);
+
+
 
   const getCount = (tag: string | undefined) => {
     if (!tag) {
@@ -50,12 +52,6 @@ export const useDocuments = async ({ path }: { path?: string }) => {
       )
     ).length;
   };
-  // const getTagCode = (path: string): string | undefined => {
-  //   const trimmedPath = path.endsWith('/') ? path.slice(0, -1) : path; // 去掉末尾的斜杠（如果有的话）
-  //   const parts = trimmedPath.split('/');
-  //   const lastPart = parts[parts.length - 1];
-  //   return lastPart;
-  // };
 
   const formatItems = (items?: NavItemType[] | null): NavItemType[] => {
     if (!items) return [];
@@ -97,7 +93,9 @@ export const useDocuments = async ({ path }: { path?: string }) => {
    * tag items
    */
   const tagItems = computed(() => {
-    return doc.value?.tags?.map((x) => tagDict.value[x]).filter((x) => x);
+    return doc.value?.tags
+      ?.map((x: string) => tagDict.value[x])
+      .filter((x: string) => x);
   });
 
   const items = ref<NavItemType[]>();
@@ -106,7 +104,9 @@ export const useDocuments = async ({ path }: { path?: string }) => {
     items.value = formatItems(treeItems.value);
     list.value = list.value.map((x) => {
       if (!x.$isDir) {
-        x.tagEntities = x.tags?.map((x) => tagDict.value[x]).filter((x) => x);
+        x.tagEntities = x.tags
+          ?.map((x: string) => tagDict.value[x])
+          .filter((x: string) => x);
       }
       return x;
     });
@@ -123,5 +123,6 @@ export const useDocuments = async ({ path }: { path?: string }) => {
     setActive,
     doc,
     tagItems,
+    // active,
   };
 };

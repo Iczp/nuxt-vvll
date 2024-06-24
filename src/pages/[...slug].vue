@@ -72,7 +72,9 @@ const { list, tagDict, doc, tagItems } = await useDocuments({
       </article>
     </div>
 
-    <Tags :items="tagItems" label="标签"> </Tags>
+    <Tags :items="tagItems" label="标签">
+      <!-- <template #empty>无</template> -->
+    </Tags>
 
     <div class="flex flex-col justify-between gap-4 mt-4 sm:flex-row">
       <PageLink :page="prev" dir="left" />

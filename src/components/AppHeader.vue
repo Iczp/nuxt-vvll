@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const route = useRoute();
 
 const links = [
   {
@@ -26,7 +25,7 @@ const links = [
   {
     label: 'Author',
     // icon: 'material-symbols:frame-person',
-    to: '/author',
+    to: '/authors',
   },
   // {
   //   label: 'iczp',

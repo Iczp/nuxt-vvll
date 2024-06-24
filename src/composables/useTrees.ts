@@ -1,6 +1,5 @@
 import { isDir } from '@/utils/isDir';
-
-
+import type { ItemType } from '../types/ItemType';
 
 export type CallbackFn = (
   item: any,
@@ -24,6 +23,9 @@ export const useTrees = ({
   let row = 0;
 
   const activeItem = ref<ItemType>();
+
+  const currentLocation = useCurrentLocation();
+
   const refItems = ref<ItemType[]>();
   const list = ref<ItemType[]>([]);
 
@@ -103,6 +105,9 @@ export const useTrees = ({
 
       if ($isActive) {
         activeItem.value = item;
+        currentLocation.setPaths(
+          activeItem.value?.$parents ? activeItem.value?.$parents() : []
+        );
         // console.log('activeItem', activeItem.value);
       }
       list.value.push(item);
@@ -135,6 +140,9 @@ export const useTrees = ({
     }
     setParents(item, true);
     activeItem.value = item;
+    currentLocation.setPaths(
+      activeItem.value?.$parents ? activeItem.value?.$parents() : []
+    );
   };
 
   const toggleOpen = (item: ItemType) => {

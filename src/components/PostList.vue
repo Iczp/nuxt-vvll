@@ -42,10 +42,10 @@ const q = ref('');
     <div>
       <UInput
         :loading="isPending"
+        color="sky"
         v-model="q"
         icon="i-heroicons-magnifying-glass-20-solid"
         size="sm"
-        color="white"
         :trailing="true"
         placeholder="Search..."
         class="w-64"
