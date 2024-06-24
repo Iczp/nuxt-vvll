@@ -23,7 +23,7 @@ const site = useSite();
     </div> -->
 
     <div
-      class="fixed z-20 flex flex-col items-stretch max-w-screen-xl gap-6 p-4 mx-auto sm:position-unset top-16 backdrop-blur-md"
+      class="fixed z-20 flex flex-col items-stretch w-full max-w-screen-xl gap-6 p-4 mx-auto sm:position-unset top-16 backdrop-blur-md"
     >
       <SiteLocation />
     </div>
