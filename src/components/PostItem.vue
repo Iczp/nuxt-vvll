@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { NavItemType } from '~/types/NavItemType';
+
 const props = withDefaults(
   defineProps<{
     item: NavItemType;
@@ -8,16 +10,20 @@ const props = withDefaults(
 </script>
 
 <template>
-  <NuxtLink class="flex flex-row justify-between gap-4" :to="`${item._path}`">
-    <aside
+  <NuxtLink
+    v-if="item"
+    class="flex flex-row justify-between gap-4"
+    :to="`${item._path}`"
+  >
+    <!-- <aside
       class="flex items-center justify-center border border-gray-500 rounded-md size-24 border-opacity-20"
     >
-      <span :to="`${item._path}`">{{ item.title }}</span>
-    </aside>
+      <span>{{ item.title }}</span>
+    </aside> -->
     <section class="flex flex-col flex-1 gap-1 min-h-24">
       <h3 class="flex flex-row items-center justify-between text-base">
         <div class="text-base">
-          <span :to="`${item._path}`">{{ item.title }}</span>
+          <span>{{ item.title }}</span>
         </div>
         <Tags :items="item.tagEntities">
           <template v-slot="{ item: tagItem }">
@@ -33,12 +39,16 @@ const props = withDefaults(
           {{ item.description || item.title }}
         </p>
       </div>
-      <div class="flex flex-row-reverse justify-between py-1 text-xs">
-        <div v-if="item.date" class="text-green-400">
-          <Date :value="item.date" />
-        </div>
+      <div class="flex flex-row justify-between py-1 text-xs">
         <div v-if="item.author" class="text-sky-500">
           {{ item.author }}
+        </div>
+        <div v-if="item.children" class="text-sky-500">
+          分类：{{ item.children.length }} , 文章总数：
+          {{ item?.$totalFileCount }}
+        </div>
+        <div v-if="item.date" class="text-green-400">
+          <Date :value="item.date" />
         </div>
       </div>
     </section>

@@ -41,7 +41,7 @@ const { list, tagDict, doc, tagItems } = await useDocuments({
     <h1>
       {{ doc?.title }}
     </h1>
-    {{ doc }}
+    <!-- {{ doc }} -->
     <ul v-if="doc?.children" class="grid grid-cols-1 gap-4 not-prose">
       <li
         v-for="item in doc?.children"
@@ -55,13 +55,14 @@ const { list, tagDict, doc, tagItems } = await useDocuments({
   <main v-if="!doc?.$isDir" class="flex flex-col w-full gap-4">
     <ContentHeader :doc="doc" />
 
-    <div class="flex flex-col">
-      <section class="z-10 flex self-end sm:fixed">
+    <div class="flex flex-col gap-4">
+      <section class="fixed z-10 flex self-end top-20">
         <Toc
           :value="toc"
           class="bg-transparent shadow dark:shadow-slate-700 dark:bg-transparent backdrop-blur-lg drak:shadow-white"
         />
       </section>
+
       <article
         class="space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
       >

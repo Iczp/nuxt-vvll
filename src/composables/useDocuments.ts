@@ -1,21 +1,6 @@
-import type { NavItem } from '@nuxt/content/types';
-import { useNavigation } from './useNavigation';
-import { isDir } from '@/utils/isDir';
+import type { NavItemType } from '../types/NavItemType';
 import { formatTags } from '@/utils/formatTags';
 
-export type NavItemType = ItemType &
-  NavItem & {
-    tags?: string[];
-    tagEntities?: NavItemType[];
-    categories?: string[] | string;
-    children?: NavItemType[] | string;
-    $count?: number;
-    description?: string;
-    date?: string;
-    icon?: string;
-    title?: string;
-    author?: string;
-  };
 export const useDocuments = async ({ path }: { path?: string }) => {
   const { data: navigation } = await useAsyncData('navigation', () =>
     fetchContentNavigation()

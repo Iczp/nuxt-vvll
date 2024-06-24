@@ -31,7 +31,7 @@ export default defineNuxtConfig({
      */
     // dirs: [],
     global: true,
-    dirs: ['~/components', '~/components-mdc', '~/logos'],
+    dirs: ['~/components', '~/components-mdc', '~/logos', '~/types'],
   },
   modules: [
     //
@@ -170,7 +170,8 @@ export default defineNuxtConfig({
 
     '/author': { prerender: false },
     '/_index': { prerender: false },
-    '/notes/js': { prerender: false },
+    // '/notes/js': { prerender: false },
+
     '/sub': { prerender: false },
   },
   nitro: {

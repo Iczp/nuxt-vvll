@@ -19,7 +19,8 @@ const {
 
 const navToLink = (item: any) => {
   // console.log('navToLink', item);
-  return !isDir(item) ? item._path : undefined;
+  return item._path;
+  // return item.$isDir ? item._path : undefined;
 };
 
 const navClick = (item: any) => {
@@ -51,7 +52,7 @@ const navClick = (item: any) => {
           </div>
           <p class="truncate">
             <NuxtLink
-              :to="item._path"
+              :to="navToLink(item)"
               @click="navClick(item)"
               class="truncate cursor-pointer"
             >

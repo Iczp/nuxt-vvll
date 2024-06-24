@@ -18,9 +18,13 @@ export type TocType = {
 const props = withDefaults(
   defineProps<{
     value?: TocType;
+    open?: boolean;
+    title?: string;
   }>(),
   {
     // items: [],
+    open: false,
+    title: '目录',
   }
 );
 
@@ -42,7 +46,7 @@ const scrollTo = (item: any) => (!isDir(item) ? item._path : undefined);
 const { items, toggleOpen } = useTrees({
   items: props.value?.links || [],
 });
-const isOpen = ref(true);
+const isOpen = ref(props.open);
 
 const toggleToc = () => {
   isOpen.value = !isOpen.value;
@@ -52,19 +56,19 @@ const toggleToc = () => {
 <template>
   <div class="!p-4 page-toc box">
     <!-- {{ tocItems }} -->
-    <h2
+    <h3
       class="flex flex-row items-center justify-between gap-4"
       @click="toggleToc"
     >
-      <div>
-        <Icon name="ic:outline-list-alt" class="" />
-        <span class="truncate text-ellipsis" :class="{ hidden: !isOpen }">
-          Table of Contents</span
+      <div class="flex flex-row items-center">
+        <Icon name="ic:outline-list-alt" class="mr-2 size-6" />
+        <span class="text-base truncate" :class="{ hidden: !isOpen }">
+          {{ title }}</span
         >
       </div>
       <Arrow :dir="isOpen ? 'down' : 'right'" class="ml-1" />
-    </h2>
-    <main v-if="isOpen" class="mt-2">
+    </h3>
+    <main v-show="isOpen" class="mt-2">
       <Trees :items="items || []">
         <template v-slot="{ item, depth, index, parents, row }">
           <div
