@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   // appDir: 'src',
   devtools: { enabled: true },
   css: [
+    // '/css/scroller.css',
     // '/css/main.css',
     // '~/assets/css/main.css',
   ],
@@ -17,10 +18,10 @@ export default defineNuxtConfig({
     buildAssetsDir: 'static',
     head: {
       link: [
-        // {
-        //   rel: 'stylesheet',
-        //   href: '~/assets/css/main.css', // 引用生成的静态样式文件
-        // },
+        {
+          rel: 'stylesheet',
+          href: '/css/scroller.css', // 引用生成的静态样式文件
+        },
       ],
     },
   },

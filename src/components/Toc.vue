@@ -20,6 +20,7 @@ const props = withDefaults(
     value?: TocType;
     open?: boolean;
     title?: string;
+    bodyClass?: any;
   }>(),
   {
     // items: [],
@@ -68,7 +69,7 @@ const toggleToc = () => {
       </div>
       <Arrow :dir="isOpen ? 'down' : 'right'" class="ml-1" />
     </h3>
-    <main v-show="isOpen" class="mt-2">
+    <div v-show="isOpen" class="mt-2" :class="bodyClass">
       <Trees :items="items || []">
         <template v-slot="{ item, depth, index, parents, row }">
           <div
@@ -100,7 +101,7 @@ const toggleToc = () => {
           </div>
         </template>
       </Trees>
-    </main>
+    </div>
   </div>
 </template>
 
