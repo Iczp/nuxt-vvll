@@ -60,7 +60,7 @@ const { list, tagDict, doc, tagItems } = await useDocuments({
         <div class="absolute right-0">
           <Toc
             :value="toc"
-            class="bg-transparent shadow dark:shadow-slate-700 dark:bg-transparent backdrop-blur-lg drak:shadow-white"
+            class="bg-transparent shadow dark:shadow-slate-700 dark:bg-transparent backdrop-blur-lg drak:shadow-white max-w-48"
           />
         </div>
       </section>
