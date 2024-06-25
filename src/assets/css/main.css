@@ -39,7 +39,7 @@
     @apply text-xl;
   }
   .prose blockquote {
-    @apply p-4 my-4 rounded-md border-collapse border-l-2 border border-solid bg-gray-100 border-gray-200 hover:border-gray-300;
+    @apply p-4 my-4 rounded-md border-collapse border-l-2 border border-solid bg-gray-100 border-gray-200 hover:border-gray-300 break-words;
   }
 
   .prose :not(pre) > code {
