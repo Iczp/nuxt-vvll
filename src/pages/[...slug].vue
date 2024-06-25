@@ -28,16 +28,31 @@ const {
 //   queryContent(route.path).findOne()
 // );
 
-const { list, tagDict, doc, tagItems } = await useDocuments({
+const { list, tagDict, doc, tagItems, getParents } = await useDocuments({
   path: route.path,
 });
 
-// const tagItems = computed(() =>
-//   doc.value?.tags?.map(x => tagDict.value[x]).filter((x) => x)
-// );
+if (doc.value?.$isDir) {
+}
+
+const getPathTitle = () => {
+  const parents = getParents(doc.value);
+  if (parents.length == 0) {
+    return doc.value?.title;
+  }
+  return parents.map((x: any) => x.title).join(' ');
+};
+
+const pathTitle = computed(() => getPathTitle());
+
+useHead({
+  title: () => pathTitle.value as string,
+});
 </script>
 <template>
+  <!-- {{ doc?.$parents() }} -->
   <main v-if="doc?.$isDir" class="flex flex-col w-full gap-4">
+    <Title>{{ pathTitle }}</Title>
     <h1>
       {{ doc?.title }}
     </h1>

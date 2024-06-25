@@ -1,4 +1,10 @@
 <script setup lang="ts">
+useHead({
+  titleTemplate: (titleChunk) => {
+    return `${titleChunk} - vvll.net`;
+  },
+});
+
 import { useCssVar } from '@vueuse/core';
 
 const app = ref(null);

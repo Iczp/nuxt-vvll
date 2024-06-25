@@ -40,8 +40,6 @@ export const useDocuments = async ({ path }: { path?: string }) => {
 
   // const active = useState('active', () => activeItem.value);
 
-
-
   const getCount = (tag: string | undefined) => {
     if (!tag) {
       return 0;
@@ -95,8 +93,11 @@ export const useDocuments = async ({ path }: { path?: string }) => {
   const tagItems = computed(() => {
     return doc.value?.tags
       ?.map((x: string) => tagDict.value[x])
-      .filter((x: string) => x);
+      .filter((x) => x);
   });
+
+  const getParents = (item: NavItemType | undefined) =>
+    item?.$parents ? item?.$parents() : [];
 
   const items = ref<NavItemType[]>();
   const init = () => {
@@ -106,7 +107,7 @@ export const useDocuments = async ({ path }: { path?: string }) => {
       if (!x.$isDir) {
         x.tagEntities = x.tags
           ?.map((x: string) => tagDict.value[x])
-          .filter((x: string) => x);
+          .filter((x) => x);
       }
       return x;
     });
@@ -123,6 +124,7 @@ export const useDocuments = async ({ path }: { path?: string }) => {
     setActive,
     doc,
     tagItems,
+    getParents,
     // active,
   };
 };

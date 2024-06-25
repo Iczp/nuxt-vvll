@@ -90,9 +90,12 @@ const setctions = ref([
       <main
         class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 border-dark-300"
       >
-        <section v-for="(section, index) in setctions">
+        <section
+          v-for="(section, index) in setctions"
+          class="text-center sm:text-left"
+        >
           <h3 class="py-2 text-lg">{{ section.title }}</h3>
-          <p class="text-xs text-gray-500">{{ section.description }}</p>
+          <p class="text-sm text-gray-500">{{ section.description }}</p>
           <ul>
             <li v-for="item in section.items" :key="item.url" class="py-1">
               <a :href="item.url" :target="item.target">{{ item.title }}</a>
@@ -107,7 +110,7 @@ const setctions = ref([
 
 <style scoped>
 .app-footer a {
-  @apply text-sky-700 ;
+  @apply text-sky-700;
 }
 .app-footer a:hover {
   @apply text-sky-500 underline;

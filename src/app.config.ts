@@ -1,11 +1,14 @@
 export default defineAppConfig({
-    ui: {
-      button: {
-        color: {
-          custom: {
-            // subtle: '...'
-          }
-        }
-      }
-    }
-  })
+  site: {
+    title: 'vvll.net',
+  },
+  ui: {
+    button: {
+      color: {
+        custom: {
+          // subtle: '...'
+        },
+      },
+    },
+  },
+});

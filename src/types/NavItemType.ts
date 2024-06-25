@@ -1,4 +1,6 @@
 import type { NavItem } from '@nuxt/content/types';
+
+import type { ItemType } from './ItemType';
 export type NavItemType = ItemType &
   NavItem & {
     tags?: string[];
