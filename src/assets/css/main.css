@@ -38,6 +38,11 @@
   h2 {
     @apply text-xl;
   }
+
+  .prose :not(.not-prose) {
+    @apply break-words;
+  }
+
   .prose blockquote {
     @apply p-4 my-4 rounded-md border-collapse border-l-2 border border-solid bg-gray-100 border-gray-200 hover:border-gray-300 break-words;
   }

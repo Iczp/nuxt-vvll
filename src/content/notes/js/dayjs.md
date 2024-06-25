@@ -1,4 +1,12 @@
-Day.js 是一个轻量级的 JavaScript 日期库，提供类似于 Moment.js 的API。它体积小（约2KB），性能高，支持链式操作，并且支持插件扩展。Day.js 主要用于解析、验证、操作和显示日期和时间。
+---
+title: Day.js
+tags: dayjs js ts
+author: iczp
+date: 2024-06-25
+description: Day.js 是一个轻量级的 JavaScript 日期库，提供类似于 Moment.js 的 API。它体积小（约 2KB），性能高，支持链式操作，并且支持插件扩展。Day.js 主要用于解析、验证、操作和显示日期和时间。
+---
+
+Day.js 是一个轻量级的 JavaScript 日期库，提供类似于 Moment.js 的 API。它体积小（约 2KB），性能高，支持链式操作，并且支持插件扩展。Day.js 主要用于解析、验证、操作和显示日期和时间。
 
 ### 安装
 
