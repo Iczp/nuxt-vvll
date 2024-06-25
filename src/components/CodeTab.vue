@@ -61,7 +61,12 @@ const onTabChang = (index: number) => {
       </li>
     </ul> -->
 
-    <Tabs :items="slotsKeys" :current="current" @change="onTabChang">
+    <Tabs
+      :items="slotsKeys"
+      :current="current"
+      @change="onTabChang"
+      v-bind="$attrs"
+    >
       <template v-slot:item="{ item }">
         <div class="flex flex-row items-center gap-2 py-2 text-sm">
           <Icon

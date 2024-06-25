@@ -23,7 +23,7 @@ const site = useSite();
     </div> -->
 
     <div
-      class="fixed z-20 flex flex-col items-stretch w-full max-w-screen-xl gap-6 p-4 mx-auto sm:position-unset top-16 backdrop-blur-md"
+      class="flex flex-col items-stretch w-full max-w-screen-xl gap-6 p-4 mx-auto sm:position-unset top-16 backdrop-blur-md"
     >
       <SiteLocation />
     </div>
@@ -34,7 +34,7 @@ const site = useSite();
       <!-- isOpen:{{ isOpen }} -->
       <ContentSilder
         :class="{ hidden: !site.isOpen }"
-        class="fixed left-0 right-0 z-10 p-4 overflow-y-scroll sm:flex sm:overflow-y-auto bottom-16 top-24 sm:top-0 sm:p-0 backdrop-blur-lg sm:relative sm:pr-6 sm:border-r border-slate-200 dark:border-slate-800 sm:max-w-72"
+        class="fixed left-0 right-0 z-10 px-4 overflow-y-scroll shadow top- sm:flex sm:overflow-y-auto bottom-16 top-16 sm:top-0 sm:p-0 backdrop-blur-lg sm:relative sm:pr-6 sm:border-r border-slate-200 dark:border-slate-800 sm:max-w-72"
       />
 
       <section
@@ -48,6 +48,7 @@ const site = useSite();
           default="详细"
           :list="`相关文章`"
           class="!p-0 not-box"
+          tabClass="sticky top-16 backdrop-blur-lg z-10 !px-4 !py-2  rounded-lg  w-full  border-0 shadow-sm ring-1 ring-inset ring-sky-500 dark:ring-sky-400  ps-10"
         >
           <template #default>
             <!-- <Box class="line-clamp-2"> -->

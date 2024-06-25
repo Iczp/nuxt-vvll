@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { RouteLocationNormalizedLoaded } from '#vue-router';
-
+import type { NavItemType } from '../types/NavItemType';
 const props = withDefaults(
   defineProps<{
     items1?: any[];
@@ -45,10 +45,10 @@ const q = ref('');
         color="sky"
         v-model="q"
         icon="i-heroicons-magnifying-glass-20-solid"
-        size="sm"
-        :trailing="true"
+        size="md"
+        :trailing="false"
         placeholder="Search..."
-        class="w-64"
+        class="w-full sm:w-64"
       />
     </div>
 

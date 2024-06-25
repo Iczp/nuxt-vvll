@@ -3,6 +3,7 @@ const props = withDefaults(
   defineProps<{
     items: Array<any>;
     current?: number;
+    tabClass?: any;
   }>(),
   {
     current: 0,
@@ -23,7 +24,7 @@ const onChange = (index: number) => {
 </script>
 <template>
   <div class="tabs">
-    <ul class="tab-ul">
+    <ul class="tab-ul" :class="tabClass">
       <li
         v-for="(item, index) in props.items"
         :key="index"
@@ -45,7 +46,7 @@ const onChange = (index: number) => {
   @apply flex flex-col;
 }
 .tab-ul {
-  @apply relative flex flex-row gap-4 p-0 m-0;
+  @apply flex flex-row gap-4 p-0 m-0;
 }
 
 .tab-ul a:hover {
@@ -54,7 +55,7 @@ const onChange = (index: number) => {
 }
 
 .tab-li {
-  @apply flex justify-center items-center p-0 relative m-0 ;
+  @apply flex justify-center items-center p-0 relative m-0;
   /* list-style: none; */
   cursor: pointer;
 }

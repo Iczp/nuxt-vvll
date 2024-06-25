@@ -41,16 +41,18 @@ const site = useSite();
 </script>
 <template>
   <header
-    class="sticky top-0 z-[99] flex items-center justify-between h-16 max-w-screen-xl box-border px-4 mx-auto border-b border-gray-200 dark:border-gray-800 backdrop-blur-md"
+    class="sticky top-0 z-[99] flex items-center justify-between h-16 max-w-screen-xl box-border px-4 mx-auto border-b border-gray-200 dark:border-gray-800 backdrop-blur-xl"
   >
     <Logo />
 
     <aside class="flex flex-row items-center gap-4 text-xl">
       <a>
-        <Icon name="mdi:magnify" class="" />
+        <Icon name="i-heroicons-magnifying-glass-20-solid" class="" />
       </a>
       <ThemeMode />
-      <LinkGithub href="https://github.com/iczp">Iczp</LinkGithub>
+      <!-- <LinkGithub href="https://github.com/iczp">Iczp</LinkGithub> -->
+
+      <Icon name="i-simple-icons-github"></Icon>
       <MenuIcon
         @click="site.toggle()"
         :open="!!site.isOpen"
@@ -59,7 +61,7 @@ const site = useSite();
     </aside>
   </header>
   <div
-    class="sm:left-1/2 sm:-translate-x-1/2 w-full fixed sm:flex bottom-0 justify-center sm:bottom-auto sm:top-0 flex flex-col h-16 sm:w-auto z-[99] backdrop-blur-sm items-center sm:border-none border-t border-gray-200 dark:border-gray-800"
+    class="sm:left-1/2 sm:-translate-x-1/2 w-full fixed sm:flex bottom-0 justify-center sm:bottom-auto sm:top-0 flex flex-col h-16 sm:w-auto z-[99] backdrop-blur-2xl sm:backdrop-blur-none items-center sm:border-none border-t border-gray-200 dark:border-gray-800"
   >
     <UHorizontalNavigation :links="links" class="justify-center" />
   </div>
