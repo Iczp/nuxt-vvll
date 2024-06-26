@@ -2,6 +2,9 @@
 title: CSS 专业技巧
 icon: noto-v1:light-bulb
 description: 一个帮你提升 CSS 技巧的收藏集。
+tags: css
+author: iczp
+date: 2024-06-27
 ---
 
 # CSS 专业技巧 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
