@@ -18,7 +18,7 @@ export const useDocuments = async ({ path }: { path?: string }) => {
     list: treeList,
   } = useTrees({
     items: navigation.value,
-    open: (x,depth) => depth >= 1,
+    open: (x, depth) => depth > 1,
     action: (x) => {
       x.tags = formatTags(x.tags);
       x.categories = formatTags(x.categories);

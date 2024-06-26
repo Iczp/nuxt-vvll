@@ -9,7 +9,13 @@ import { useCssVar } from '@vueuse/core';
 
 const app = ref(null);
 const color1 = useCssVar('--color', app, { initialValue: '#eee' });
-
+const isDark = useDark();
+watch(isDark, (dark) => {
+  useBrowserColor({
+    themeColor: dark ? '#1e293b' : '#f8fafc',
+    appleStatusBarStyle: 'black-translucent',
+  });
+});
 onMounted(() => {
   setTimeout(() => {
     color1.value = 'red';
