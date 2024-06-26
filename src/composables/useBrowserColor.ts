@@ -1,6 +1,4 @@
 // useBrowserColor.ts
-import { onMounted } from 'vue';
-
 export function useBrowserColor({
   themeColor = '#1e293b',
   appleStatusBarStyle = 'black-translucent',
