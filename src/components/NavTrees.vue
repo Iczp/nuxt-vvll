@@ -38,40 +38,40 @@ const navClick = (item: any) => {
       <h3
         class="flex flex-row justify-between gap-2 py-1"
         :class="{ dir: item.$isDir }"
-        @click="toggleOpen(item)"
       >
-        <section class="flex flex-row items-center overflow-hidden">
+        <NuxtLink
+          class="flex flex-row items-center overflow-hidden"
+          :to="navToLink(item)"
+        >
           <div class="px-1.5 text-lg inline-flex tree-icon">
-            <!-- {{ item }} -->
             <Folder v-if="item.$isDir" :open="item.$isOpen" />
-
             <Icon
               v-else
               :name="item.icon || 'material-symbols:article-outline'"
             />
           </div>
-          <p class="truncate">
-            <NuxtLink
-              :to="navToLink(item)"
-              @click="navClick(item)"
-              class="truncate cursor-pointer"
+
+          <div class="truncate" :to="navToLink(item)" @click="navClick(item)">
+            <!-- {{ item.$row }} /{{ depth }}.{{ index }}  -->
+            <span class="">{{ item.title }}</span>
+            <span v-if="item.$isDir"> ({{ item.$totalFileCount }}) </span>
+            <span v-else-if="!item.$isDir && item.$count">
+              ({{ item.$count }})</span
             >
-              <!-- {{ item.$row }} /{{ depth }}.{{ index }}  -->
-              {{ item.title }}
-              <span v-if="item.$isDir"> ({{ item.$totalFileCount }}) </span>
-              <span v-else-if="!item.$isDir && item.$count">
-                ({{ item.$count }})</span
-              >
-            </NuxtLink>
-          </p>
-        </section>
-        <section v-if="item.$isDir">
+          </div>
+        </NuxtLink>
+        <div class="flex flex-row">
           <div
-            class="inline-flex items-center justify-center p-0 border rounded-sm cursor-pointer size-6 border-slate-300 bg-slate-200 dark:border-slate-700 dark:bg-slate-800"
+            v-if="item.$isDir"
+            @click="toggleOpen(item)"
+            class="badge size-6"
           >
             <Arrow :dir="item.$isOpen ? 'down' : 'right'" />
           </div>
-        </section>
+          <div v-else-if="!item.$isDir && item.$count" class="badge size-6 text-sky-600">
+            {{ item.$count }}
+          </div>
+        </div>
       </h3>
     </template>
   </Trees>

@@ -53,6 +53,10 @@
   .position-unset {
     position: unset;
   }
+
+  .badge {
+    @apply inline-flex items-center justify-center border rounded-md cursor-pointer  border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800;
+  }
 }
 
 @layer base {
