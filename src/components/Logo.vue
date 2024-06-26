@@ -2,26 +2,34 @@
 
 <template>
   <section class="flex-shrink-0 logo-container">
-    <a href="/" class="flex flex-row items-center gap-4">
-      <div class="logo">
-        <Icon
-          name="logos:waypoint-icon"
-          class="size-8 sm:size-12 -scale-y-100"
-        />
-      </div>
-      <div class="flex flex-col">
+    <a
+      href="/"
+      class="flex flex-col"
+      title="“不积跬步，无以至千里；不积小流，无以成江海。”——荀子"
+    >
+      <div class="flex flex-row gap-2">
+        <div class="logo">
+          <Icon
+            name="logos:waypoint-icon"
+            class="size-8 sm:size-12 -scale-y-100"
+          />
+        </div>
         <h1 class="site-title">
           <strong class="text-2xl text-[#14C6CB]">VVLL</strong
-          ><span class="text-base">.net</span>
+          ><span class="text-sm">.net</span>
         </h1>
-        <!-- <p class="text-sm site-description">
+      </div>
+      <!-- <div>
+        <p class="text-sm site-description">
           <span><strong class="light">V</strong>ite</span>
           <span> <strong class="light">V</strong>ue</span>
           <span><strong class="light">L</strong>ink</span>
           <span><strong class="light">L</strong>ab</span>
-          <span class="hidden"> “不积跬步，无以至千里；不积小流，无以成江海。”——荀子</span>
-        </p> -->
-      </div>
+          <span class="hidden">
+            “不积跬步，无以至千里；不积小流，无以成江海。”——荀子</span
+          >
+        </p>
+      </div> -->
     </a>
   </section>
 </template>

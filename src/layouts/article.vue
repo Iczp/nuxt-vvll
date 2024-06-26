@@ -48,7 +48,7 @@ const site = useSite();
           default="详细"
           :list="`相关文章`"
           class="!p-0 not-box"
-          tabClass="sticky top-16 backdrop-blur-lg z-10 !px-4 !py-2  rounded-lg  w-full  border-0 shadow-sm ring-1 ring-inset ring-sky-500 dark:ring-sky-400  ps-10"
+          tabClass="sticky top-16 backdrop-blur-lg z-[2] !px-4 !py-2  rounded-lg  w-full  border-0 shadow-sm ring-1 ring-inset ring-sky-500 dark:ring-sky-400  ps-10"
         >
           <template #default>
             <!-- <Box class="line-clamp-2"> -->

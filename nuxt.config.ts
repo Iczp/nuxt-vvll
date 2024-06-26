@@ -42,6 +42,9 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@pinia/nuxt',
   ],
+  experimental: {
+    payloadExtraction: false, // 取消生成 _payload.js
+  },
   content: {
     navigation: {
       fields: [
