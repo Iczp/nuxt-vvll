@@ -14,7 +14,8 @@ export default defineNuxtConfig({
     // '~/assets/css/main.css',
   ],
   app: {
-    rootId: 'app',
+    baseURL: '/',
+    rootId: 'vvll-net',
     buildAssetsDir: 'static',
     head: {
       link: [

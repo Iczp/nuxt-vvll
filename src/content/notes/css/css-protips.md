@@ -13,6 +13,8 @@ date: 2024-06-27
 
 一个帮你提升 CSS 技巧的收藏集。
 
+✅
+
 > 对于其他收藏集合可以查看 [@sindresorhus](https://github.com/sindresorhus/) 创建的收藏集合 [Awesome Lists](https://github.com/sindresorhus/awesome/).
 
 <div id="table-of-contents"></div>
@@ -21,7 +23,7 @@ date: 2024-06-27
 
 - [专业技巧](#专业技巧)
 - [支持情况](#支持情况)
-- [贡献准则](../../CONTRIBUTING.md)
+
 
 ## 专业技巧
 

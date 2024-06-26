@@ -14,3 +14,13 @@ icon: fluent-emoji-flat:heart-suit
 A web-based(canvas) JavaScript Table
 
 https://github.com/wolf-table/table
+
+
+
+https://github.com/andreasbm/web-skills
+
+
+https://css-tricks.com/
+
+
+https://github.com/sindresorhus/awesome
