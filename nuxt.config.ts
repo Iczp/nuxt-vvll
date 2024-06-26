@@ -172,10 +172,11 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/about': { prerender: true },
     // '/author': { prerender: true },
-    '/author/**': { prerender: true },
+    '/authors/**': { prerender: true },
     '/tags': { prerender: true },
     '/tags/**': { prerender: true },
     '/notes/**': { prerender: true },
+    '/notes': { prerender: true },
     '/sub/**': { prerender: true },
 
     '/author': { prerender: false },
