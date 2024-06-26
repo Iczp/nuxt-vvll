@@ -109,7 +109,7 @@ export default defineNuxtConfig({
       theme: {
         // Default theme (same as single string)
         // github-light | github-dark
-        default: 'github-dark',
+        default: 'github-light',
         // Theme used if `html.dark`
         dark: 'github-dark',
         // Theme used if `html.sepia`
@@ -139,6 +139,7 @@ export default defineNuxtConfig({
         'mermaid',
         'dart',
         'vue-html',
+        'markdown',
       ],
     },
   },
