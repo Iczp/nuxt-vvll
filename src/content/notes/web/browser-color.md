@@ -1,7 +1,7 @@
 ---
 title: 修改浏览器地址栏颜色
 icon:
-tags: vue css html h5 ts js
+tags: vue css html h5 ts js android ios
 date: 2024-06-27
 description: 修改浏览器地址栏颜色 HTML meta
 ---
