@@ -23,6 +23,10 @@ export default defineNuxtConfig({
           href: '/css/scroller.css', // 引用生成的静态样式文件
         },
       ],
+      script: [
+        // 百度统计
+        { src: 'https://hm.baidu.com/hm.js?2a59a39629cd35dc4ec0cf17b9304e0b' },
+      ],
     },
   },
   components: {
