@@ -24,7 +24,7 @@ const props = withDefaults(
       class="flex flex-row items-center justify-between text-sm text-slate-400 dark:text-slate-700"
     >
       <section class="flex flex-row gap-4">
-        <div>作者: <Author :id="doc?.author" /></div>
+        <div v-if="doc?.author"><Author :id="doc?.author" /></div>
         <div>日期:<Date :value="doc?.date" /></div>
       </section>
       <section class="flex flex-row gap-2">

@@ -1,4 +1,8 @@
 ---
+title: Nuxt3 中使用 Tailwind CSS
+icon:
+tags: nuxtjs tailwindcss css vue
+description: Nuxt3 中使用 Tailwind CSS
 layout: article
 ---
 
@@ -40,7 +44,7 @@ layout: article
          autoprefixer: {},
        },
      },
-   })
+   });
    ```
 
 4. ## 配置模板路径
@@ -53,18 +57,18 @@ layout: article
    /** @type {import('tailwindcss').Config} */
    module.exports = {
      content: [
-       "./components/**/*.{js,vue,ts}",
-       "./layouts/**/*.vue",
-       "./pages/**/*.vue",
-       "./plugins/**/*.{js,ts}",
-       "./app.vue",
-       "./error.vue",
+       './components/**/*.{js,vue,ts}',
+       './layouts/**/*.vue',
+       './pages/**/*.vue',
+       './plugins/**/*.{js,ts}',
+       './app.vue',
+       './error.vue',
      ],
      theme: {
        extend: {},
      },
      plugins: [],
-   }
+   };
    ```
 
 5. ## 将 Tailwind 指令添加到你的 CSS
@@ -96,7 +100,7 @@ layout: article
          autoprefixer: {},
        },
      },
-   })
+   });
    ```
 
 7. ## 开始构建过程
@@ -111,12 +115,10 @@ layout: article
 
 8. ## 开始在你的项目中使用 Tailwind
 
-   开始使用 Tailwind 的实用程序类来设置您的内容样式。   `app.vue`
+   开始使用 Tailwind 的实用程序类来设置您的内容样式。 `app.vue`
 
    ```vue [app.vue]
    <template>
-     <h1 class="text-3xl font-bold underline">
-       Hello world!
-     </h1>
+     <h1 class="text-3xl font-bold underline">Hello world!</h1>
    </template>
    ```

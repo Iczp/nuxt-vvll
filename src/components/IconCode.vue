@@ -44,6 +44,10 @@ switch (props.lang?.toLowerCase()) {
   case 'shell':
     name.value = 'bi:terminal';
     break;
+    case 'c#':
+  case 'csharp':
+    name.value = 'vscode-icons:file-type-csharp2';
+    break;
 }
 </script>
 

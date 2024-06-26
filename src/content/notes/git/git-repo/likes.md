@@ -26,3 +26,8 @@ https://css-tricks.com/
 ### awesome
 
 https://github.com/sindresorhus/awesome
+
+### shiki
+
+https://github.com/shikijs/shiki
+https://shiki.style/

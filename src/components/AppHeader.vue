@@ -51,8 +51,14 @@ const site = useSite();
       </a>
       <ThemeMode />
       <!-- <LinkGithub href="https://github.com/iczp">Iczp</LinkGithub> -->
+      <a
+        href="https://github.com/iczp/nuxt-vvll"
+        target="_blank"
+        ref="nofollow"
+      >
+        <Icon name="i-simple-icons-github"></Icon>
+      </a>
 
-      <Icon name="i-simple-icons-github"></Icon>
       <MenuIcon
         @click="site.toggle()"
         :open="!!site.isOpen"
