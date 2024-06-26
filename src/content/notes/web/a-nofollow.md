@@ -1,5 +1,6 @@
 ---
 title: 链接接中的 nofollow 标签
+icon: emojione-v1:linked-paperclips
 description: 链接接中的 nofollow 标签
 tags: html,h5
 author: iczp
@@ -41,7 +42,7 @@ Content 里 index、noindex、follow、nofollow 标签结合使用：
 **2、用于 a 标签**
 
 ```html
-
+<a href="https://vvll.net" rel="nofollow">https://vvll.net</a>
 ```
 
 这段代码在超链接中加入 nofollow 属性，意思是告诉搜索引擎不要追踪这个链接。
