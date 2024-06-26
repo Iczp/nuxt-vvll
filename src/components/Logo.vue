@@ -9,10 +9,7 @@
     >
       <div class="flex flex-row gap-2">
         <div class="logo">
-          <Icon
-            name="logos:waypoint-icon"
-            class="size-8 sm:size-12 -scale-y-100"
-          />
+          <Icon name="logos:waypoint-icon" class="size-8 -scale-y-100" />
         </div>
         <h1 class="site-title">
           <strong class="text-2xl text-[#14C6CB]">VVLL</strong
