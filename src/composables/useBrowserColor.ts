@@ -1,6 +1,6 @@
 // useBrowserColor.ts
 export function useBrowserColor({
-  themeColor = '#1e293b',
+  themeColor = '#111827',
   appleStatusBarStyle = 'black-translucent',
 } = {}) {
   let themeColorMeta = document.querySelector(

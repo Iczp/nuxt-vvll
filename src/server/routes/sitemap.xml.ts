@@ -5,7 +5,7 @@ export default defineEventHandler(async (event: any) => {
   // Fetch all documents
   const docs = await serverQueryContent(event).find();
   const sitemap = new SitemapStream({
-    hostname: 'https://iczp.net',
+    hostname: 'https://vvll.net',
     // xslUrl: '/sitemap.xsl',
   });
 
