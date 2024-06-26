@@ -31,13 +31,13 @@ nofollow 这个概念最初是由谷歌公司在 2005 年的时候提出来的�
 
 Content 里 index、noindex、follow、nofollow 标签结合使用：
 
-<meta name="robots" content="index,follow">：可以抓取本页，而且可以顺着本页继续索引别的链接。
+`<meta name="robots" content="index,follow">`：可以抓取本页，而且可以顺着本页继续索引别的链接。
 
-<meta name="robots" content="noindex,follow">：不许抓取本页，但是可以顺着本页抓取索引别的链接。
+`<meta name="robots" content="noindex,follow">`：不许抓取本页，但是可以顺着本页抓取索引别的链接。
 
-<meta name="robots" content="index,nofollow">：可以抓取本页，但是不许顺着本页抓取索引别的链接。
+`<meta name="robots" content="index,nofollow">`：可以抓取本页，但是不许顺着本页抓取索引别的链接。
 
-<meta name="robots" content="noindex,nofollow">：不许抓取本页，也不许顺着本页抓取索引别的链接。
+`<meta name="robots" content="noindex,nofollow">`：不许抓取本页，也不许顺着本页抓取索引别的链接。
 
 **2、用于 a 标签**
 
@@ -95,9 +95,9 @@ Google：Google 爬虫不会爬行 nofollow 链接，但是只要页面有一个
 
 **1、百度对于 nofollow 标签的态度**
 
-网页级：< meta name="robots" content="nofollow" > 不追踪链接，不传递权重。
+网页级：`<meta name="robots" content="nofollow">` 不追踪链接，不传递权重。
 
-链接级：< a rel="nofollow" href="#" >123< /a >跟踪链接并记录锚文本，但不传递权重。
+链接级：`<a rel="nofollow" href="#">123</a>`跟踪链接并记录锚文本，但不传递权重。
 
 **2、Google 对待 nofollow 标签的态度**
 

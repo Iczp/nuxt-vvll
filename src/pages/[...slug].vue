@@ -75,7 +75,7 @@ useHead({
         <div class="absolute right-0">
           <Toc
             :value="toc"
-            class="bg-transparent shadow dark:shadow-slate-700 dark:bg-transparent backdrop-blur-lg drak:shadow-white max-w-48"
+            class="bg-transparent shadow dark:shadow-slate-700 dark:bg-transparent backdrop-blur-lg drak:shadow-white max-w-56"
             bodyClass="max-h-96 overflow-y-auto pr-4"
           />
         </div>
