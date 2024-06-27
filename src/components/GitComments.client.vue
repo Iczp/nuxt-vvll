@@ -15,13 +15,14 @@ const init = () => {
 };
 onMounted(() => {
   setTimeout(init, 0);
-
   setTimeout(() => {
-    current.value = tabs.value.findIndex((x) => x.hash == location.hash);
+    const index = tabs.value.findIndex((x) => x.hash == location.hash);
+    if (index > -1) {
+      current.value = index;
+      location.hash = `${tabs.value[current.value].hash}`;
+    }
     console.log(current.value, location.hash);
-
-    location.hash = `#${tabs.value[current.value].hash}`;
-  }, 500);
+  }, 0);
 });
 
 const tabs = ref([
