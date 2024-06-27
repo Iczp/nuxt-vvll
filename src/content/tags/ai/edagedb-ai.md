@@ -8,6 +8,8 @@ description: ChatGPT 是由 OpenAI 开发的一种基于 GPT（Generative Pre-tr
 
 :Icon{name=arcticons:openai-chatgpt .size-32}
 
+## EdgeDB AI
+
 EdgeDB 并不是一个与人工智能（AI）直接相关的产品或技术。EdgeDB 实际上是一个现代化的面向对象关系数据库管理系统（RDBMS），旨在提供强大的数据建模、查询和持久化能力。以下是对 EdgeDB 的简要介绍：
 
 > 此数据更新截至 2022 年 1 月

@@ -5,6 +5,10 @@ icon: vscode-icons:file-type-typescript
 description: TypeScript 是一种由微软开发的编程语言，它是 JavaScript 的一个超集，并添加了静态类型、类、接口和模块等特性。TypeScript 代码在编译时会转换为纯 JavaScript 代码，这样它就可以在任何支持 JavaScript 的环境中运行，比如浏览器或 Node.js
 ---
 
+## TypeScript
+
+:Icon{name=logos:typescript .size-32}
+
 TypeScript 是一种由微软开发的编程语言，它是 JavaScript 的一个超集，并添加了静态类型、类、接口和模块等特性。TypeScript 代码在编译时会转换为纯 JavaScript 代码，这样它就可以在任何支持 JavaScript 的环境中运行，比如浏览器或 Node.js。
 
 TypeScript 的主要优势包括：

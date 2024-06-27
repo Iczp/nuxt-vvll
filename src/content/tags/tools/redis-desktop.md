@@ -5,9 +5,9 @@ icon: logos:redis
 description: Redis Desktop Manager 是一个功能丰富的 Redis 客户端应用程序，通过提供直观的 GUI 界面和丰富的管理功能，简化了 Redis 数据库的连接、操作和管理过程。它适用于各种使用场景，帮助用户提高 Redis 数据库的使用效率和管理效果。
 ---
 
-:Icon{name=devicon-plain:redis-wordmark .size-32}
+## Redis Desktop Manager
 
-## RedisDesktopManager
+:Icon{name=devicon-plain:redis-wordmark .size-32}
 
 Redis Desktop Manager（RDM）是一个用于管理 Redis 数据库的桌面客户端应用程序。它提供了图形用户界面（GUI），使用户可以方便地连接、操作和管理 Redis 实例，而无需使用命令行界面（CLI）。以下是对 Redis Desktop Manager 的详细介绍：
 
@@ -20,6 +20,7 @@ Redis Desktop Manager（RDM）是一个用于管理 Redis 数据库的桌面客�
    用户可以通过 Redis Desktop Manager 轻松地管理多个 Redis 数据库实例的连接。它支持基本的连接信息配置，如主机地址、端口号、认证密码等。
 
 3. **数据库操作**：
+
    - **数据浏览和编辑**：通过 GUI 界面查看 Redis 中存储的数据结构（如字符串、列表、哈希表等），支持数据的编辑和更新操作。
    - **键管理**：可以查看和管理 Redis 中的键（keys），包括删除键、重命名键等操作。
    - **数据导入导出**：支持数据的导入和导出，方便用户在不同的 Redis 实例之间迁移数据或备份数据。
@@ -39,9 +40,7 @@ Redis Desktop Manager（RDM）是一个用于管理 Redis 数据库的桌面客�
 ### 使用场景
 
 - **开发者和运维人员**：用于开发和测试过程中的 Redis 数据库管理，提供便捷的数据查看和操作。
-  
 - **系统管理员**：用于监控和管理生产环境中的 Redis 数据库，进行性能优化和故障排除。
-  
 - **数据分析师和应用程序员**：用于处理和分析 Redis 中的数据，支持数据的导入导出和快速查询。
 
 ### 总结

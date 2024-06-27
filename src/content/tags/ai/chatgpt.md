@@ -1,12 +1,12 @@
 ---
 name: chatgpt
-title: Chat GPT
+title: ChatGPT
 group: IDE
 icon: arcticons:openai-chatgpt
 description: ChatGPT 是由 OpenAI 开发的一种基于 GPT（Generative Pre-trained Transformer）架构的自然语言处理模型。它通过大量的文本数据进行预训练，并能够生成类似人类的文本响应。
 ---
 
-
+## ChatGPT
 
 :Icon{name=arcticons:openai-chatgpt .size-32}
 

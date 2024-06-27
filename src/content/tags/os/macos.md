@@ -5,6 +5,8 @@ icon: gravity-ui:logo-macos
 description: macOS 是苹果公司开发的图形用户界面操作系统，专为其 Macintosh 计算机系列设计和开发。
 ---
 
+## macOS
+
 :Icon{name=logos:macos .size-32}
 
 macOS 是苹果公司开发的图形用户界面操作系统，专为其 Macintosh 计算机系列设计和开发。macOS 是世界上最先进和用户友好的操作系统之一，以其流畅的用户体验、强大的功能和高度的安全性而著称。以下是对 macOS 的详细介绍，包括其关键特点、历史演变和主要版本。

@@ -5,6 +5,10 @@ icon: logos:css-3
 description: Animate.css 是一个简单易用的 CSS 动画库，为网页设计师和开发者提供了丰富的动画效果，能够快速增添页面的视觉吸引力和交互性。通过 Animate.css，用户可以轻松地实现各种动态效果，改善用户体验，使网页内容更加生动和引人注目。
 ---
 
+## Animate.css
+
+:Icon{name=logos:css-3 .size-32}
+
 Animate.css 是一个轻量级的 CSS 动画库，专门用于在网页上添加各种动画效果。它提供了一组预先定义好的动画类，通过简单地将这些类应用到 HTML 元素上，即可实现各种动态效果，无需编写复杂的 JavaScript 或 CSS 动画代码。以下是对 Animate.css 的详细介绍：
 
 ### 主要特点和功能
@@ -28,12 +32,17 @@ Animate.css 是一个轻量级的 CSS 动画库，专门用于在网页上添加
 
 1. **引入 Animate.css 文件**：
    在 HTML 文件中通过链接引入 Animate.css 文件，可以从官方网站直接下载或通过 CDN 获取：
+
    ```html
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+   />
    ```
 
 2. **应用动画类**：
    在需要添加动画效果的 HTML 元素上，添加相应的 Animate.css 类即可。例如，要为一个元素添加淡入动画效果，可以添加类名 `animate__animated animate__fadeIn`：
+
    ```html
    <div class="animate__animated animate__fadeIn">内容</div>
    ```

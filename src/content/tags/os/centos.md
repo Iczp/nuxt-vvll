@@ -1,9 +1,11 @@
 ---
 name: centos
-title: CentOS  
+title: CentOS
 icon: logos:centos-icon
 description: CentOS (Community ENTerprise Operating System) 是一个免费的、开源的操作系统，它是基于 Red Hat Enterprise Linux (RHEL) 的源代码构建的。CentOS 提供了 RHEL 的许多特性和稳定性，但不包括商业支持，使其成为许多企业和开发者的首选。
 ---
+
+## CentOS
 
 :Icon{name=logos:centos .size-32}
 

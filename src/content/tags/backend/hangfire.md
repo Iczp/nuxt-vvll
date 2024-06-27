@@ -5,6 +5,7 @@ icon: Hangfire
 description: Hangfire 是一个功能强大的后台任务管理工具，适用于各种 .NET 应用程序。它提供了丰富的任务调度和管理功能，支持任务的持久化存储和分布式执行，简化了后台任务的开发和维护工作。通过 Hangfire，开发人员可以轻松实现高效、可靠的后台任务处理，提高应用程序的性能和用户体验。
 ---
 
+## Hangfire
 
 :Icon{name=Hangfire .size-32}
 
@@ -18,6 +19,7 @@ Hangfire 是一个开源的 .NET 库，旨在简化和管理后台任务的执�
    Hangfire 支持将任务持久化存储在各种后端数据库中，如 SQL Server、PostgreSQL、MongoDB 和 Redis。这意味着即使应用程序重启或崩溃，任务也不会丢失，能够在恢复后继续执行。
 
 2. **多种任务类型**：
+
    - **火即执行任务（Fire-and-forget job）**：立即执行一次的任务。
    - **延迟任务（Delayed job）**：在指定时间后执行的任务。
    - **定时任务（Recurring job）**：按计划周期性执行的任务。
@@ -58,12 +60,14 @@ Hangfire 是一个开源的 .NET 库，旨在简化和管理后台任务的执�
 
 1. **安装 Hangfire**：
    在项目中通过 NuGet 包管理器安装 Hangfire：
+
    ```bash
    Install-Package Hangfire
    ```
 
 2. **配置 Hangfire**：
    在 `Startup.cs` 文件中进行配置：
+
    ```csharp
    public void ConfigureServices(IServiceCollection services)
    {
@@ -81,6 +85,7 @@ Hangfire 是一个开源的 .NET 库，旨在简化和管理后台任务的执�
 
 3. **定义任务**：
    在应用程序中定义一个简单的任务并进行调度：
+
    ```csharp
    public class EmailService
    {

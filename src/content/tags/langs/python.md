@@ -5,8 +5,9 @@ icon: logos:python
 description: C#是一种功能强大且灵活的编程语言，适用于各种类型的应用开发，包括桌面应用、Web应用、游戏开发等。其丰富的特性和工具使得开发者能够快速构建高质量的应用程序，并在不同平台上实现应用程序的部署和运行。
 ---
 
-:Icon{name=devicon:python-wordmark .size-32}
+## Python
 
+:Icon{name=devicon:python-wordmark .size-32}
 
 **Python** 是一种高级编程语言，于 1991 年由 Guido van Rossum 创造并开源发布。Python 设计简洁、易读且功能强大，广泛用于软件开发、数据分析、人工智能、科学计算、Web 开发等领域。以下是 Python 的主要特点和应用场景的详细介绍：
 

@@ -5,6 +5,8 @@ icon: simple-icons:harmonyos
 description: HarmonyOS（鸿蒙操作系统）是由华为公司开发的跨平台操作系统，旨在提供统一的操作系统体验，支持多种设备类型，包括智能手机、平板电脑、智能家居设备、车载系统等。HarmonyOS 强调分布式架构和生态系统的一体化，旨在实现设备之间的无缝协同工作。
 ---
 
+## HarmonyOS
+
 ![HarmonyOS](https://www.harmonyos.com/resource/image/release2/home/harmonyOS_logo.png)
 
 HarmonyOS（鸿蒙操作系统）是由华为公司开发的跨平台操作系统，旨在提供统一的操作系统体验，支持多种设备类型，包括智能手机、平板电脑、智能家居设备、车载系统等。HarmonyOS 强调分布式架构和生态系统的一体化，旨在实现设备之间的无缝协同工作。

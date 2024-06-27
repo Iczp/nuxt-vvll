@@ -5,6 +5,8 @@ icon: devicon:dotnetcore
 description: .NET Core是一个功能强大、灵活且跨平台的应用程序开发框架，适用于各种类型的应用程序开发需求。无论你是初学者还是经验丰富的开发者，都可以通过.NET Core来构建高质量、高性能的应用程序
 ---
 
+## .NET Core
+
 :Icon{name=devicon:dotnetcore .size-32}
 
 .NET Core是微软开发的跨平台开源应用程序框架，适用于Windows、Linux和macOS等多种操作系统。它不仅是微软官方推出的第一个跨平台.NET实现，也是.NET 5、.NET 6等后续版本的基础。作为一个开源项目，.NET Core促进了更加透明的开发过程和积极参与的社区。

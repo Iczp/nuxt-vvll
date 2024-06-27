@@ -1,9 +1,11 @@
 ---
 name: linux
-title: Linux  
+title: Linux
 icon: devicon:linux
 description: Linux 是一个功能强大、灵活且安全的操作系统，广泛应用于从个人电脑到企业服务器和嵌入式设备的各种场景。凭借其开源和社区驱动的开发模式，Linux 不断发展和创新，成为许多用户和组织的首选操作系统。
 ---
+
+## Linux
 
 :Icon{name=logos:linux-tux .size-32}
 

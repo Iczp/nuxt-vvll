@@ -1,9 +1,11 @@
 ---
 name: ffmpeg
-title: FFmpeg 
+title: FFmpeg
 icon: logos:ffmpeg-icon
 description: FFmpeg 是一个功能强大且灵活的多媒体处理工具，广泛应用于音视频转换、处理和流式传输等任务。通过命令行接口，用户可以进行多种复杂的多媒体处理操作，满足各种需求。
 ---
+
+## FFmpeg
 
 :Icon{name=logos:ffmpeg .size-32}
 

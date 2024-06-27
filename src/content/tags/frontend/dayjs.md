@@ -5,6 +5,8 @@ icon: logos:momentjs
 description: Day.js 是一个轻量级的 JavaScript 库，用于解析、验证、操作和显示日期和时间。它的 API 设计与 Moment.js 十分相似，但其大小仅为 2KB（gzip 压缩后），因此在性能和包大小方面具有明显优势。Day.js 是一个现代替代方案，适合那些需要高性能和小体积日期处理库的项目。
 ---
 
+## Day.js
+
 :Icon{name=logos:momentjs .size-32}
 
 Day.js 是一个轻量级的 JavaScript 库，用于解析、验证、操作和显示日期和时间。它的 API 设计与 Moment.js 十分相似，但其大小仅为 2KB（gzip 压缩后），因此在性能和包大小方面具有明显优势。Day.js 是一个现代替代方案，适合那些需要高性能和小体积日期处理库的项目。

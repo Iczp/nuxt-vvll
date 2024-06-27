@@ -5,6 +5,8 @@ icon: logos:python
 description: Go 通常称为 Golang，是一门由 Google 开发的开源编程语言。Go 的设计目标是提供一种简单、快速、高效的编程体验，特别适合构建并发、高性能的系统软件。
 ---
 
+## Go
+
 :Icon{name=tabler:brand-golang .size-32}
 
 **Go**，通常称为 **Golang**，是一门由 Google 开发的开源编程语言。Go 的设计目标是提供一种简单、快速、高效的编程体验，特别适合构建并发、高性能的系统软件。

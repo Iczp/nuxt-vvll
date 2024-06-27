@@ -1,14 +1,15 @@
 ---
 name: windows
-title: Windows 
+title: Windows
 icon: devicon:windows8
 description: Microsoft Windows 是由微软公司开发的一系列图形用户界面的操作系统。
 ---
 
+## Microsoft Windows
+
 :Icon{name=logos:microsoft-windows .size-32}
 
-
-Microsoft Windows 是由微软公司开发的一系列图形用户界面的操作系统。自1985年发布首个版本以来，Windows 已经成为全球最广泛使用的操作系统之一，覆盖了个人计算机、服务器和移动设备。以下是一些关于 Microsoft Windows 的关键特点、历史演变以及主要版本的介绍。
+Microsoft Windows 是由微软公司开发的一系列图形用户界面的操作系统。自 1985 年发布首个版本以来，Windows 已经成为全球最广泛使用的操作系统之一，覆盖了个人计算机、服务器和移动设备。以下是一些关于 Microsoft Windows 的关键特点、历史演变以及主要版本的介绍。
 
 ### 关键特点
 

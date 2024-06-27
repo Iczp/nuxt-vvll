@@ -1,9 +1,11 @@
 ---
 name: ubuntu
-title: Ubuntu  
+title: Ubuntu
 icon: logos:ubuntu
 description: Ubuntu 是一个基于 Debian 的开源操作系统，由 Canonical Ltd. 及其社区开发者共同维护。自 2004 年首次发布以来，Ubuntu 已成为最流行的 Linux 发行版之一，广泛应用于个人电脑、服务器、云计算和物联网等领域。以下是对 Ubuntu 的详细介绍，包括其关键特点、历史演变和主要版本。
 ---
+
+## Ubuntu
 
 :Icon{name=devicon:ubuntu-wordmark .size-32}
 

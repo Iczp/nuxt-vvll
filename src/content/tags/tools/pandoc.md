@@ -5,6 +5,10 @@ icon: icon-park-solid:transform
 description: Pandoc 是一个非常强大的工具，适用于需要在各种文档格式之间进行转换的用户。它支持丰富的输入和输出格式，并且提供了强大的自定义功能和扩展能力。无论是用于简单的文档转换还是复杂的文档生成流程，Pandoc 都是一个非常有用的工具。
 ---
 
+## Pandoc
+
+:Icon{name=icon-park-solid:transform .size-32}
+
 Pandoc 是一个开源的文档转换工具，被广泛认为是最强大的文档转换工具之一。它支持多种文档格式之间的转换，使得用户可以轻松地在不同的文档格式之间进行转换。Pandoc 是用 Haskell 语言编写的，并且可以在多种操作系统上运行，包括 Windows、macOS 和 Linux。
 
 ### 主要特点

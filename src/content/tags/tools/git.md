@@ -5,6 +5,8 @@ icon: logos:git-icon
 description: Git 是一种分布式版本控制系统，由 Linus Torvalds 于 2005 年创建，用于管理 Linux 内核开发。它被广泛应用于软件开发中，用来跟踪代码的变更，协作开发和管理项目历史记录。以下是对 Git 的详细介绍。
 ---
 
+## Git
+
 :Icon{name=logos:git .size-32}
 
 Git 是一种分布式版本控制系统，由 Linus Torvalds 于 2005 年创建，用于管理 Linux 内核开发。它被广泛应用于软件开发中，用来跟踪代码的变更，协作开发和管理项目历史记录。以下是对 Git 的详细介绍。

@@ -5,6 +5,7 @@ icon: logos:rabbitmq-icon
 description: RabbitMQ 是一个功能强大且灵活的消息中间件，广泛应用于分布式系统中实现异步消息传递和任务处理。通过其可靠性、灵活性和可扩展性，RabbitMQ 能够满足各种高并发和高可用性应用场景的需求，成为现代微服务架构和消息驱动架构中的关键组件。
 ---
 
+## RabbitMQ
 
 :Icon{name=devicon:rabbitmq-wordmark .size-32}
 

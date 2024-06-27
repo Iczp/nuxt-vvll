@@ -5,6 +5,7 @@ icon: Quartz
 description: Quartz 是一个强大且灵活的作业调度框架，适用于各种复杂的调度需求。通过其丰富的功能和易用的 API，开发人员可以轻松实现各种定时任务和后台作业，提升应用程序的自动化和可靠性。Quartz 的持久化支持和分布式调度能力使得它在高可用性和大规模系统中表现出色。
 ---
 
+## Quartz
 
 :Icon{name=Quartz .size-32}
 
@@ -14,6 +15,7 @@ Quartz 是一个功能强大的开源作业调度库，主要用于 Java 应用�
 
 1. **丰富的调度能力**：
    Quartz 支持各种调度需求，包括简单的时间间隔调度、复杂的 Cron 表达式调度、以及基于日历的调度等。
+
    ```java
    // 使用简单的时间间隔调度任务
    Trigger trigger = TriggerBuilder.newTrigger()
@@ -25,6 +27,7 @@ Quartz 是一个功能强大的开源作业调度库，主要用于 Java 应用�
 
 2. **作业和触发器**：
    Quartz 通过作业（Job）和触发器（Trigger）来定义和控制任务的执行。作业是实际执行的任务逻辑，而触发器则定义了任务的执行时间和条件。
+
    ```java
    // 定义一个简单的作业
    public class MyJob implements Job {
@@ -41,6 +44,7 @@ Quartz 是一个功能强大的开源作业调度库，主要用于 Java 应用�
 
 3. **持久化支持**：
    Quartz 可以将调度信息持久化到数据库中，支持多种数据库，包括 MySQL、PostgreSQL、Oracle 等。这使得任务调度信息可以在应用程序重启后恢复。
+
    ```xml
    <property name="org.quartz.jobStore.class" value="org.quartz.impl.jdbcjobstore.JobStoreTX" />
    <property name="org.quartz.jobStore.driverDelegateClass" value="org.quartz.impl.jdbcjobstore.StdJDBCDelegate" />
@@ -60,6 +64,7 @@ Quartz 是一个功能强大的开源作业调度库，主要用于 Java 应用�
 
 1. **引入 Quartz 库**：
    在 Maven 项目中引入 Quartz 依赖：
+
    ```xml
    <dependency>
        <groupId>org.quartz-scheduler</groupId>
@@ -70,6 +75,7 @@ Quartz 是一个功能强大的开源作业调度库，主要用于 Java 应用�
 
 2. **创建调度器**：
    创建和启动一个调度器实例：
+
    ```java
    // 获取调度器实例
    Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
@@ -79,6 +85,7 @@ Quartz 是一个功能强大的开源作业调度库，主要用于 Java 应用�
 
 3. **定义作业和触发器**：
    定义一个简单的作业和触发器，并将其调度：
+
    ```java
    // 定义作业
    JobDetail job = JobBuilder.newJob(MyJob.class)

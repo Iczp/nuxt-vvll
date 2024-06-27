@@ -5,6 +5,7 @@ icon: MinioIcon
 description: MinIO 是一个强大且灵活的对象存储解决方案，兼容 S3 API，提供高性能、高可用性和可扩展性，适用于各种大规模数据存储和处理场景。通过简单的安装和配置，开发人员和运维人员可以快速部署和管理 MinIO，构建可靠的数据存储基础设施。
 ---
 
+## MinIO
 
 :Icon{name=Minio .size-32}
 
@@ -55,6 +56,7 @@ MinIO 是一个高性能的对象存储服务器，完全兼容亚马逊 S3 (Ama
 
 1. **下载和安装 MinIO**：
    使用官方提供的可执行文件快速启动 MinIO 服务器：
+
    ```bash
    wget https://dl.min.io/server/minio/release/linux-amd64/minio
    chmod +x minio
@@ -66,6 +68,7 @@ MinIO 是一个高性能的对象存储服务器，完全兼容亚马逊 S3 (Ama
 
 3. **使用 MinIO 客户端（mc）管理存储**：
    MinIO 提供了一个命令行工具 `mc`，用于与 MinIO 服务器交互：
+
    ```bash
    wget https://dl.min.io/client/mc/release/linux-amd64/mc
    chmod +x mc
