@@ -2,7 +2,7 @@
 name: git
 title: Git
 icon: logos:git-icon
-description: GitHub是一个功能强大的代码托管平台，为开发者提供了丰富的工具和功能，帮助他们更高效地进行代码管理、协作和部署。GitHub的广泛应用和活跃的开发者社区使其成为全球最受欢迎的代码托管平台之一
+description: Git 是一种分布式版本控制系统，由 Linus Torvalds 于 2005 年创建，用于管理 Linux 内核开发。它被广泛应用于软件开发中，用来跟踪代码的变更，协作开发和管理项目历史记录。以下是对 Git 的详细介绍。
 ---
 
 :Icon{name=logos:git .size-32}
