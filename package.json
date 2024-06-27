@@ -1,7 +1,10 @@
 {
   "name": "vvll.net",
+  "productName": "Vast Value Learn Lab",
+  "description": "Vast Value Learn Lab",
   "version": "0.0.1",
   "author": "IczpNet <1000@intry.cn>",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {
