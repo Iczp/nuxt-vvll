@@ -98,5 +98,5 @@ useHead({
     </div>
   </main>
 
-  <Comments></Comments>
+  <GitComments></GitComments>
 </template>
