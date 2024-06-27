@@ -11,9 +11,12 @@
         <div class="logo">
           <Icon name="logos:waypoint-icon" class="size-8 -scale-y-100" />
         </div>
-        <h1 class="site-title">
-          <strong class="text-2xl text-[#14C6CB]">VVLL</strong
-          ><span class="text-sm">.net</span>
+        <h1 class="flex flex-row items-center gap-1 site-title">
+          <strong class="text-2xl text-[#14C6CB]">VVLL</strong>
+          <span
+            class="px-0.5 text-xs text-white border rounded border-sky-500 bg-sky-400 "
+            >.net</span
+          >
         </h1>
       </div>
       <!-- <div>
@@ -48,11 +51,6 @@
   gap: 4px;
 }
 .site-title {
-  display: flex;
-  align-items: last baseline;
-  font-size: 24px;
-  padding: 0;
-  margin: 0;
 }
 .site-description {
   display: flex;
