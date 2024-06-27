@@ -20,6 +20,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "@vueuse/nuxt": "^10.10.1",
     "dayjs": "^1.11.11",
+    "gitalk": "^1.8.0",
     "nuxt": "^3.12.1",
     "nuxt-icon": "^0.6.10",
     "pinia": "^2.1.7",

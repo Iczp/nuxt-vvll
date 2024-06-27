@@ -30,6 +30,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    githubClientId: process.env.GITHUB_CLIENT_ID,
+    githubClientSecret: process.env.GITHUB_CLIENT_SECRET,
+    public: {
+      githubClientId: process.env.GITHUB_CLIENT_ID,
+    },
+  },
   components: {
     /**
      * 要禁用自动导入的话，components.dirs设置为空数组

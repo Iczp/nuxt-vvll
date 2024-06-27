@@ -97,4 +97,6 @@ useHead({
       <PageLink :page="next" />
     </div>
   </main>
+
+  <Comments></Comments>
 </template>
