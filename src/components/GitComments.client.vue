@@ -49,13 +49,13 @@ const tabs = ref([
 
       <div class="mt-10" :class="{ hidden: index != 1 }">
         <a
-          href="https://discord.gg/PFpEHVs6Wj"
+          href="https://discord.gg/GmKVxWz5wk"
           class="flex flex-col items-center justify-center gap-2 !py-4 card hover:card-hover"
           target="_blank"
           rel="nofollow"
         >
-          <Icon name="fa6-brands:discord" class="size-12" />
-          https://discord.gg/PFpEHVs6Wj
+          <Icon name="logos:discord-icon" class="size-12" />
+          https://discord.gg/GmKVxWz5wk
         </a>
       </div>
     </template>
