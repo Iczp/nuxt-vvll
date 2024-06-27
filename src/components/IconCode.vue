@@ -5,7 +5,7 @@
 
 const props = withDefaults(
   defineProps<{
-    lang?: string | null | undefined;
+    lang?: any;
   }>(),
   {
     // lang: 'bx:code-block',
@@ -44,7 +44,7 @@ switch (props.lang?.toLowerCase()) {
   case 'shell':
     name.value = 'bi:terminal';
     break;
-    case 'c#':
+  case 'c#':
   case 'csharp':
     name.value = 'vscode-icons:file-type-csharp2';
     break;
@@ -53,9 +53,10 @@ switch (props.lang?.toLowerCase()) {
 
 <template>
   <!-- after:capitalize -->
+  <!-- after:content-[attr(lang)] -->
   <span
-    :l="`{ ${lang || '..'} }`"
-    class="after:mx-2 after:content-[attr(l)] after:text-sm after:text-slate-300 dark:after:text-slate-700"
+    :lang="`{ ${lang || '..'} }`"
+    class="after:mx-2 after:text-sm after:text-slate-300 dark:after:text-slate-700"
   >
     <!-- <IconCode :lang="$attrs.language" /> -->
     <Icon v-if="lang" :name="name" />

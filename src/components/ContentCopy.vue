@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  value?: string | undefined;
+  value?: any | string | undefined;
 }>();
 
 const { text, copy, copied, isSupported } = useClipboard({
