@@ -15,27 +15,43 @@ const init = () => {
 };
 onMounted(() => {
   setTimeout(init, 0);
+
+  setTimeout(() => {
+    current.value = tabs.value.findIndex((x) => x.hash == location.hash);
+    console.log(current.value, location.hash);
+
+    location.hash = `#${tabs.value[current.value].hash}`;
+  }, 500);
 });
 
 const tabs = ref([
   {
     title: '评论',
     icon: 'bi:github',
+    hash: '#comment',
   },
   {
     title: '意见',
     icon: 'logos:discord-icon',
+    hash: '#discord',
   },
 ]);
+
+const current = ref(0);
 </script>
 
 <template>
-  <Tabs :items="tabs" class="mt-8">
+  <a name="comment"></a>
+  <Tabs id="comment" :current="current" :items="tabs" class="mt-8">
     <template v-slot:item="{ item }">
-      <div class="flex flex-row items-center gap-2 p-2 text-base">
+      <a
+        :href="item.hash"
+        :name="item.hash.slice(1)"
+        class="flex flex-row items-center gap-2 p-2 text-base"
+      >
         <Icon :name="item.icon" class="size-5" />
         <span>{{ item.title }}</span>
-      </div>
+      </a>
     </template>
 
     <template v-slot="{ index }">

@@ -21,6 +21,12 @@ const onChange = (index: number) => {
   emit('change', index);
   emit('update:current', index);
 };
+watch(
+  () => props.current,
+  (val) => {
+    tabIndex.value = val;
+  }
+);
 </script>
 <template>
   <div class="tabs">
