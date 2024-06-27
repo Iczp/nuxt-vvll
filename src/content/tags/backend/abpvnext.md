@@ -2,7 +2,7 @@
 name: abpvnext
 title: Abp vNext
 icon: AbpVNext
-description: ABP VNext是abp团队重新设计的主要版本的ASP.NET Boilerplate框架，是一个开源的应用框架，用于开发现代化的企业级Web应用程序。它基于.NET平台，提供了一套丰富的工具和功能，帮助开发人员快速构建可扩展、可维护和可测试的应用程序。许多开发团队的首选语言之一
+description: ABP VNext 是abp团队重新设计的主要版本的ASP.NET Boilerplate框架，是一个开源的应用框架，用于开发现代化的企业级Web应用程序。它基于.NET平台，提供了一套丰富的工具和功能，帮助开发人员快速构建可扩展、可维护和可测试的应用程序。许多开发团队的首选语言之一
 ---
 
 ## Abp vNext

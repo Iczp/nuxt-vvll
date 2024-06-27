@@ -2,7 +2,7 @@
 name: prisma
 title: Prisma
 icon: logos:prisma
-description: Prisma是一个功能强大、灵活且易于使用的数据库访问工具，它极大地简化了开发人员与数据库的交互过程，提高了开发效率和数据访问的安全性。
+description: Prisma 是一个功能强大、灵活且易于使用的数据库访问工具，它极大地简化了开发人员与数据库的交互过程，提高了开发效率和数据访问的安全性。
 ---
 
 ## Prisma

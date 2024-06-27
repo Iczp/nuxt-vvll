@@ -2,7 +2,7 @@
 name: vueuse
 title: VueUse
 icon: logos:vueuse
-description: Vue 2 和 3 的基本 Vue Composition API 实用程序集合
+description: Vue 2 和 3 的基本 Vue Composition API 实用程序集合,提供了 Vue.js 生态系统中常用的一些功能性函数和组合的集合，旨在帮助开发者更高效地构建 Vue.js 应用程序。
 ---
 
 ## VueUse

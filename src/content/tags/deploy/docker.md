@@ -2,7 +2,7 @@
 name: docker
 title: Docker
 icon: logos:docker-icon
-description: Docker是一种强大且灵活的容器化平台，为开发者提供了便捷的应用程序打包、部署和管理工具，使得应用程序的开发、测试和部署更加高效和可靠。Docker在现代应用开发和部署中扮演着重要的角色。
+description: Docker 是一种强大且灵活的容器化平台，为开发者提供了便捷的应用程序打包、部署和管理工具，使得应用程序的开发、测试和部署更加高效和可靠。Docker在现代应用开发和部署中扮演着重要的角色。
 ---
 
 ## Docker

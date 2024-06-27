@@ -2,7 +2,7 @@
 name: vite
 title: Vite
 icon: logos:vitess
-description: Vue.js是一款灵活、高效的前端框架，适用于构建现代化的交互式Web应用程序。其简洁的API设计和丰富的生态系统使得开发者能够快速构建功能丰富、响应迅速的Web应用
+description: Vite 是一款面向现代浏览器的轻量级、快速的前端开发工具。其核心基于 ECMAScript 标准原生模块系统（ES Modules）实现，提供了全新的开发体验。Vite 的主要特性是 Bundleless，即按需加载。当某个模块被 import 时，Vite 会动态地加载它，这种机制减少了加载文件的体积，缩短了加载时长，从而实现了真正的按需加载。
 ---
 
 ## Vite

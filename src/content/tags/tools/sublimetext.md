@@ -2,7 +2,7 @@
 name: sublimetext
 title: Sublime Text
 icon: logos:sublimetext-icon
-description: Sublime Text是一款非常优秀的文本编辑器和代码编辑器，具有强大的功能和良好的扩展性，适用于各种不同类型的用户。无论是初学者还是经验丰富的开发者，都可以通过使用Sublime Text来提高编码效率和代码质量。
+description: Sublime Text 是一款非常优秀的文本编辑器和代码编辑器，具有强大的功能和良好的扩展性，适用于各种不同类型的用户。无论是初学者还是经验丰富的开发者，都可以通过使用Sublime Text来提高编码效率和代码质量。
 ---
 
 ## Sublime Text

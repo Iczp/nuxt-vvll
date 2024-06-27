@@ -2,7 +2,7 @@
 name: netcore
 title: .Net Core
 icon: devicon:dotnetcore
-description: .NET Core是一个功能强大、灵活且跨平台的应用程序开发框架，适用于各种类型的应用程序开发需求。无论你是初学者还是经验丰富的开发者，都可以通过.NET Core来构建高质量、高性能的应用程序
+description: .NET Core 是一个功能强大、灵活且跨平台的应用程序开发框架，适用于各种类型的应用程序开发需求。无论你是初学者还是经验丰富的开发者，都可以通过.NET Core来构建高质量、高性能的应用程序
 ---
 
 ## .NET Core

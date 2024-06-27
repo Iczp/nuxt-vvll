@@ -2,7 +2,7 @@
 name: sqlite
 title: Sqlite
 icon: devicon:sqlite
-description: SQLite是一款功能强大、轻量级且易于使用的数据库系统，适用于各种需要嵌入式或轻量级数据库支持的应用场景。
+description: SQLite 是一款功能强大、轻量级且易于使用的数据库系统，适用于各种需要嵌入式或轻量级数据库支持的应用场景。
 ---
 
 ## SQLite 是一款功能强大、轻量级且易于使用的数据库系统，适用于各种需要嵌入式或轻量级数据库支持的应用场景。

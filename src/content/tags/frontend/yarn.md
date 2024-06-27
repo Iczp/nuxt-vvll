@@ -2,7 +2,7 @@
 name: yarn
 title: Yarn
 icon: logos:yarn
-description: Yarn是另一种资源协调者，也是一种高效的包管理工具
+description: Yarn 是另一种资源协调者，也是一种高效的包管理工具,针对传统包管理工具（如 npm）在安装和更新依赖包时面临的性能和磁盘空间挑战而设计的优化工具。
 ---
 
 ## Yarn

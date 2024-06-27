@@ -2,7 +2,7 @@
 name: postgresql
 title: PostgreSQL
 icon: logos:postgresql
-description: PostgreSQL凭借其强大的功能、高度的可定制性、出色的并发控制能力以及丰富的数据类型支持等特点，成为了关系型数据库领域的佼佼者。
+description: PostgreSQL 凭借其强大的功能、高度的可定制性、出色的并发控制能力以及丰富的数据类型支持等特点，成为了关系型数据库领域的佼佼者。
 ---
 
 ## PostgreSQL

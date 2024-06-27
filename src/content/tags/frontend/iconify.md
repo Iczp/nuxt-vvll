@@ -2,7 +2,7 @@
 name: iconify
 title: Iconify
 icon: line-md:iconify2
-description: Iconify是一个功能强大、灵活且易于使用的图标解决方案，无论是对于需要快速集成图标到项目的开发者，还是对于追求高度定制化的设计师，都是一个理想的选择。
+description: Iconify 是一个功能强大、灵活且易于使用的图标解决方案，无论是对于需要快速集成图标到项目的开发者，还是对于追求高度定制化的设计师，都是一个理想的选择。
 ---
 
 ## Iconify

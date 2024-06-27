@@ -2,7 +2,7 @@
 name: gitlab
 title: Gitlab
 icon: logos:gitlab
-description: GitLab是一个功能强大、灵活且易于使用的仓库管理系统，适用于各种规模和类型的团队和组织，用于管理代码、协作开发和提高开发效率。如需了解更多，可以访问GitLab的官网，获取更详细的信息和使用教程。
+description: GitLab 是一个功能强大、灵活且易于使用的仓库管理系统，适用于各种规模和类型的团队和组织，用于管理代码、协作开发和提高开发效率。如需了解更多，可以访问GitLab的官网，获取更详细的信息和使用教程。
 ---
 
 ## GitLab

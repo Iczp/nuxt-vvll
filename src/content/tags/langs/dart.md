@@ -2,7 +2,7 @@
 name: dart
 title: Dart
 icon: logos:dart
-description: Dart是一种功能强大且灵活的编程语言，适用于各种应用场景。无论是构建高效的Web应用，还是开发跨平台的移动应用，Dart都能提供优秀的解决方案。
+description: Dart 是一种功能强大且灵活的编程语言，适用于各种应用场景。无论是构建高效的Web应用，还是开发跨平台的移动应用，Dart都能提供优秀的解决方案。
 ---
 
 ## Dart

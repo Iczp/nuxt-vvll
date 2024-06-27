@@ -2,7 +2,7 @@
 name: graphql
 title: Graphql
 icon: logos:graphql
-description: GraphQL是一种强大而灵活的API查询语言，适用于需要高效、灵活和可扩展数据获取的场景。
+description: GraphQL 是一种强大而灵活的API查询语言，适用于需要高效、灵活和可扩展数据获取的场景。
 ---
 
 ## GraphQL

@@ -2,7 +2,7 @@
 name: npm
 title: NPM
 icon: logos:npm-2
-description: npm是一个强大且广泛使用的JavaScript包管理工具，为开发者提供了便捷的包管理、依赖解析和脚本执行功能，是现代JavaScript开发中不可或缺的工具之一。
+description: npm 是一个强大且广泛使用的JavaScript包管理工具，为开发者提供了便捷的包管理、依赖解析和脚本执行功能，是现代JavaScript开发中不可或缺的工具之一。
 ---
 
 ## npm

@@ -2,7 +2,7 @@
 name: github-actions
 title: Github Actions
 icon: logos:github-actions
-description: GitHub Actions是一个功能强大的自动化工具，能够极大地提升开发工作流程的效率和生产力。如需了解更多GitHub Actions的详细信息和使用方法，建议查阅GitHub官方文档或相关教程。
+description: GitHub Actions 是一个功能强大的自动化工具，能够极大地提升开发工作流程的效率和生产力。如需了解更多GitHub Actions的详细信息和使用方法，建议查阅GitHub官方文档或相关教程。
 ---
 
 ## GitHub Actions

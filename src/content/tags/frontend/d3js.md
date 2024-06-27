@@ -2,7 +2,7 @@
 name: d3js
 title: D3.js
 icon: devicon:d3js
-description: D3.js是一个功能强大、灵活且社区活跃的JavaScript数据可视化库，它可以帮助开发者创建出丰富多样的数据可视化作品，提升数据的展示效果和用户体验。
+description: D3.js 是一个功能强大、灵活且社区活跃的JavaScript数据可视化库，它可以帮助开发者创建出丰富多样的数据可视化作品，提升数据的展示效果和用户体验。
 ---
 
 ## D3.js

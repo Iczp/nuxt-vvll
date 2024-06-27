@@ -2,7 +2,7 @@
 name: markdown
 title: Markdown
 icon: vscode-icons:file-type-markdown
-description: Markdown作为一种轻量级的标记语言，不仅简化了HTML的书写，还具有简洁、易读、扩展性强等优点，使其在各种场景下都有广泛的应用。无论是开发者、写作人员还是个人用户，Markdown都能提供简便快捷、高效美观的文本编辑和发布体验。
+description: Markdown 作为一种轻量级的标记语言，不仅简化了HTML的书写，还具有简洁、易读、扩展性强等优点，使其在各种场景下都有广泛的应用。无论是开发者、写作人员还是个人用户，Markdown都能提供简便快捷、高效美观的文本编辑和发布体验。
 ---
 
 ## Markdown

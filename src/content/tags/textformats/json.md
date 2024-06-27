@@ -2,7 +2,7 @@
 name: json
 title: Json
 icon: mdi:code-json
-description: 'JSON是一种简单、通用且易于理解的数据格式，广泛应用于各种领域，特别是在Web开发中扮演着重要的角色。'
+description: JSON 是一种简单、通用且易于理解的数据格式，广泛应用于各种领域，特别是在Web开发中扮演着重要的角色。
 ---
 
 ## JSON

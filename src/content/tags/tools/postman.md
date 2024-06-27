@@ -2,7 +2,7 @@
 name: postman
 title: Postman
 icon: logos:postman-icon
-description: Postman是一个功能强大、易于使用的接口测试工具，适用于各种规模和复杂度的项目。它能够帮助开发团队提高测试效率，减少bug数量，从而提升产品的质量和用户体验。
+description: Postman 是一个功能强大、易于使用的接口测试工具，适用于各种规模和复杂度的项目。它能够帮助开发团队提高测试效率，减少bug数量，从而提升产品的质量和用户体验。
 ---
 
 ## Postman

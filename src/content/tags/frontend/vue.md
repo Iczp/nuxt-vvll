@@ -2,14 +2,14 @@
 name: vue
 title: Vue
 icon: logos:vue
-description: Vue.js是一款灵活、高效的前端框架，适用于构建现代化的交互式Web应用程序。其简洁的API设计和丰富的生态系统使得开发者能够快速构建功能丰富、响应迅速的Web应用
+description: Vuejs 是一款灵活、高效的前端框架，适用于构建现代化的交互式Web应用程序。其简洁的API设计和丰富的生态系统使得开发者能够快速构建功能丰富、响应迅速的Web应用
 ---
 
 ## Vue
 
 :Icon{name=logos:vue .size-32}
 
-Vue.js 是一款流行的 JavaScript 框架，用于构建用户界面和单页面应用程序。以下是 Vue.js 的一些关键特点：
+Vuejs 是一款流行的 JavaScript 框架，用于构建用户界面和单页面应用程序。以下是 Vuejs 的一些关键特点：
 
 - **响应式数据绑定**：Vue.js 采用双向数据绑定机制，使得数据的变化能够自动反映在视图上，简化了开发过程。
 

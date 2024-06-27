@@ -2,7 +2,7 @@
 name: electron
 title: Electron
 icon: logos:electron
-description: Electron是一个功能强大、易用且具有广泛社区支持的跨平台桌面应用程序框架，它使得开发者能够使用Web技术构建出具有丰富功能和优秀性能的桌面应用程序。
+description: Electron 是一个功能强大、易用且具有广泛社区支持的跨平台桌面应用程序框架，它使得开发者能够使用Web技术构建出具有丰富功能和优秀性能的桌面应用程序。
 ---
 
 ## Electron

@@ -2,7 +2,7 @@
 name: swagger
 title: Swagger
 icon: logos:swagger
-description: Swagger是一个规范和完整的框架，主要用于生成、描述、调用和可视化RESTful风格的Web服务。它旨在使客户端和文件系统作为服务器以同样的速度来更新，并确保文件的方法、参数和模型紧密集成到服务器端的代码，以保持API的同步。
+description: Swagger 是一个规范和完整的框架，主要用于生成、描述、调用和可视化RESTful风格的Web服务。它旨在使客户端和文件系统作为服务器以同样的速度来更新，并确保文件的方法、参数和模型紧密集成到服务器端的代码，以保持API的同步。
 ---
 
 ## Swagger

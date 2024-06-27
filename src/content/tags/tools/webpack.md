@@ -2,7 +2,7 @@
 name: webpack
 title: Webpack
 icon: logos:webpack
-description: Webpack是一个功能强大、灵活且易于扩展的前端构建工具，它已经成为绝大多数企业中前端项目打包构建的首选工具。通过使用Webpack，开发者可以更高效地管理前端资源，提高项目的可维护性和性能。
+description: Webpack 是一个功能强大、灵活且易于扩展的前端构建工具，它已经成为绝大多数企业中前端项目打包构建的首选工具。通过使用Webpack，开发者可以更高效地管理前端资源，提高项目的可维护性和性能。
 ---
 
 ## Webpack

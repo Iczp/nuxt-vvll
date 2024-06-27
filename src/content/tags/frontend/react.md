@@ -2,7 +2,7 @@
 name: react
 title: React
 icon: devicon:react
-description: NestJS是一个基于TypeScript和Node.js的后端框架，主要用于构建可维护且高效的服务器端应用程序。功能强大、灵活且易于使用的后端框架，适用于各种规模和复杂度的Web应用程序开发。
+description: React 是一个用于构建用户界面的 JavaScript 库，起源于 Facebook 的内部项目。该项目最初是为了解决 Facebook 对市场上所有 JavaScript MVC 框架的不满，并用于架设 Instagram 的网站。
 ---
 
 ## React

@@ -2,7 +2,7 @@
 name: nginx
 title: Nginx
 icon: logos:nginx
-description: Nginx是一个高性能的开源的HTTP和反向代理服务器，以及一个邮件代理服务器。它最初由俄罗斯的程序员Igor Sysoev开发，并于2004年首次公开发布。Nginx因其稳定性、丰富的功能集、简单的配置和低资源消耗而广受欢迎，成为许多网站和互联网应用的首选服务器软件之一。
+description: Nginx 是一个高性能的开源的HTTP和反向代理服务器，以及一个邮件代理服务器。它最初由俄罗斯的程序员Igor Sysoev开发，并于2004年首次公开发布。Nginx因其稳定性、丰富的功能集、简单的配置和低资源消耗而广受欢迎，成为许多网站和互联网应用的首选服务器软件之一。
 ---
 
 ## Nginx

@@ -2,7 +2,7 @@
 name: regex
 title: Regex
 icon: skill-icons:regex-light
-description: Regex,全称Regular Expression，中文称为正则表达式，是一种文本模式
+description: Regex 全称Regular Expression，中文称为正则表达式，是一种文本模式
 ---
 
 ## Regex

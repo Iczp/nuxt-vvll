@@ -2,7 +2,7 @@
 name: oracle
 title: Oracle
 icon: simple-icons:oracle
-description: SQLite是一款功能强大、轻量级且易于使用的数据库系统，适用于各种需要嵌入式或轻量级数据库支持的应用场景。
+description: Oracle 是全球最大的信息管理软件及服务供应商，总部位于美国加州 Redwood Shore。Oracle 公司（甲骨文）自 1977 年成立以来，始终致力于提供卓越的数据库解决方案和软件服务。Oracle 开发的关系数据库产品性能卓越，被广泛采用于财富排行榜上的前 1000 家公司以及众多大型网站，是世界最好的数据库产品之一。
 ---
 
 ## Oracle

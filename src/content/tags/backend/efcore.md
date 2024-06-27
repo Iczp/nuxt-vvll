@@ -2,7 +2,7 @@
 name: efcore
 title: Entity Framework Core
 icon: Efcore
-description: Entity Framework Core(简称EF Core)是一个功能强大且易于使用的ORM框架，它简化了.NET开发者与关系型数据库的交互过程，提高了开发效率和代码质量。如需更多信息，建议查阅微软官方文档或相关教程。
+description: Entity Framework Core (简称EF Core)是一个功能强大且易于使用的ORM框架，它简化了.NET开发者与关系型数据库的交互过程，提高了开发效率和代码质量。如需更多信息，建议查阅微软官方文档或相关教程。
 ---
 
 ## Entity Framework Core

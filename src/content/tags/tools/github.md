@@ -2,7 +2,7 @@
 name: github
 title: Github
 icon: carbon:logo-github
-description: GitHub是一个功能强大的代码托管平台，为开发者提供了丰富的工具和功能，帮助他们更高效地进行代码管理、协作和部署。GitHub的广泛应用和活跃的开发者社区使其成为全球最受欢迎的代码托管平台之一
+description: GitHub 是一个功能强大的代码托管平台，为开发者提供了丰富的工具和功能，帮助他们更高效地进行代码管理、协作和部署。GitHub的广泛应用和活跃的开发者社区使其成为全球最受欢迎的代码托管平台之一
 ---
 
 ## GitHub

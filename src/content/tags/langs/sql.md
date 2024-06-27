@@ -2,7 +2,7 @@
 name: sql
 title: SQL
 icon: devicon:azuresqldatabase
-description: SQL语言广泛应用于各种关系数据库管理系统，如Microsoft SQL Server、MySQL、PostgreSQL、MariaDB和Oracle等。
+description: SQL 语言广泛应用于各种关系数据库管理系统，如Microsoft SQL Server、MySQL、PostgreSQL、MariaDB和Oracle等。
 ---
 
 ## SQL

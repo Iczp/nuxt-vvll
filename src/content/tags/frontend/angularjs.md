@@ -2,7 +2,7 @@
 name: angularjs
 title: AngularJS
 icon: devicon:angularjs
-description: NestJS是一个基于TypeScript和Node.js的后端框架，主要用于构建可维护且高效的服务器端应用程序。功能强大、灵活且易于使用的后端框架，适用于各种规模和复杂度的Web应用程序开发。
+description: AngularJS 是一个诞生于 2009 年的前端框架，由 Misko Hevery 等人创建，后被 Google 收购。它是为了克服 HTML 在构建应用上的不足而设计的，通过扩展 HTML 的语法和添加新的属性，使得开发者能够更方便地构建复杂的单页面应用（SPAs）。
 ---
 
 ## AngularJS

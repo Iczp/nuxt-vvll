@@ -2,7 +2,7 @@
 name: pandacss
 title: PandaCSS
 icon: logos:pandacss-icon
-description: PandaCSS是一个功能强大、易用且高效的CSS-in-JS框架，适合各种前端开发需求，特别是需要高效管理样式和提高开发体验的场景。
+description: PandaCSS 是一个功能强大、易用且高效的CSS-in-JS框架，适合各种前端开发需求，特别是需要高效管理样式和提高开发体验的场景。
 ---
 
 ## PandaCSS

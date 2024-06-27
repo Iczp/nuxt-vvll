@@ -2,7 +2,7 @@
 name: mysql
 title: MySql
 icon: devicon:mysql
-description: MySQL是一个功能强大、易用、可靠且高性能的关系型数据库管理系统，广泛应用于各种应用场景，是开发者和企业级应用的理想选择。
+description: MySQL 是一个功能强大、易用、可靠且高性能的关系型数据库管理系统，广泛应用于各种应用场景，是开发者和企业级应用的理想选择。
 ---
 
 ## MySql

@@ -2,7 +2,7 @@
 name: redis
 title: Redis
 icon: logos:redis
-description: Redis是一个功能强大、性能优越的Key-Value数据库，能够满足各种复杂的业务需求，提高系统的整体性能和稳定性。如需更多信息，建议查阅Redis的官方文档或相关教程。
+description: Redis 是一个功能强大、性能优越的Key-Value数据库，能够满足各种复杂的业务需求，提高系统的整体性能和稳定性。如需更多信息，建议查阅Redis的官方文档或相关教程。
 ---
 
 ## Redis

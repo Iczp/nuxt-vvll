@@ -2,7 +2,7 @@
 name: vercel
 title: Vercel
 icon: logos:vercel-icon
-description: Vercel是一个功能丰富、易于使用的云平台，适合前端开发人员构建、部署和扩展现代Web应用程序。无论是个人项目还是大型企业应用，Vercel都能提供灵活且强大的解决方案。
+description: Vercel 是一个功能丰富、易于使用的云平台，适合前端开发人员构建、部署和扩展现代Web应用程序。无论是个人项目还是大型企业应用，Vercel都能提供灵活且强大的解决方案。
 ---
 
 ## Vercel

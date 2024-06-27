@@ -2,7 +2,7 @@
 name: nuget
 title: Nuget
 icon: devicon:nuget
-description: NuGet是一个自由开源的软件包管理系统，是一个功能强大且灵活的包管理工具，可以大大简化.NET开发人员在项目中的库管理任务，提高开发效率。
+description: NuGet 是一个自由开源的软件包管理系统，是一个功能强大且灵活的包管理工具，可以大大简化.NET开发人员在项目中的库管理任务，提高开发效率。
 ---
 
 ## NuGet

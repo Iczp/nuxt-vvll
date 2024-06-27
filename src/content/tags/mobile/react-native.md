@@ -2,7 +2,7 @@
 name: react-native
 title: React Native
 icon: devicon:react
-description: React Native为移动应用开发提供了一种高效、灵活且强大的解决方案，使得开发者能够更快地构建出优质的移动应用，满足不断变化的市场需求。
+description: React Native 为移动应用开发提供了一种高效、灵活且强大的解决方案，使得开发者能够更快地构建出优质的移动应用，满足不断变化的市场需求。
 ---
 
 ## React Native

@@ -2,7 +2,7 @@
 name: uniapp
 title: Uniapp
 icon: 'mdi:unicode'
-description: UniApp是一个强大且灵活的跨平台应用开发框架，通过其跨平台特性、Vue.js基础和丰富的组件库，使得开发者能够快速构建高质量的跨平台应用，降低开发成本，提高开发效率。UniApp在移动应用开发领域具有广泛的应用和影响力。
+description: UniApp 是一个强大且灵活的跨平台应用开发框架，通过其跨平台特性、Vue.js基础和丰富的组件库，使得开发者能够快速构建高质量的跨平台应用，降低开发成本，提高开发效率。UniApp在移动应用开发领域具有广泛的应用和影响力。
 ---
 
 ## UniApp

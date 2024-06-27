@@ -2,7 +2,7 @@
 name: javascript
 title: Javascript
 icon: vscode-icons:file-type-js
-description: JavaScript是一种强大且灵活的编程语言，广泛应用于Web开发、移动应用开发、游戏开发等领域。其动态特性、事件驱动模型和丰富的生态系统使得JavaScript成为现代Web开发中不可或缺的一部分。
+description: JavaScript 是一种强大且灵活的编程语言，广泛应用于Web开发、移动应用开发、游戏开发等领域。其动态特性、事件驱动模型和丰富的生态系统使得JavaScript成为现代Web开发中不可或缺的一部分。
 ---
 
 ## Javascript

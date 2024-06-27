@@ -2,7 +2,7 @@
 name: mongodb
 title: MongoDB
 icon: logos:mongodb-icon
-description: MongoDB是一个功能强大、灵活且易于使用的数据库系统，适用于各种需要高性能数据存储和处理的场景。
+description: MongoDB 是一个功能强大、灵活且易于使用的数据库系统，适用于各种需要高性能数据存储和处理的场景。
 ---
 
 ## MongoDB

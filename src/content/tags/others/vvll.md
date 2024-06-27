@@ -2,7 +2,7 @@
 name: vvll
 title: VVLL
 icon: logos:waypoint-icon
-description: 通过VVLL.net，开发者可以获取关于Vite、Vue和前端开发相关的最新资讯、文档和教程，帮助他们更好地理解和应用这些技术，提升前端开发能力和效率。
+description: 通过 VVLL.net，开发者可以获取关于Vite、Vue和前端开发相关的最新资讯、文档和教程，帮助他们更好地理解和应用这些技术，提升前端开发能力和效率。
 ---
 
 ## VVLL.net

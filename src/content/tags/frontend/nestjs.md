@@ -2,7 +2,7 @@
 name: nestjs
 title: NestJS
 icon: logos:nestjs
-description: NestJS是一个基于TypeScript和Node.js的后端框架，主要用于构建可维护且高效的服务器端应用程序。功能强大、灵活且易于使用的后端框架，适用于各种规模和复杂度的Web应用程序开发。
+description: NestJS 是一个基于TypeScript和Node.js的后端框架，主要用于构建可维护且高效的服务器端应用程序。功能强大、灵活且易于使用的后端框架，适用于各种规模和复杂度的Web应用程序开发。
 ---
 
 ## NestJS

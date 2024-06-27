@@ -2,7 +2,7 @@
 name: pnpm
 title: Pnpm
 icon: logos:pnpm
-description: Pnpm是一种快速、高效且磁盘空间友好的包管理工具。它通过共享依赖来减少磁盘空间占用，并通过硬链接来加快安装速度。
+description: Pnpm 是一种快速、高效且磁盘空间友好的包管理工具。它通过共享依赖来减少磁盘空间占用，并通过硬链接来加快安装速度。
 ---
 
 ## Pnpm

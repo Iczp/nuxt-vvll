@@ -2,7 +2,7 @@
 name: eslint
 title: ESLint
 icon: logos:eslint
-description: Vue.js是一款灵活、高效的前端框架，适用于构建现代化的交互式Web应用程序。其简洁的API设计和丰富的生态系统使得开发者能够快速构建功能丰富、响应迅速的Web应用
+description: ESLint 是一个开源的 JavaScript 代码检查工具，它的目标是提供一个插件化的 JavaScript 代码检测工具，以发现并修复 JavaScript 代码中的问题。
 ---
 
 ## ESLint

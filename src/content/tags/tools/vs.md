@@ -3,7 +3,7 @@ name: vs
 title: Visual Studio
 group: IDE
 icon: logos:visual-studio
-description: Visual Studio是一款功能强大且全面的集成开发环
+description: Visual Studio 是一款功能强大且全面的集成开发环
 ---
 
 ## Visual Studio

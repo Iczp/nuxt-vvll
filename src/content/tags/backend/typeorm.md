@@ -2,7 +2,7 @@
 name: typeorm
 title: TypeORM
 icon: logos:typeorm
-description: TypeORM是一个功能强大、灵活且易于使用的ORM库，它极大地简化了Node.js中的数据库操作，提高了开发效率和代码质量。
+description: TypeORM 是一个功能强大、灵活且易于使用的ORM库，它极大地简化了Node.js中的数据库操作，提高了开发效率和代码质量。
 ---
 
 ## TypeORM

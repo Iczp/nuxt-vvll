@@ -2,7 +2,7 @@
 name: oauth
 title: OAuth
 icon: logos:oauth
-description: OAuth是一个功能强大、安全且广泛应用的开放标准，它极大地简化了用户资源的授权过程，并提高了系统的安全性。
+description: OAuth 是一个功能强大、安全且广泛应用的开放标准，它极大地简化了用户资源的授权过程，并提高了系统的安全性。
 ---
 
 ## OAuth

@@ -2,7 +2,7 @@
 name: kubernetes
 title: Kubernetes(k8s)
 icon: logos:kubernetes
-description: Kubernetes，简称K8s。Kubernetes是一个功能强大、灵活且易于使用的容器编排系统，它使得容器化应用的部署、管理和扩展变得更加简单和高效，是云原生应用的标准解决方案。
+description: Kubernetes 简称K8s。Kubernetes是一个功能强大、灵活且易于使用的容器编排系统，它使得容器化应用的部署、管理和扩展变得更加简单和高效，是云原生应用的标准解决方案。
 ---
 
 ## Kubernetes
