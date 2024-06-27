@@ -14,7 +14,7 @@ const init = () => {
   gitalk.render('gitalk-container');
 };
 onMounted(() => {
-  setTimeout(init, 0);
+  setTimeout(init, 500);
   setTimeout(() => {
     const index = tabs.value.findIndex((x) => x.hash == location.hash);
     if (index > -1) {
@@ -42,7 +42,6 @@ const current = ref(0);
 </script>
 
 <template>
-  <a name="comment"></a>
   <Tabs id="comment" :current="current" :items="tabs" class="mt-8">
     <template v-slot:item="{ item }">
       <a
@@ -61,7 +60,17 @@ const current = ref(0);
         class="leading-normal"
         :class="{ hidden: index != 0 }"
       >
-        <slot>...加载中...</slot>
+        <slot>
+          <a
+            href="https://github.com/Iczp/nuxt-vvll/issues"
+            class="mt-10 flex flex-col items-center justify-center gap-2 !py-4 card hover:card-hover"
+            target="_blank"
+            rel="nofollow"
+          >
+            <Icon name="bi:github" class="size-12" />
+            https://github.com/Iczp/nuxt-vvll/issues
+          </a>
+        </slot>
       </div>
 
       <div class="mt-10" :class="{ hidden: index != 1 }">
