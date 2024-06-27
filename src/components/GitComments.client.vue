@@ -24,13 +24,13 @@ const tabs = ref([
   },
   {
     title: '意见',
-    icon: 'vscode-icons:file-type-wxss',
+    icon: 'logos:discord-icon',
   },
 ]);
 </script>
 
 <template>
-  <Tabs :items="tabs" class="mt-4">
+  <Tabs :items="tabs" class="mt-8">
     <template v-slot:item="{ item }">
       <div class="flex flex-row items-center gap-2 p-2 text-base">
         <Icon :name="item.icon" class="size-5" />
@@ -47,16 +47,18 @@ const tabs = ref([
         <slot>...加载中...</slot>
       </div>
 
-      <div
-        class="flex flex-col items-center justify-center p-4 mt-4 box min-h-32"
-        :class="{ hidden: index != 1 }"
-      >
-        <Icon name="radix-icons:shadow-none" class="text-red-500 size-12" />
-        未开放的功能！
+      <div class="mt-10" :class="{ hidden: index != 1 }">
+        <a
+          href="https://discord.gg/PFpEHVs6Wj"
+          class="flex flex-col items-center justify-center gap-2 !py-4 card hover:card-hover"
+          target="_blank"
+          rel="nofollow"
+        >
+          <Icon name="fa6-brands:discord" class="size-12" />
+          https://discord.gg/PFpEHVs6Wj
+        </a>
       </div>
     </template>
   </Tabs>
 </template>
-<style scoped>
-
-</style>
+<style scoped></style>
