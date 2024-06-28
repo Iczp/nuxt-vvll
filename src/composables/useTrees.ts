@@ -20,14 +20,14 @@ export const useTrees = ({
   action?: (item: any, depth: number, index: number, parents: any[]) => void;
   sort?: (a: any, b: any, depth: number) => number;
 }) => {
-  let row = 0;
+  let row = -1;
 
   const activeItem = ref<ItemType>();
 
   const site = useSite();
 
   const refItems = ref<ItemType[]>();
-  const list = ref<ItemType[]>([]);
+  // const list = ref<ItemType[]>([]);
 
   /**
    * 文件数量统计
@@ -106,11 +106,14 @@ export const useTrees = ({
       if ($isActive) {
         activeItem.value = item;
         site.setPaths(
-          activeItem.value?.$parents ? activeItem.value?.$parents().reverse() : []
+          activeItem.value?.$parents
+            ? activeItem.value?.$parents().reverse()
+            : []
         );
         // console.log('activeItem', activeItem.value);
       }
-      list.value.push(item);
+      //  bug: $row
+      // list.value.push(item);
       return item;
     });
     if (sort) {
@@ -150,6 +153,20 @@ export const useTrees = ({
     // console.log(item);
     item.$isOpen = !item.$isOpen;
   };
+
+  const toList = <T extends { children?: T[] }>(
+    items: T[] | undefined,
+    arr: T[] = []
+  ) => {
+    items?.forEach((x) => {
+      arr.push(x);
+      // console.log(x);
+      toList(x.children, arr);
+    });
+    return arr;
+  };
+
+  const list = computed(() => toList(refItems.value));
 
   /**
    * 初始化

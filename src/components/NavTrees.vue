@@ -68,7 +68,10 @@ const navClick = (item: any) => {
           >
             <Arrow :dir="item.$isOpen ? 'down' : 'right'" />
           </div>
-          <div v-else-if="!item.$isDir && item.$count" class="badge size-6 text-sky-600">
+          <div
+            v-else-if="!item.$isDir && item.$count"
+            class="badge size-6 text-sky-600"
+          >
             {{ item.$count }}
           </div>
         </div>

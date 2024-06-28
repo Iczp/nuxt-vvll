@@ -27,6 +27,7 @@ export const useSite = defineStore('site', {
     },
     toggle() {
       this.isOpen = !this.isOpen;
+      return this.isOpen;
     },
   },
 });

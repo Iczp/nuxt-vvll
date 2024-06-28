@@ -5,6 +5,8 @@ withDefaults(
     items: Array<any>;
     depth?: number;
     parents?: Array<any>;
+    activeIndex?: number;
+    activeRow?: number;
   }>(),
   {
     depth: 0,
@@ -16,7 +18,13 @@ withDefaults(
 <template>
   <ul class="trees" :depth="depth">
     <li v-for="(item, index) in items" :index="index" :key="index" class="">
-      <div class="div" :class="{ active: item.$isActive }">
+      <div
+        class="div"
+        :class="{
+          active:
+            item.$isActive || activeIndex == index || activeRow == item.$row,
+        }"
+      >
         <slot :item="item" :depth="depth" :index="index" :parents="parents">
           {{ item.title }}
         </slot>
@@ -28,6 +36,8 @@ withDefaults(
         :depth="depth + 1"
         :parents="[item, ...parents]"
         :class="{ hidden: item?.$isOpen === false }"
+        :active-index="activeIndex"
+        :active-row="activeRow"
       >
         <template v-slot="{ item, depth, index }">
           <slot :item="item" :depth="depth" :index="index" :parents="parents">

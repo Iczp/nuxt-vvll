@@ -57,21 +57,32 @@ const activeHeading = ref<string>('');
 
 const { y } = useScroll(window);
 
+const activeRow = ref(0);
 watch(y, (scrollY) => {
-  const scrollPosition = scrollY + 100;
+  //
+  const scrollPosition = scrollY + 64;
   let currentHeading = '';
 
-  list.value.forEach((heading) => {
+  list.value.forEach((heading, index) => {
     const element = document.getElementById(heading.id);
     if (element && element.offsetTop <= scrollPosition) {
       currentHeading = heading.id;
+      activeRow.value = index;
     }
   });
 
   activeHeading.value = currentHeading;
+
+  console.log('scrollY', scrollY, currentHeading, activeRow.value);
 });
 
-onMounted(() => {});
+watch(activeRow, (v) => {
+  console.log('activeIndex', v, list.value[activeRow.value || 0]);
+});
+
+onMounted(() => {
+  console.log('list.value', list.value);
+});
 
 const getCssVariable = (variable: string): string => {
   return getComputedStyle(document.documentElement).getPropertyValue(variable);
@@ -106,10 +117,10 @@ const scrollToHeading = (id: string) => {
       <Arrow :dir="isOpen ? 'down' : 'right'" class="ml-1" />
     </h3>
     <div v-show="isOpen" class="mt-2" :class="bodyClass">
-      <Trees :items="items || []">
+      <Trees :items="items || []" :active-row="activeRow">
         <template v-slot="{ item, depth, index, parents, row }">
           <div
-            class="flex flex-row items-center justify-between gap-2 py-1"
+            class="flex flex-row items-center justify-between gap-2 py-1 toc-item"
             @click="scrollTo(item)"
           >
             <h3 class="flex flex-row items-center overflow-hidden">
@@ -141,4 +152,8 @@ const scrollToHeading = (id: string) => {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.active .toc-item {
+  @apply !text-sky-500;
+}
+</style>

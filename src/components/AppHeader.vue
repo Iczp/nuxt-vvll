@@ -38,6 +38,13 @@ const links = [
 ];
 
 const site = useSite();
+
+const isLocked = useScrollLock(window);
+
+const toggle = () => {
+  site.toggle();
+  isLocked.value = site.isOpen?.valueOf() || false;
+};
 </script>
 <template>
   <header
@@ -60,7 +67,7 @@ const site = useSite();
       </a>
 
       <MenuIcon
-        @click="site.toggle()"
+        @click="toggle"
         :open="!!site.isOpen"
         class="size-5 sm:hidden"
       />

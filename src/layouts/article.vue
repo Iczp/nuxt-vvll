@@ -37,7 +37,7 @@ const site = useSite();
       <!-- isOpen:{{ isOpen }} -->
       <ContentSilder
         :class="{ hidden: !site.isOpen }"
-        class="fixed max-h-[calc(100vh-var(--header-height)-64px)] sm:sticky sm:top-[--header-height] left-0 right-0 z-10 px-4 overflow-y-scroll shadow sm:flex sm:overflow-y-auto bottom-16 top-16 sm:p-0 backdrop-blur-lg sm:pr-6 sm:border-r border-slate-200 dark:border-slate-800 sm:max-w-72"
+        class="fixed max-h-[calc(100vh-var(--header-height)-64px)] sm:sticky sm:top-[--header-height] left-0 right-0 z-50 px-4 overflow-y-scroll shadow sm:flex sm:overflow-y-auto bottom-16 top-16 sm:p-0 backdrop-blur-lg sm:pr-6 sm:border-r border-slate-200 dark:border-slate-800 sm:max-w-72"
       />
 
       <section
