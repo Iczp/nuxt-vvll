@@ -88,11 +88,23 @@ const getCssVariable = (variable: string): string => {
   return getComputedStyle(document.documentElement).getPropertyValue(variable);
 };
 
+const { x, y: winY } = useWindowScroll();
+// console.log(x.value) // read current x scroll value
+// y.value = 100 // scroll y to 100
+
 const scrollToHeading = (id: string) => {
   const element = document.getElementById(id);
+
+  // console.log('scrollToHeading', element, id);
+
   if (element) {
-    const navbarHeight = parseInt(getCssVariable('--navbar-height'), 10);
+    const navbarHeight = parseInt(getCssVariable('--header-height'), 10);
     const offsetTop = element.offsetTop - navbarHeight;
+
+    // winY.value = offsetTop;
+
+    // console.log('scrollToHeading offsetTop', offsetTop);
+
     window.scrollTo({
       top: offsetTop,
       behavior: 'smooth',
@@ -136,7 +148,10 @@ const scrollToHeading = (id: string) => {
                 />
               </div>
 
-              <a :href="`#${item.id}`" class="truncate cursor-pointer">
+              <a
+                class="truncate cursor-pointer"
+                @click="scrollToHeading(item.id)"
+              >
                 <!-- {{ item }} -->
                 <!-- {{ item.$row }} /{{ depth }}.{{ index }}  -->
                 {{ item.text }}

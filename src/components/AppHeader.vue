@@ -56,7 +56,7 @@ const toggle = () => {
       <a>
         <Icon name="i-heroicons-magnifying-glass-20-solid" class="" />
       </a>
-      <Share />
+
       <ThemeMode />
       <!-- <LinkGithub href="https://github.com/iczp">Iczp</LinkGithub> -->
 
@@ -67,7 +67,7 @@ const toggle = () => {
       >
         <Icon name="i-simple-icons-github"></Icon>
       </a>
-
+      <Share />
       <MenuIcon
         @click="toggle"
         :open="!!site.isOpen"

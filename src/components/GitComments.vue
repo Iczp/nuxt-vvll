@@ -27,7 +27,13 @@ const current = ref(0);
 </script>
 
 <template>
-  <Tabs id="comment" :current="current" :items="tabs" class="mt-8">
+  <Tabs
+    id="comment"
+    :current="current"
+    :items="tabs"
+    class="mt-8"
+    tab-class="!px-4 !py-2 rounded-lg ring-1 ring-inset ring-sky-500"
+  >
     <template v-slot:item="{ item }">
       <a
         :href="item.hash"

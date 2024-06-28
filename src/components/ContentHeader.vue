@@ -28,7 +28,7 @@ const props = withDefaults(
         <div>日期:<Date :value="doc?.date" /></div>
       </section>
       <section class="flex flex-row gap-2">
-        <Star :fill="true" class="size-6" />
+        <!-- <Star :fill="true" class="size-6" /> -->
         <!-- <Share :fill="true" class="size-6" /> -->
       </section>
     </div>

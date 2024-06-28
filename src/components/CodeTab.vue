@@ -86,17 +86,5 @@ const onTabChang = (index: number) => {
         </div>
       </template>
     </Tabs>
-
-    <!-- <div
-      v-for="(slot, index) of slotsKeys"
-      :key="index"
-      :class="{ hidden: active == slot }"
-    >
-      <slot :name="slot" :props="getCustomProp(slot)"></slot>
-    </div> -->
-
-    <!-- <template v-for="(slot, index) of keys" :key="index" v-slot:[slot]> -->
-
-    <!-- </template> -->
   </div>
 </template>

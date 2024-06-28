@@ -55,9 +55,9 @@ const navClick = (item: any) => {
             <!-- {{ item.$row }} /{{ depth }}.{{ index }}  -->
             <span class="">{{ item.title }}</span>
             <span v-if="item.$isDir"> ({{ item.$totalFileCount }}) </span>
-            <span v-else-if="!item.$isDir && item.$count">
+            <!-- <span v-else-if="!item.$isDir && item.$count">
               ({{ item.$count }})</span
-            >
+            > -->
           </div>
         </NuxtLink>
         <div class="flex flex-row">

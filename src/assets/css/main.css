@@ -19,6 +19,9 @@
 }
 
 @layer base {
+  :root {
+    --header-height: 64px;
+  }
   html::selection {
   }
   html::-moz-selection {
