@@ -91,4 +91,34 @@ const current = ref(0);
     </template>
   </Tabs>
 </template>
-<style scoped></style>
+<style>
+.gt-copyright {
+  display: none !important;
+}
+.gt-comment-content {
+  @apply rounded-lg;
+}
+
+.gt-container .gt-comment-content:hover {
+  box-shadow: 0 0 5px 0 #94a3b8;
+}
+
+.gt-container .gt-comment-admin .gt-comment-content {
+  @apply dark:bg-slate-800 text-gray-200 bg-slate-100;
+}
+
+.gt-container .gt-comment-body {
+  @apply dark:!text-gray-300;
+}
+
+.gt-container .gt-header-textarea:hover {
+  @apply ring-1 ring-sky-500;
+}
+
+.dark .gt-container .gt-header-textarea {
+  @apply bg-slate-800 text-gray-200;
+}
+.dark .gt-container .gt-header-textarea:hover {
+  @apply ring-sky-400;
+}
+</style>

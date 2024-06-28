@@ -62,8 +62,11 @@
     @apply bg-slate-100 dark:bg-slate-700;
   } */
 
-  #gitalk-container .gt-container .gt-no-init {
+  #gitalk-container .gt-no-init {
     @apply border border-slate-300 rounded-lg p-2 dark:border-slate-700;
+  }
+  .gt-copyright {
+    display: none !important;
   }
 }
 
