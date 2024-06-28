@@ -44,13 +44,49 @@ const props = withDefaults(
 
 const scrollTo = (item: any) => (!isDir(item) ? item._path : undefined);
 
-const { items, toggleOpen } = useTrees({
+const { items, list, toggleOpen } = useTrees({
   items: props.value?.links || [],
 });
 const isOpen = ref(props.open);
 
 const toggleToc = () => {
   isOpen.value = !isOpen.value;
+};
+
+const activeHeading = ref<string>('');
+
+const { y } = useScroll(window);
+
+watch(y, (scrollY) => {
+  const scrollPosition = scrollY + 100;
+  let currentHeading = '';
+
+  list.value.forEach((heading) => {
+    const element = document.getElementById(heading.id);
+    if (element && element.offsetTop <= scrollPosition) {
+      currentHeading = heading.id;
+    }
+  });
+
+  activeHeading.value = currentHeading;
+});
+
+onMounted(() => {});
+
+const getCssVariable = (variable: string): string => {
+  return getComputedStyle(document.documentElement).getPropertyValue(variable);
+};
+
+const scrollToHeading = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    const navbarHeight = parseInt(getCssVariable('--navbar-height'), 10);
+    const offsetTop = element.offsetTop - navbarHeight;
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth',
+    });
+  }
 };
 </script>
 

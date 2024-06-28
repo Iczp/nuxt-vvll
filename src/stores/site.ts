@@ -3,7 +3,6 @@ import type { NavItemType } from '~/types/NavItemType';
 
 type CurrentLocation = {
   location: NavItemType[];
-
   isOpen?: Boolean;
 };
 

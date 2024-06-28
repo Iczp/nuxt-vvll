@@ -9,23 +9,6 @@ const toggleMenu = () => {
 const menuIcon = ref('mdi:menu');
 
 const site = useSite();
-
-const links = computed(() =>
-  site.location
-    .map((x) => ({
-      label: x.title,
-      //   icon: x.icon,
-      to: x._path,
-    }))
-    .concat([
-      {
-        label: 'Home',
-        // icon: 'i-heroicons-home',
-        to: '/',
-      },
-    ])
-    .reverse()
-);
 </script>
 
 <template>
@@ -34,8 +17,31 @@ const links = computed(() =>
       <Icon :name="menuIcon" class="size-6" />
     </a>
 
-    <UBreadcrumb :links="links" />
+    <ol class="max-w-full breadcrumb">
+      <li v-for="(item, index) in site.location" :key="index" class="min-w-0">
+        <NuxtLink :to="item._path" class="flex items-center min-w-0">
+          <span class="font-semibold truncate">
+            {{ item.title }}
+          </span>
+        </NuxtLink>
+      </li>
+    </ol>
+
+    <!-- <ClientOnly>
+      <UBreadcrumb :links="links" />
+    </ClientOnly> -->
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.breadcrumb,
+.breadcrumb li {
+  @apply flex flex-row items-center;
+}
+.breadcrumb li:last-child {
+  @apply text-primary;
+}
+.breadcrumb li:not(:last-child)::after {
+  @apply flex flex-shrink-0 w-5 h-5 i-heroicons-chevron-right-20-solid rtl:i-heroicons-chevron-left-20-solid content-[''];
+}
+</style>

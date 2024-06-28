@@ -106,7 +106,7 @@ export const useTrees = ({
       if ($isActive) {
         activeItem.value = item;
         site.setPaths(
-          activeItem.value?.$parents ? activeItem.value?.$parents() : []
+          activeItem.value?.$parents ? activeItem.value?.$parents().reverse() : []
         );
         // console.log('activeItem', activeItem.value);
       }
@@ -141,7 +141,7 @@ export const useTrees = ({
     setParents(item, true);
     activeItem.value = item;
     site.setPaths(
-      activeItem.value?.$parents ? activeItem.value?.$parents() : []
+      activeItem.value?.$parents ? activeItem.value?.$parents().reverse() : []
     );
     site.close();
   };

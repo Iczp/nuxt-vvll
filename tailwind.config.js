@@ -14,7 +14,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#ff0000', // 设置主颜色为红色
+        primary: '#14C6CB', // 设置主颜色为红色
         secondary: '#00ff00', // 设置次要颜色为绿色
         // ... 其他颜色
       },
