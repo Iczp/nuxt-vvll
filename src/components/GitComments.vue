@@ -80,8 +80,13 @@ const current = ref(0);
   </Tabs>
 </template>
 <style>
+.gt-container .gt-initing-text,
+.gt-ico.gt-ico-tip,
 .gt-copyright {
   display: none !important;
+}
+.gt-container .gt-initing-text::after {
+  content: 'loading...';
 }
 .gt-comment-content {
   @apply rounded-lg;
