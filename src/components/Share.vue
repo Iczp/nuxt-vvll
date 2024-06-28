@@ -5,14 +5,30 @@ const props = withDefaults(
   }>(),
   {}
 );
-const isFill = ref(props.fill);
+// import { useEmits } from 'vue';
+import { useShare } from '@vueuse/core';
+
+const { share, isSupported } = useShare();
+
+const emits = defineEmits(['change']);
+
+function startShare() {
+  share({
+    title: 'Hello',
+    text: 'Hello my friend!',
+    url: location.href,
+  });
+  emits('change');
+}
+
 // const on
 </script>
 
 <template>
   <Icon
     :name="fill ? 'ic:round-share' : 'ic:outline-share'"
-    @click="$emit('change')"
+    @click="startShare"
+    class="cursor-pointer"
   />
 </template>
 <style scoped></style>

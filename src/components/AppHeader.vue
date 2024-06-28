@@ -56,8 +56,10 @@ const toggle = () => {
       <a>
         <Icon name="i-heroicons-magnifying-glass-20-solid" class="" />
       </a>
+      <Share />
       <ThemeMode />
       <!-- <LinkGithub href="https://github.com/iczp">Iczp</LinkGithub> -->
+
       <a
         href="https://github.com/iczp/nuxt-vvll"
         target="_blank"

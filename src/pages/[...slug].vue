@@ -71,7 +71,7 @@ useHead({
     <ContentHeader :doc="doc" />
 
     <div class="relative flex flex-col gap-4">
-      <section class="sticky z-10 flex top-32">
+      <section class="sticky z-10 flex min-h-0 top-32">
         <div class="absolute right-0">
           <Toc
             :value="toc"
