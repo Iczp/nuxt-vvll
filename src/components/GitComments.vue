@@ -1,31 +1,12 @@
 <script setup lang="ts">
-import Gitalk from 'gitalk';
-import 'gitalk/dist/gitalk.css';
-
-const route = useRoute();
-const init = () => {
-  var gitalk = new Gitalk({
-    clientID: 'Ov23li75reFeYTpJhaI2',
-    clientSecret: '38dcb5ed87ada5c1bf41b42dfed1053414345655',
-    labels: ['comment'],
-    // title: route.path,
-    repo: 'nuxt-vvll',
-    owner: 'iczp',
-    admin: ['iczp'],
-    id: location.pathname, // Ensure uniqueness and length less than 50
-    distractionFreeMode: false, // Facebook-like distraction free mode
-  });
-  gitalk.render('gitalk-container');
-};
 onMounted(() => {
-  setTimeout(init, 500);
   setTimeout(() => {
     const index = tabs.value.findIndex((x) => x.hash == location.hash);
     if (index > -1) {
       current.value = index;
-      location.hash = `${tabs.value[current.value].hash}`;
+      // location.hash = `${tabs.value[current.value].hash}`;
     }
-    console.log(current.value, location.hash);
+    // console.log(current.value, location.hash);
   }, 0);
 });
 
@@ -59,23 +40,24 @@ const current = ref(0);
     </template>
 
     <template v-slot="{ index }">
+      <!-- <ClientOnly> -->
       <div
         id="gitalk-container"
         class="leading-normal"
         :class="{ hidden: index != 0 }"
       >
-        <slot>
-          <a
-            href="https://github.com/Iczp/nuxt-vvll/issues"
-            class="mt-10 flex flex-col items-center justify-center gap-2 !py-4 card hover:card-hover"
-            target="_blank"
-            rel="nofollow"
-          >
-            <Icon name="bi:github" class="size-12" />
-            https://github.com/Iczp/nuxt-vvll/issues
-          </a>
-        </slot>
+        <a
+          href="https://github.com/Iczp/nuxt-vvll/issues"
+          class="mt-10 flex flex-col items-center justify-center gap-2 !py-4 card hover:card-hover"
+          target="_blank"
+          rel="nofollow"
+        >
+          <Icon name="bi:github" class="size-12" />
+          https://github.com/Iczp/nuxt-vvll/issues
+        </a>
       </div>
+      <Gitalk> </Gitalk>
+      <!-- </ClientOnly> -->
 
       <div class="mt-10" :class="{ hidden: index != 1 }">
         <a
