@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { metaSymbol } = useShortcuts();
-const isOpen = ref(true);
+const isOpen = ref(false);
 const route = useRoute();
 defineShortcuts({
   meta_k: {
@@ -19,7 +19,7 @@ defineShortcuts({
   },
 });
 
-const keyword = ref((route.query.q as string) || 'vue');
+const keyword = ref(route.query.q as string);
 
 // const { data, error } =  useAsyncData('users', () => searchContent(keyword))
 
@@ -46,6 +46,8 @@ const items = computed(() => results.value.slice(0, showCount.value));
 watch(keyword, (v) => {
   console.log('keyword', v);
 });
+
+const close = () => (isOpen.value = false);
 </script>
 
 <template>
@@ -93,12 +95,21 @@ watch(keyword, (v) => {
               placeholder="Search..."
             >
               <template #trailing>
-                <UKbd
-                  class="cursor-pointer pointer-events-auto"
-                  @click="isOpen = false"
-                >
-                  <Icon name="mdi:keyboard-esc" class="size-4" />
-                </UKbd>
+                <div class="flex flex-row items-center gap-2">
+                  <span
+                    v-if="keyword != ''"
+                    class="flex items-center pointer-events-auto justify-center text-xl !cursor-pointer size-6"
+                    @click="keyword = ''"
+                  >
+                    <Icon name="ic:sharp-clear" />
+                  </span>
+                  <UKbd
+                    class="cursor-pointer pointer-events-auto"
+                    @click="close"
+                  >
+                    <Icon name="mdi:keyboard-esc" class="size-4" />
+                  </UKbd>
+                </div>
               </template>
             </UInput>
           </div>
@@ -121,6 +132,7 @@ watch(keyword, (v) => {
                       :to="item._path"
                       class="flex items-center min-w-0"
                       :title="item.title"
+                      @click="close"
                     >
                       <Icon
                         v-if="icon && item.icon"
@@ -130,7 +142,7 @@ watch(keyword, (v) => {
                       <span class="font-semibold truncate">
                         <HighLight
                           :text="item.title"
-                          :reg="keyword"
+                          :reg="`(${keyword})`"
                         ></HighLight>
                       </span>
 
@@ -145,9 +157,14 @@ watch(keyword, (v) => {
                       <NuxtLink
                         :to="item._path"
                         class="flex items-center min-w-0"
+                        @click="close"
                       >
                         <span class="text-gray-600 truncate sm:text-slate-600">
-                          {{ item?.description }}
+                          <HighLight
+                            :text="item.description"
+                            :reg="`(${keyword})`"
+                          ></HighLight>
+                          <!-- {{ item?.description }} -->
                         </span>
                       </NuxtLink>
                     </li>

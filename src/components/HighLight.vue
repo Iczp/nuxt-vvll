@@ -13,13 +13,18 @@ const props = defineProps<{
 }>();
 
 const words = computed(() => {
+  if (!props.reg || props.reg == '()' || props.reg.trim().length == 0) {
+    // console.log('words reg' , props.reg);
+    return [props.text];
+  }
   let reg = new RegExp(props.reg, 'ig');
   var words = props.text.split(reg).filter((x) => x != '');
   // console.log('words', words)
   return words;
 });
 
-const isKey = (word: string) => props.reg.indexOf(word) != -1;
+const isKey = (word: string) =>
+  props.reg.toLocaleLowerCase().indexOf(word.toLocaleLowerCase()) != -1;
 </script>
 
 <template>
@@ -34,7 +39,8 @@ const isKey = (word: string) => props.reg.indexOf(word) != -1;
           event: $event,
         })
       "
-    ></b>
+      >{{ word }}</b
+    >
     <template v-else>
       {{ word }}
     </template>
@@ -43,6 +49,7 @@ const isKey = (word: string) => props.reg.indexOf(word) != -1;
 
 <style>
 .high-light {
-  color: red;
+  /* color: red; */
+  @apply text-primary;
 }
 </style>

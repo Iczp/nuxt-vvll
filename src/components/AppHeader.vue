@@ -76,7 +76,7 @@ const toggle = () => {
     </aside>
   </header>
   <div
-    class="sm:left-1/2 sm:-translate-x-1/2 w-full fixed sm:flex bottom-0 justify-center sm:bottom-auto sm:top-0 flex flex-col h-16 sm:w-auto z-[99] backdrop-blur-2xl sm:backdrop-blur-none items-center sm:border-none border-t border-gray-200 dark:border-gray-800"
+    class="sm:left-1/2 sm:-translate-x-1/2 w-full fixed sm:flex bottom-0 sm:justify-center justify-start sm:bottom-auto sm:top-0 flex flex-col h-16 sm:w-auto z-[99] backdrop-blur-2xl sm:backdrop-blur-none items-center sm:border-none border-t border-gray-200 dark:border-gray-800"
   >
     <UHorizontalNavigation :links="links" class="justify-center" />
   </div>
