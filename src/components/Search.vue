@@ -19,7 +19,7 @@ defineShortcuts({
   },
 });
 
-const keyword = ref(route.query.q as string);
+const keyword = ref((route.query.q as string) || '');
 
 // const { data, error } =  useAsyncData('users', () => searchContent(keyword))
 
@@ -115,7 +115,17 @@ const close = () => (isOpen.value = false);
           </div>
 
           <div class="overflow-y-auto min-h-36 max-h-96">
-            <Empty v-if="results.length == 0" class="min-h-36"></Empty>
+            <Empty
+              v-if="results.length == 0 && keyword != ''"
+              class="text-gray-400 dark:text-slate-700 min-h-36"
+            >
+              <div>
+                No results found for "<span class="text-primary">{{
+                  keyword
+                }}</span
+                >"
+              </div>
+            </Empty>
             <ul
               v-if="results.length != 0"
               class="flex flex-col max-w-full gap-1.5"
