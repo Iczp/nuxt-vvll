@@ -1,5 +1,10 @@
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
+  const query = getQuery(event);
+
+  //   const results = queryContent(query.q).find();
+
   return {
-    hello: 'world',
+    query,
+    // results,
   };
 });

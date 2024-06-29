@@ -19,21 +19,25 @@ defineShortcuts({
   },
 });
 
-const keyword = ref(route.query.q as string);
+const keyword = ref((route.query.q as string) || 'vue');
 
 // const { data, error } =  useAsyncData('users', () => searchContent(keyword))
 
+const { list } = await useDocuments({});
 
+const results = computed(() =>
+  list.value.filter(
+    (x) =>
+      x.title
+        ?.toLocaleLowerCase()
+        .indexOf(keyword.value?.toLocaleLowerCase()) != -1 ||
+      x._path.toLocaleUpperCase().indexOf(keyword.value?.toLocaleUpperCase()) !=
+        -1
+  )
+);
 
-const results = ref();
-const search = (v: string) => {
-  searchContent(keyword).then((res) => {
-    results.value = res;
-  });
-};
 watch(keyword, (v) => {
   console.log('keyword', v);
-  search(v);
 });
 </script>
 
@@ -71,37 +75,61 @@ watch(keyword, (v) => {
       class="fixed top-[var(--header-height)] left-0 right-0 box-border m-4 z-[99]"
     >
       <UCard>
-        <div>
-          <UInput
-            icon="i-heroicons-magnifying-glass-20-solid"
-            size="md"
-            color="sky"
-            :trailing="false"
-            v-model="keyword"
-            placeholder="Search..."
-          >
-            <template #trailing>
-              <div class="flex items-center gap-1">
-                <UKbd>
-                  <Icon name="mdi:keyboard-esc" class="size-4" />
-                </UKbd>
-              </div>
-            </template>
-          </UInput>
-        </div>
+        <div class="flex flex-col gap-4">
+          <div>
+            <UInput
+              icon="i-heroicons-magnifying-glass-20-solid"
+              size="md"
+              color="sky"
+              :trailing="false"
+              v-model="keyword"
+              placeholder="Search..."
+            >
+              <template #trailing>
+                <div class="flex items-center gap-1">
+                  <UKbd>
+                    <Icon name="mdi:keyboard-esc" class="size-4" />
+                  </UKbd>
+                </div>
+              </template>
+            </UInput>
+          </div>
 
-        <div class="overflow-y-scroll h-96">
-          <pre>{{ results }} </pre>
-          <hr />
-          <ul>
-            <li v-for="(item, index) in results" :key="index">
-              <NuxtLink>
-                {{ item }}
-              </NuxtLink>
-            </li>
-          </ul>
+          <div class="overflow-y-scroll h-96">
+            <Empty v-if="results.length == 0"></Empty>
+            <ul
+              v-if="results.length != 0"
+              class="flex flex-col max-w-full gap-1.5"
+            >
+              <li v-for="(item, index) in results" :key="index">
+                <Breadcrumb
+                  li-class="flex min-w-12"
+                  v-if="item.$parents"
+                  :items="item.$parents().reverse()"
+                  class="block max-w-full"
+                >
+                  <template v-if="item?.description" #footer>
+                    <li class="min-w-0">
+                      <NuxtLink
+                        :to="item._path"
+                        class="flex items-center min-w-0"
+                      >
+                        <span class="truncate sm:text-slate-600">
+                          {{ item?.description }}
+                        </span>
+                      </NuxtLink>
+                    </li>
+                  </template>
+                </Breadcrumb>
+                <!-- <NuxtLink :to="item?._path">
+                <Icon v-if="item.icon" :name="item.icon" class="mr-2 size-4" />
+                <span>{{ item?.title }}</span>
+              </NuxtLink> -->
+              </li>
+            </ul>
+          </div>
         </div>
       </UCard>
-    </div></UModal
-  >
+    </div>
+  </UModal>
 </template>

@@ -21,7 +21,6 @@
           <IconCode :lang="$attrs.language" />
         </span> -->
 
-        
         <IconCode :lang="$attrs.language" />
         <span class="tag-item filename">{{ $attrs.filename }}</span>
       </div>
@@ -54,15 +53,6 @@ pre code .line {
   gap: 8px;
   flex-direction: row;
 }
-
-.tag-item {
-  /* display: flex;
-  border: var(--card-border);
-  padding: 0 8px;
-  border-radius: 4px;
-  background-color: rgb(23, 26, 39); */
-}
-
 .language {
   font-weight: bold;
 }
