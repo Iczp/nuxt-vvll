@@ -25,15 +25,20 @@ const keyword = ref((route.query.q as string) || 'vue');
 
 const { list } = await useDocuments({});
 
+const defaultShowCount = 20;
+const showCount = ref(defaultShowCount);
 const results = computed(() =>
-  list.value.filter(
-    (x) =>
-      x.title
-        ?.toLocaleLowerCase()
-        .indexOf(keyword.value?.toLocaleLowerCase()) != -1 ||
-      x._path.toLocaleUpperCase().indexOf(keyword.value?.toLocaleUpperCase()) !=
-        -1
-  )
+  list.value
+    .filter(
+      (x) =>
+        x.title
+          ?.toLocaleLowerCase()
+          .indexOf(keyword.value?.trim().toLocaleLowerCase()) != -1 ||
+        x._path
+          .toLocaleUpperCase()
+          .indexOf(keyword.value?.trim().toLocaleUpperCase()) != -1
+    )
+    .slice(0, showCount.value)
 );
 
 watch(keyword, (v) => {
@@ -95,8 +100,8 @@ watch(keyword, (v) => {
             </UInput>
           </div>
 
-          <div class="overflow-y-scroll h-96">
-            <Empty v-if="results.length == 0"></Empty>
+          <div class="overflow-y-auto min-h-36 max-h-96">
+            <Empty v-if="results.length == 0" class="min-h-36"></Empty>
             <ul
               v-if="results.length != 0"
               class="flex flex-col max-w-full gap-1.5"
@@ -114,7 +119,7 @@ watch(keyword, (v) => {
                         :to="item._path"
                         class="flex items-center min-w-0"
                       >
-                        <span class="truncate sm:text-slate-600">
+                        <span class="text-gray-600 truncate sm:text-slate-600">
                           {{ item?.description }}
                         </span>
                       </NuxtLink>
