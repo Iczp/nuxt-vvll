@@ -41,6 +41,8 @@ const results = computed(() =>
     .slice(0, showCount.value)
 );
 
+const items = computed(() => results.value.slice(0, showCount.value));
+
 watch(keyword, (v) => {
   console.log('keyword', v);
 });
@@ -91,11 +93,12 @@ watch(keyword, (v) => {
               placeholder="Search..."
             >
               <template #trailing>
-                <div class="flex items-center gap-1">
-                  <UKbd>
-                    <Icon name="mdi:keyboard-esc" class="size-4" />
-                  </UKbd>
-                </div>
+                <UKbd
+                  class="cursor-pointer pointer-events-auto"
+                  @click="isOpen = false"
+                >
+                  <Icon name="mdi:keyboard-esc" class="size-4" />
+                </UKbd>
               </template>
             </UInput>
           </div>
@@ -113,6 +116,30 @@ watch(keyword, (v) => {
                   :items="item.$parents().reverse()"
                   class="block max-w-full"
                 >
+                  <template v-slot="{ item, icon }">
+                    <NuxtLink
+                      :to="item._path"
+                      class="flex items-center min-w-0"
+                      :title="item.title"
+                    >
+                      <Icon
+                        v-if="icon && item.icon"
+                        :name="item.icon"
+                        class="mr-2 size-4"
+                      />
+                      <span class="font-semibold truncate">
+                        <HighLight
+                          :text="item.title"
+                          :reg="keyword"
+                        ></HighLight>
+                      </span>
+
+                      <!-- <span class="font-semibold truncate">
+                        {{ item.title }}
+                      </span> -->
+                    </NuxtLink>
+                  </template>
+
                   <template v-if="item?.description" #footer>
                     <li class="min-w-0">
                       <NuxtLink

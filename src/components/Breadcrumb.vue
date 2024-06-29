@@ -15,7 +15,7 @@ const props = defineProps<{
       class="flex min-w-0"
       :class="liClass"
     >
-      <slot :item="item">
+      <slot :item="item" :icon="icon">
         <NuxtLink :to="item._path" class="flex items-center min-w-0" :title="item.title">
           <Icon
             v-if="icon && item.icon"
