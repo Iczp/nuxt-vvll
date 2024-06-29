@@ -23,5 +23,5 @@ export function useBrowserColor({
     document.head.appendChild(statusBarStyleMeta);
   }
   statusBarStyleMeta.content = appleStatusBarStyle;
-  console.log('useBrowserColor', themeColorMeta, statusBarStyleMeta);
+  // console.log('useBrowserColor', themeColorMeta, statusBarStyleMeta);
 }

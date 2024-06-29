@@ -23,12 +23,12 @@ const navToLink = (item: any) => {
   // return item.$isDir ? item._path : undefined;
 };
 
-const isLocked = useScrollLock(window);
 const navClick = (item: any) => {
   // console.log('navClick', JSON.stringify(item));
   console.log('navClick', item);
-  setActive(item);
+  const isLocked = useScrollLock(window);
   isLocked.value = false;
+  setActive(item);
 };
 </script>
 

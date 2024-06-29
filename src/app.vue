@@ -17,11 +17,17 @@ const setBrowserColor = (isDark: boolean) =>
     appleStatusBarStyle: 'black-translucent',
   });
 watch(isDark, setBrowserColor);
+
 onMounted(() => {
   setBrowserColor(isDark.value);
   setTimeout(() => {
     color1.value = 'red';
   }, 1000);
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+  useScrollLock(window).value = false;
 });
 </script>
 

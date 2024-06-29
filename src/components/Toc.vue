@@ -73,15 +73,15 @@ watch(y, (scrollY) => {
 
   activeHeading.value = currentHeading;
 
-  console.log('scrollY', scrollY, currentHeading, activeRow.value);
+  // console.log('scrollY', scrollY, currentHeading, activeRow.value);
 });
 
 watch(activeRow, (v) => {
-  console.log('activeIndex', v, list.value[activeRow.value || 0]);
+  // console.log('activeIndex', v, list.value[activeRow.value || 0]);
 });
 
 onMounted(() => {
-  console.log('list.value', list.value);
+  // console.log('list.value', list.value);
 });
 
 const getCssVariable = (variable: string): string => {

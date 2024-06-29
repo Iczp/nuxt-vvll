@@ -39,10 +39,9 @@ const links = [
 
 const site = useSite();
 
-const isLocked = useScrollLock(window);
-
 const toggle = () => {
   site.toggle();
+  const isLocked = useScrollLock(window);
   isLocked.value = site.isOpen?.valueOf() || false;
 };
 </script>
