@@ -81,8 +81,8 @@ onMounted(() => {
         >
           <template v-slot:item="{ item }">
             <a
-              :href="item.hash"
-              :name="item.hash.slice(1)"
+              
+              :id="item.hash.slice(1)"
               class="flex flex-row items-center gap-2 p-2 text-base"
             >
               <Icon :name="item.icon" class="size-5" />

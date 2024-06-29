@@ -72,9 +72,10 @@ export default defineNuxtConfig({
     experimental: {
       // stripQueryParameters: true,
       // advanceQuery: true,
+
       clientDB: true,
       search: {
-        indexed: false,
+        indexed: true,
         options: {
           fields: [
             'title',

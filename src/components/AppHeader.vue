@@ -53,9 +53,10 @@ const toggle = () => {
     <Logo />
 
     <aside class="flex flex-row items-center gap-4 text-xl">
-      <a>
+      <!-- <a>
         <Icon name="i-heroicons-magnifying-glass-20-solid" class="" />
-      </a>
+      </a> -->
+      <Search />
 
       <ThemeMode />
       <!-- <LinkGithub href="https://github.com/iczp">Iczp</LinkGithub> -->

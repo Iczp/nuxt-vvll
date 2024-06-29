@@ -23,10 +23,12 @@ const navToLink = (item: any) => {
   // return item.$isDir ? item._path : undefined;
 };
 
+const isLocked = useScrollLock(window);
 const navClick = (item: any) => {
   // console.log('navClick', JSON.stringify(item));
   console.log('navClick', item);
   setActive(item);
+  isLocked.value = false;
 };
 </script>
 
@@ -42,6 +44,7 @@ const navClick = (item: any) => {
         <NuxtLink
           class="flex flex-row items-center overflow-hidden"
           :to="navToLink(item)"
+          @click="navClick(item)"
         >
           <div class="px-1.5 text-lg inline-flex tree-icon">
             <Folder v-if="item.$isDir" :open="item.$isOpen" />
@@ -51,7 +54,7 @@ const navClick = (item: any) => {
             />
           </div>
 
-          <div class="truncate" :to="navToLink(item)" @click="navClick(item)">
+          <div class="truncate">
             <!-- {{ item.$row }} /{{ depth }}.{{ index }}  -->
             <span class="">{{ item.title }}</span>
             <span v-if="item.$isDir"> ({{ item.$totalFileCount }}) </span>
