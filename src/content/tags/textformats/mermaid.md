@@ -1,15 +1,27 @@
 ---
 name: mermaid
 title: Mermaid
-icon: twemoji:mermaid
+icon: vscode-icons:file-type-mermaid
 description: Mermaid 是一个功能强大且易于使用的图表绘制工具，适用于多种场景下的流程图、序列图和甘特图等需求。它通过简单的文本描述语言和丰富的图表类型，帮助用户快速创建和展示复杂的数据流程和关系，是软件开发、项目管理和教育培训等领域中的有力工具。
 ---
 
 ## Mermaid
 
-:Icon{name=logos:markdown .size-32}
+:Icon{name=vscode-icons:file-type-mermaid .size-32}
 
 Mermaid 是一个用于描述和绘制流程图、序列图、甘特图等图表的开源工具。它使用简单的文本描述语言，支持多种常见的图表类型，并能够将这些描述转换成可视化图形，以帮助用户更清晰地表达和展示复杂的数据流程和关系。
+
+### Mermaid 中文网
+
+#### 官方网站（中文网）
+
+:Github{repo=https://github.com/mermaid-js/mermaid }
+
+> https://mermaid.nodejs.cn/
+
+#### 集成
+
+> https://mermaid.nodejs.cn/ecosystem/integrations-community.html
 
 ### 主要特点和功能
 
@@ -49,11 +61,19 @@ Mermaid 是一个用于描述和绘制流程图、序列图、甘特图等图表
        A-->C;
        B-->D;
        C-->D;
+
    ```
 
-   这段代码表示一个简单的流程图，节点 A 指向节点 B 和节点 C，节点 B 和节点 C 再分别指向节点 D。
+   ```mermaid
+   sequenceDiagram
+   	Site->>mermaid: initialize
+   	Site->>mermaid: content loaded
+   	mermaid->>mermaidAPI: init
+   ```
 
-3. **在线编辑器**：
+这段代码表示一个简单的流程图，节点 A 指向节点 B 和节点 C，节点 B 和节点 C 再分别指向节点 D。
+
+1. **在线编辑器**：
    Mermaid 提供了一个在线编辑器 https://mermaid-js.github.io/mermaid-live-editor/ ，可以实时预览和编辑 Mermaid 图表，帮助用户快速调试和生成图表。
 
 ### 应用场景

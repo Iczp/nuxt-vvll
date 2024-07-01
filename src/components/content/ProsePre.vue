@@ -1,14 +1,46 @@
 <script lang="ts" setup>
-// const countries = ['United States', 'Canada', 'Mexico'];
+import mermaid from 'mermaid';
+const mermaidContainer = ref<HTMLDivElement | null>(null);
 
-// const country = ref(countries[0]);
+const renderMermaid = (chart: string) => {
+  if (mermaidContainer.value && chart) {
+    console.log('mermaid render:', chart);
+    mermaid
+      .render(`mermaid-chart-${new Date().getTime()}`, chart)
+      .then((res) => {
+        if (mermaidContainer.value) {
+          mermaidContainer.value.innerHTML = res.svg;
+        }
+      })
+      .catch((err) => {
+        mermaidContainer.value = err;
+      });
+
+    // try {
+    //   const render = await mermaid.render('mermaid-chart', chart);
+    //   mermaidContainer.value.innerHTML = render.svg;
+    // } catch (error) {
+    //   console.error('Mermaid render error:', error);
+    // }
+  }
+};
+
+const attrs = useAttrs();
+
+// 初始化 Mermaid
+onMounted(() => {
+  mermaid.initialize({ startOnLoad: true });
+  if (attrs.language == 'mermaid') {
+    renderMermaid(attrs.code as string);
+  }
+});
 </script>
 
 <template>
   <div
     class="container flex flex-col my-3 overflow-hidden border rounded-lg border-color"
   >
-  <!-- $attrs.d{{ $props }}
+    <!-- $attrs.d{{ $props }}
         {{ $attrs }}
         {{ $slots }} -->
     <header class="flex flex-row justify-between h-10 px-2">
@@ -30,7 +62,10 @@
     </header>
 
     <main class="code-content">
-      <pre class="m-0 break-words break-all rounded-none"><slot></slot></pre>
+      <pre class="m-0 break-words break-all rounded-none">
+        <slot></slot>
+      </pre>
+      <div v-if="$attrs.language == 'mermaid'" ref="mermaidContainer"></div>
     </main>
     <!-- <footer class="flex flex-row justify-between p-2"></footer> -->
   </div>

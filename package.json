@@ -24,11 +24,13 @@
     "@vueuse/nuxt": "^10.10.1",
     "dayjs": "^1.11.11",
     "gitalk": "^1.8.0",
+    "mermaid": "^10.9.1",
     "nuxt": "^3.12.1",
     "nuxt-icon": "^0.6.10",
     "pinia": "^2.1.7",
     "sitemap": "^8.0.0",
-    "vue": "latest"
+    "vue": "latest",
+    "vue-mermaid": "^0.0.15"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
