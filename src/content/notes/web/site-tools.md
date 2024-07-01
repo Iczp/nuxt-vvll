@@ -1,7 +1,7 @@
 ---
 title: 站长工具-sitemap.xml提交
 icon: ph:ranking-bold
-tags: html,h5
+tags: html,h5,xml
 date: 2024-06-27
 description: 网站排名工具
 ---
@@ -23,3 +23,7 @@ https://ziyuan.baidu.com/linksubmit/url?sitename=https%3A%2F%2Fsite%3Avvll.net
 
 [bing.com](https://cn.bing.com/)
 
+
+### sitemap.xml
+
+https://vvll.net/sitemap.xml
