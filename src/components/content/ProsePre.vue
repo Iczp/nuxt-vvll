@@ -65,7 +65,11 @@ onMounted(() => {
       <pre class="m-0 break-words break-all rounded-none">
         <slot></slot>
       </pre>
-      <div v-if="$attrs.language == 'mermaid'" ref="mermaidContainer"></div>
+      <div
+        v-if="$attrs.language == 'mermaid'"
+        ref="mermaidContainer"
+        class="flex justify-center"
+      ></div>
     </main>
     <!-- <footer class="flex flex-row justify-between p-2"></footer> -->
   </div>
