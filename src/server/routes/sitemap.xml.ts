@@ -3,10 +3,18 @@ import { SitemapStream, streamToPromise } from 'sitemap';
 
 export default defineEventHandler(async (event: any) => {
   // Fetch all documents
-  const docs = await serverQueryContent(event).find();
+  const docs = await serverQueryContent(event)
+    .where({
+      _path: {
+        $not: {
+          $regex: '/_',
+        },
+      },
+    })
+    .find();
   const sitemap = new SitemapStream({
     hostname: 'https://vvll.net',
-    // xslUrl: '/sitemap.xsl',
+    xslUrl: '/sitemap.xsl',
   });
 
   for (const doc of docs) {
