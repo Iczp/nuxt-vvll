@@ -3,6 +3,7 @@ name: mermaid
 title: Mermaid
 icon: vscode-icons:file-type-mermaid
 description: Mermaid 是一个功能强大且易于使用的图表绘制工具，适用于多种场景下的流程图、序列图和甘特图等需求。它通过简单的文本描述语言和丰富的图表类型，帮助用户快速创建和展示复杂的数据流程和关系，是软件开发、项目管理和教育培训等领域中的有力工具。
+date: 2024-07-01
 ---
 
 ## Mermaid

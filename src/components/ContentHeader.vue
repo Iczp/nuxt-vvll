@@ -25,7 +25,7 @@ const props = withDefaults(
     >
       <section class="flex flex-row gap-4">
         <div v-if="doc?.author"><Author :id="doc?.author" /></div>
-        <div>日期:<Date :value="doc?.date" /></div>
+        <div v-if="doc?.date">日期:<Date :value="doc?.date" /></div>
       </section>
       <section class="flex flex-row gap-2">
         <!-- <Star :fill="true" class="size-6" /> -->
