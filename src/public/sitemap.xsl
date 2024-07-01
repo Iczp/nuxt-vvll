@@ -55,14 +55,14 @@
           </h2>
           <p>
                         This is an XML sitemap, meant for consumption by search engines.<br />
-                        You can find more information about XML sitemaps on <a href="https://sitemaps.org" target="" class="link blue">sitemaps.org</a>.
+                        You can find more information about XML sitemaps on <a href="https://sitemaps.org" target="_blank" class="link blue">sitemaps.org</a>.
         </p>
       </header>
 
       <xsl:apply-templates/>
 
       <footer class="mw8 center pv4 tc">
-                    This is an open source <a href="https://github.com/pedroborges/xml-sitemap-stylesheet" title="Go to Github" class="link blue">XML Sitemap Stylesheet</a> created by <a href="https://pedroborg.es" title="Pedro Borges" class="link blue">pedroborg.es</a>
+                    This is an open source <a href="https://github.com/pedroborges/xml-sitemap-stylesheet" target="_blank" title="Go to Github" class="link blue">XML Sitemap Stylesheet</a> created by <a href="https://pedroborg.es" title="Pedro Borges" class="link blue">pedroborg.es</a>
       </footer>
 
     </body>
