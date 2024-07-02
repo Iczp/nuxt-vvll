@@ -1,6 +1,10 @@
 ---
 title: mermaid 文档
 icon: vscode-icons:file-type-mermaid
+tags: mermaid
+author: iczp
+date: 2024-07-02
+description: mermaid中文文档
 ---
 
 ## mermaid
