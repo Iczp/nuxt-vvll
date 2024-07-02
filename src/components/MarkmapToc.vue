@@ -6,9 +6,9 @@
         v-model="value"
       ></textarea>
     </div>
-    <div class="flex flex-1 card">
+    <div ref="containerRef" class="relative flex flex-1 card">
       <svg
-        class="flex flex-1 w-full h-full text-slate-100 h-1/2"
+        class="flex flex-1 w-full h-full text-slate-100"
         ref="svgRef"
         @click="svgClick"
       ></svg>
@@ -21,6 +21,7 @@ import { ref, onMounted, onUpdated } from 'vue';
 import { Markmap } from 'markmap-view';
 import { loadJS, loadCSS } from 'markmap-common';
 import { Transformer } from 'markmap-lib';
+import { Toolbar } from 'markmap-toolbar';
 
 const transformer = new Transformer();
 const { scripts, styles } = transformer.getAssets();
@@ -136,6 +137,7 @@ const initValue = `# VVLL.NET
 `;
 
 const svgRef = ref();
+const containerRef = ref<HTMLDivElement | undefined>();
 const value = ref(initValue);
 let mm: any;
 
@@ -149,6 +151,17 @@ onMounted(() => {
   loadCSS(styles!);
   loadJS(scripts!);
   mm = Markmap.create(svgRef.value);
+  const { el } = Toolbar.create(mm);
+  // el.style.position = 'absolute';
+  // el.style.top = '0.5rem';
+  // el.style.right = '0.5rem';
+  console.log('Toolbar', el);
+  containerRef.value!.appendChild(el);
+  const logo = el.querySelector('.mm-toolbar-brand');
+  if (logo) {
+    el.removeChild(logo);
+  }
+
   update();
 });
 onUpdated(update);
@@ -159,5 +172,15 @@ onUpdated(update);
 
 .dark .markmap {
   --markmap-text-color: #fff;
+}
+.mm-toolbar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(56, 191, 248, 0.296);
+  border-radius: 4px;
+}
+.mm-toolbar-item {
+  font-size: 24px !important;
 }
 </style>

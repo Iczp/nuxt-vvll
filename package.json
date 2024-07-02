@@ -26,6 +26,7 @@
     "gitalk": "^1.8.0",
     "markmap-common": "^0.17.0",
     "markmap-lib": "^0.17.0",
+    "markmap-toolbar": "^0.17.0",
     "markmap-view": "^0.17.0",
     "mermaid": "^10.9.1",
     "nuxt": "^3.12.1",
