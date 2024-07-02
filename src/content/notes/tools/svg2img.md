@@ -1,5 +1,7 @@
 ---
 title: SVG转图片PNG
+tags: svg
+date: 2024-070-2
 ---
 
 # SVG 转图片 PNG

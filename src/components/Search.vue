@@ -66,6 +66,7 @@ const close = () => (isOpen.value = false);
     </template>
   </UInput> -->
   <div
+    v-if="!isOpen"
     class="inline-flex flex-row gap-1 py-1 rounded-lg cursor-pointer sm:px-2 sm:ring-1 ring-slate-400 dark:ring-slate-600 hover:ring-sky-400"
     @click="isOpen = true"
   >
@@ -79,7 +80,19 @@ const close = () => (isOpen.value = false);
     </div>
   </div>
 
-  <UModal v-model="isOpen" :transition="false">
+  <UModal
+    v-model="isOpen"
+    :transition="false"
+    :ui="{
+      overlay: {
+        base: 'fixed inset-0 transition-opacity ',
+        background: '!backdrop-blur-md',
+      },
+    }"
+  >
+    <!-- <div
+      class="fixed top-0 bottom-0 left-0 right-0 z-0 pointer-events-none drop-shadow-xl bg-slate-200 bg-opacity-45"
+    ></div> -->
     <div
       class="fixed top-[var(--header-height)] left-0 right-0 box-border m-4 z-[99]"
     >
@@ -114,7 +127,7 @@ const close = () => (isOpen.value = false);
             </UInput>
           </div>
 
-          <div class="overflow-y-auto min-h-36 max-h-96">
+          <div class="overflow-y-auto min-h-36 max-h-60 sm:max-h-96">
             <Empty
               v-if="results.length == 0 && keyword != ''"
               class="text-gray-400 dark:text-slate-700 min-h-36"
