@@ -1,6 +1,6 @@
 ---
 title: 思维导图
-tags: svg
+tags: svg,mindmap
 date: 2024-07-02
 ---
 

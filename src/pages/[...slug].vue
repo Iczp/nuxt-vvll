@@ -84,7 +84,14 @@ useHead({
       <article
         class="space-y-4 prose no-underline max-w-none dark:prose-dark prose-headings:no-underline prose-a:no-underline hover:prose-a:underline"
       >
-        <ContentDoc></ContentDoc>
+        <ContentDoc v-if="doc">
+          <template #not-found>
+            <h1>Document not found!!!</h1>
+          </template>
+          <template #empty>
+            <h1>Document is empty</h1>
+          </template>
+        </ContentDoc>
       </article>
     </div>
 

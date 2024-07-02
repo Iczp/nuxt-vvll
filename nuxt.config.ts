@@ -193,7 +193,7 @@ export default defineNuxtConfig({
     // '/notes/js': { prerender: false },
 
     '/sub': { prerender: false },
-    '/mermaid': { prerender: false },
+    '/lab/**': { prerender: false },
   },
   nitro: {
     prerender: {

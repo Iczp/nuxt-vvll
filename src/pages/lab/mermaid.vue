@@ -28,4 +28,8 @@
   </pre
     >
   </Mermaid>
+
+  <ClientOnly>
+    <MarkmapToc></MarkmapToc>
+  </ClientOnly>
 </template>
