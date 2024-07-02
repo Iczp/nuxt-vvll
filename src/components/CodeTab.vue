@@ -43,24 +43,31 @@ const current = ref(0);
 const onTabChang = (index: number) => {
   console.log('onTabChang', index);
 };
+
+const attrs = useAttrs();
+
+const { tagDict } = await useDocuments({});
+
+const getIcon = (slotKey: string) => {
+  const icon = attrs[`${slotKey}-icon`];
+  if (icon) {
+    return icon as string;
+  }
+  const tag = tagDict.value[slotKey.toLocaleLowerCase()];
+  return tag?.icon;
+};
+
+const getTitle = (slotKey: string) => {
+  const title = attrs[slotKey];
+  if (title) {
+    return title as string;
+  }
+  const tag = tagDict.value[slotKey.toLocaleLowerCase()];
+  return tag?.title;
+};
 </script>
 <template>
   <div class="px-4 box">
-    <!-- slots:{{ slots }}
-    {{ slotsKeys }}
-    :attrs{{ $attrs }} -->
-
-    <!-- <slot></slot> -->
-    <!-- <ul>
-      <li
-        v-for="(slot, index) of slotsKeys"
-        :key="index"
-        @click="setActive(slot)"
-      >
-        {{ slot }}
-      </li>
-    </ul> -->
-
     <Tabs
       :items="slotsKeys"
       :current="current"
@@ -69,18 +76,11 @@ const onTabChang = (index: number) => {
     >
       <template v-slot:item="{ item }">
         <div class="flex flex-row items-center gap-2 py-2 text-sm">
-          <Icon
-            class=""
-            v-if="$attrs[`${item}-icon`]"
-            :name="$attrs[`${item}-icon`] as string"
-          >
-          </Icon>
-
-          {{ $attrs[item] || item }}
+          <Icon class="" v-if="getIcon(item)" :name="getIcon(item)!"> </Icon>
+          {{ getTitle(item) || item }}
         </div>
       </template>
       <template v-slot="{ index }">
-        <!-- <div>index:{{ index }}</div> -->
         <div v-for="(key, i) in slotsKeys" v-show="i == index" :id="key">
           <slot :name="key" :props="getCustomProp(key)"></slot>
         </div>

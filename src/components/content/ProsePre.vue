@@ -62,9 +62,7 @@ onMounted(() => {
     </header>
 
     <main class="code-content">
-      <pre class="m-0 break-words break-all rounded-none">
-        <slot></slot>
-      </pre>
+      <pre class="m-0 break-words break-all rounded-none"><slot></slot></pre>
       <div
         v-if="$attrs.language == 'mermaid'"
         ref="mermaidContainer"
