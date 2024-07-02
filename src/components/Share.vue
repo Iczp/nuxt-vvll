@@ -13,9 +13,13 @@ const { share, isSupported } = useShare();
 const emits = defineEmits(['change']);
 
 function startShare() {
+  // alert(document.title)
+  if (!isSupported) {
+    alert('Unsupported');
+  }
   share({
-    title: 'Hello',
-    text: 'Hello my friend!',
+    title: `${document.title}`,
+    text: `${document.title}`,
     url: location.href,
   });
   emits('change');

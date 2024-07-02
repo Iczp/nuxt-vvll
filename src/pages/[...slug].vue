@@ -88,7 +88,7 @@ useHead({
       </article>
     </div>
 
-    <Tags :items="tagItems" label="标签">
+    <Tags v-if="tagItems?.length" :items="tagItems" label="标签">
       <!-- <template #empty>无</template> -->
     </Tags>
 
