@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full gap-4 min-h-96">
+  <div class="flex flex-col w-full gap-4 sm:flex-row min-h-96">
     <div class="flex flex-1">
       <textarea
         class="w-full h-full border border-gray-400"
