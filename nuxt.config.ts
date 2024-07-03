@@ -148,6 +148,8 @@ export default defineNuxtConfig({
         'dart',
         'vue-html',
         'markdown',
+        'toml',
+        'swift',
       ],
     },
   },

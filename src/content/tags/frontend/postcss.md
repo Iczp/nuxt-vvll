@@ -1,6 +1,7 @@
 ---
 name: postcss
 title: PostCSS
+tags: css
 icon: logos:postcss
 description: PostCSS 是一款强大的 CSS 处理器，它的核心在于提供了一个平台，允许开发者通过插件来扩展 CSS 的功能。与传统的 CSS 预处理器（如 Sass 和 Less）不同，PostCSS 本身并不具备变量、嵌套、混合等功能，但它的插件系统使得这些功能都可以被添加进来。
 ---
