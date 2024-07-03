@@ -1,6 +1,6 @@
 ---
 title: howler.js
-tags: vue mindmap
+tags: vue mindmap npm
 ---
 
 :github{repo=https://github.com/goldfire/howler.js name=howler.js}

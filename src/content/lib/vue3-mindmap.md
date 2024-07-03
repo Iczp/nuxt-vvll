@@ -1,11 +1,11 @@
 ---
 title: vue3-mindmap
-tags: vue mindmap
-description: 
+tags: vue mindmap npm
+description:
 date: 2024-07-03
 ---
 
-# vue3-mindmap  :github{repo=https://github.com/hellowuxin/vue3-mindmap}
+# vue3-mindmap :github{repo=https://github.com/hellowuxin/vue3-mindmap}
 
 > :github{repo=https://github.com/hellowuxin/vue3-mindmap}
 

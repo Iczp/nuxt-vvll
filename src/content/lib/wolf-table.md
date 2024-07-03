@@ -1,6 +1,6 @@
 ---
 title: wolf-table
-tags: vue mindmap,excel
+tags: vue mindmap excel npm
 description: wolf-table A web-based(canvas) JavaScript Table
 date: 2024-07-03
 ---
@@ -8,7 +8,6 @@ date: 2024-07-03
 ## wolf-table
 
 :github{repo=https://github.com/wolf-table/table}
-
 
 <p align="center">
   <a href="https://github.com/wolf-table/table">
@@ -24,21 +23,27 @@ date: 2024-07-03
 </p>
 
 ## wolf-table
+
 > A web-based(canvas) JavaScript Table
 
 ## Demo
+
 <a href="https://stackblitz.com/edit/wolf-table-lts2dq?file=index.ts">Open in Stackblitz</a>
 <a href="https://wolf-table-lts2dq.stackblitz.io">Preview in browser</a>
 
 ## NPM
+
 npm install
+
 ```shell
 npm install @wolf-table/table@0.0.1
 ```
+
 ## Usage
+
 ```javascript
 import '@wolf-table/table/dist/table.min.css';
-import Table from "@wolf-table/table";
+import Table from '@wolf-table/table';
 
 const t = Table.create(
   '#table',
@@ -59,7 +64,14 @@ const t = Table.create(
   .formulaParser((v) => `${v}-formula`)
   .data({
     styles: [
-      { bold: true, strikethrough: true, color: '#21ba45', italic: true, align: 'center', fontSize: 12 },
+      {
+        bold: true,
+        strikethrough: true,
+        color: '#21ba45',
+        italic: true,
+        align: 'center',
+        fontSize: 12,
+      },
     ],
     cells: [
       [0, 0, 'abc'],

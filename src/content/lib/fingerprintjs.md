@@ -1,5 +1,6 @@
 ---
 title: FingerprintJS
+tags: npm
 description: FingerprintJS is a source-available, client-side, browser fingerprinting library that queries browser attributes and computes a hashed visitor identifier from them. Unlike cookies and local storage,
 ---
 
