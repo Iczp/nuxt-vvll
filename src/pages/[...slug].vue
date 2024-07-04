@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 可以基于 API 调用或登录状态进行选择
-
+import type { NavItemType } from '~/types/NavItemType';
 // const route = useRoute();
 
 definePageMeta({
@@ -48,7 +48,9 @@ const pathTitle = computed(() => getPathTitle());
 const contentFiles = useContentFiles();
 
 const children = computed(() =>
-  doc.value?.children?.map((x) => ({ ...x, fileInfo: contentFiles[x._path] }))
+  doc.value?.children?.map(
+    (x) => ({ ...x, fileInfo: contentFiles[x._path] } as NavItemType)
+  )
 );
 useHead({
   title: () => pathTitle.value as string,

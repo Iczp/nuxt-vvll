@@ -14,6 +14,11 @@ export default defineNuxtConfig({
     // '/css/main.css',
     // '~/assets/css/main.css',
   ],
+  webpack: {
+    extractCSS: {
+      ignoreOrder: true,
+    },
+  },
   app: {
     baseURL: '/',
     rootId: 'vvll-net',
@@ -163,13 +168,14 @@ export default defineNuxtConfig({
     },
   },
   tailwindcss: {
-    cssPath: ['~/assets/css/main.css', { injectPosition: 'first' }],
+    // cssPath: false,
+    cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
     configPath: 'tailwind.config',
     exposeConfig: {
       level: 2,
     },
     config: {},
-    viewer: true,
+    viewer: { endpoint: '/_tailwind', exportViewer: true },
   },
   colorMode: {
     preference: 'system', // system | light | dark, default value of $colorMode.preference
