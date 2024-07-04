@@ -1,6 +1,7 @@
 import type { NavItem } from '@nuxt/content/types';
 
 import type { ItemType } from './ItemType';
+import type { FileInfo } from './FileInfo';
 export type NavItemType = ItemType &
   NavItem & {
     tags?: string[];
@@ -13,4 +14,4 @@ export type NavItemType = ItemType &
     icon?: string;
     title?: string;
     author?: string;
-  };
+  } & { fileInfo?: FileInfo };

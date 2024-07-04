@@ -1,15 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import type { FileInfo } from '~/types/FileInfo';
 
-interface FileInfo {
-  fullPath: string;
-  path: string;
-  name: string;
-  lastModified: Date;
-  created: Date;
-  isDirectory: boolean;
-  size: number;
-}
+
 
 export function removeSortPrefix(name: string): string {
   const nameParts = name.split('.');
@@ -19,14 +12,30 @@ export function removeSortPrefix(name: string): string {
   return name;
 }
 
-export function generateRoutePath(filePath: string, isDirectory: boolean, rootPath: string): string {
+export function generateRoutePath(
+  filePath: string,
+  isDirectory: boolean,
+  rootPath: string
+): string {
   const parsedPath = path.parse(filePath);
-  let relativePath = path.relative(rootPath, parsedPath.dir).split(path.sep).map(x => removeSortPrefix(x)).join('/');
-  const fileName = removeSortPrefix(parsedPath.name);
+  let relativePath = path.relative(rootPath, parsedPath.dir);
 
+  // Normalize and split the path
+  const parts = relativePath
+    .split(path.sep)
+    .map((part) => removeSortPrefix(part));
+
+  // Filter out empty parts and join back with '/'
+  relativePath = parts
+    // .filter(part => !!part)
+    .join('/');
+
+  // If relativePath is empty, return '/'
   if (relativePath === '') {
-    return `/${fileName}`;
+    return '/';
   }
+
+  const fileName = removeSortPrefix(parsedPath.name);
 
   return `/${relativePath}/${fileName}`.replace(/\\/g, '/');
 }
@@ -39,7 +48,7 @@ export function traverseDirectory(
 ): { [key: string]: FileInfo } {
   const files = fs.readdirSync(directory);
 
-  files.forEach(file => {
+  files.forEach((file) => {
     const fullPath = path.join(directory, file);
     const stat = fs.statSync(fullPath);
     const isDirectory = stat.isDirectory();
@@ -53,8 +62,11 @@ export function traverseDirectory(
       isDirectory,
       size: stat.size,
     };
-
-    dict[routePath] = fileInfo;
+    if (dict[routePath]) {
+      dict['*' + routePath] = fileInfo;
+    } else {
+      dict[routePath] = fileInfo;
+    }
 
     if (stat.isDirectory()) {
       traverseDirectory(fullPath, generateRouteAction, dict);

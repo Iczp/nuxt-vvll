@@ -133,8 +133,8 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.menu-open {
+/* .menu-open {
 }
 .menu-close {
-}
+} */
 </style>

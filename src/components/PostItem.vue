@@ -7,6 +7,16 @@ const props = withDefaults(
   }>(),
   {}
 );
+
+// const contentFiles = useContentFiles();
+
+// const fileInfo = computed(() => contentFiles[props.item?._path as string]);
+const fileInfo = computed(() => props.item.fileInfo);
+
+const lastModified = computed(
+  () =>
+    fileInfo.value?.lastModified || fileInfo.value?.created || props.item?.date
+);
 </script>
 
 <template>
@@ -43,15 +53,18 @@ const props = withDefaults(
         </p>
       </div>
       <div class="flex flex-row justify-between py-1 text-xs">
-        <div v-if="item.author" class="text-sky-500">
-          {{ item.author }}
+        <!-- {{ item._path }} : {{ item.fileInfo }} -->
+        <div>
+          <div v-if="item.author" class="text-sky-500">
+            {{ item.author }}
+          </div>
+          <div v-if="item.children" class="text-sky-500">
+            分类：{{ item.children.length }} , 文章总数：
+            {{ item?.$totalFileCount }}
+          </div>
         </div>
-        <div v-if="item.children" class="text-sky-500">
-          分类：{{ item.children.length }} , 文章总数：
-          {{ item?.$totalFileCount }}
-        </div>
-        <div v-if="item.date" class="text-green-400">
-          <Date :value="item.date" />
+        <div v-if="lastModified" class="text-green-400">
+          <Date :value="lastModified" format="YYYY-MM-DD hh:mm:ss" />
         </div>
       </div>
     </section>

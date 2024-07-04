@@ -4,6 +4,7 @@ const props = withDefaults(
     doc?: {
       title?: string;
       author?: string;
+      _path?: string;
       date?: string | Date;
     } | null;
   }>(),
@@ -11,6 +12,16 @@ const props = withDefaults(
     // items: [],
   }
 );
+
+const contentFiles = useContentFiles();
+
+const fileInfo = computed(() => contentFiles[props.doc?._path as string]);
+
+const lastModified = computed(
+  () =>
+    fileInfo.value?.lastModified || fileInfo.value?.created || props.doc?.date
+);
+// const created = computed(() => fileInfo.value?.created);
 </script>
 <template>
   <header class="flex flex-col gap-4">
@@ -25,7 +36,11 @@ const props = withDefaults(
     >
       <section class="flex flex-row gap-4">
         <div v-if="doc?.author"><Author :id="doc?.author" /></div>
-        <div v-if="doc?.date">日期:<Date :value="doc?.date" /></div>
+        <div v-if="lastModified">
+          <!-- <Date :value="created" format="YYYY-MM-DD hh:mm:ss" /> -->
+          日期:<Date :value="lastModified" format="YYYY-MM-DD hh:mm:ss" />
+          <!-- {{ lastModified }} -->
+        </div>
       </section>
       <section class="flex flex-row gap-2">
         <!-- <Star :fill="true" class="size-6" /> -->

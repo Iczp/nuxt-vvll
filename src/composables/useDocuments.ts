@@ -1,5 +1,6 @@
+import type { FileInfo } from '~/types/FileInfo';
 import type { NavItemType } from '../types/NavItemType';
-import { formatTags } from '@/utils/formatTags';
+import { formatTags } from '~/utils/formatTags';
 
 export const useDocuments = async ({ path }: { path?: string }) => {
   const { data: navigation } = await useAsyncData('navigation', () =>
@@ -51,14 +52,19 @@ export const useDocuments = async ({ path }: { path?: string }) => {
     ).length;
   };
 
+  // const contentFiles = useContentFiles();
+  // const runtimeConfig = useRuntimeConfig();
+  // const contentFiles = runtimeConfig.public.contentFiles as { [key: string]: FileInfo };
+
   const formatItems = (items?: NavItemType[] | null): NavItemType[] => {
     if (!items) return [];
-
+    // const contentFiles = useContentFiles();
     return items.map((x, i) => {
       if (!x.$isDir && x._path.startsWith('/tags/')) {
         const tagCode = getTagCode(x._path);
         x.$count = getCount(tagCode);
       }
+      // x.fileInfo = contentFiles[x._path];
 
       list.value.push(x);
 

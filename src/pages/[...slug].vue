@@ -45,6 +45,11 @@ const getPathTitle = () => {
 
 const pathTitle = computed(() => getPathTitle());
 
+const contentFiles = useContentFiles();
+
+const children = computed(() =>
+  doc.value?.children?.map((x) => ({ ...x, fileInfo: contentFiles[x._path] }))
+);
 useHead({
   title: () => pathTitle.value as string,
 });
@@ -57,9 +62,9 @@ useHead({
       {{ doc?.title }}
     </h1>
     <!-- {{ doc }} -->
-    <ul v-if="doc?.children" class="grid grid-cols-1 gap-4 not-prose">
+    <ul v-if="children" class="grid grid-cols-1 gap-4 not-prose">
       <li
-        v-for="item in doc?.children"
+        v-for="item in children"
         :key="item._path"
         class="flex flex-col p-6 card hover:card-hover"
       >
