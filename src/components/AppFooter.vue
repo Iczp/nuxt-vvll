@@ -10,8 +10,8 @@ const setctions = ref([
         target: '_blank',
       },
       {
-        url: 'https://www.tasao.com',
-        title: 'Tasao.com',
+        url: 'https://www.GGGGA.com',
+        title: 'GGGGA.com',
         target: '_blank',
       },
     ],
