@@ -7,7 +7,21 @@ description: Iconify 是一个功能强大、灵活且易于使用的图标解�
 
 ## Iconify
 
+:github{repo=https://github.com/iconify/iconify name=Iconify}
+
 :icon{name=line-md:iconify2 .size-32}
+
+
+
+Iconify 是最通用的图标框架。
+
+- 统一的图标框架，可与任何图标库一起使用。
+- 开箱即用，包含 150 多个图标集，超过 200,000 个图标。
+- 使用 Iconify Icon Web 组件或前端框架组件在 HTML 中嵌入图标。
+- 使用 Figma、Sketch 和 Adobe XD 插件在设计中嵌入图标。
+- 使用 Iconify Icon Finder 为您的应用程序添加图标搜索。
+
+更多信息请访问https://iconify.design/。
 
 Iconify 是一个全面的图标解决方案，它提供了一个庞大的图标库，并支持多种前端框架和语言。这个图标集和图标管理工具旨在简化开发者在项目中引入和管理图标的流程，通过轻量级的 API 和模块化的设计，为现代 Web 应用带来高效且可定制的图标体验。
 
