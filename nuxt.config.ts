@@ -39,6 +39,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubClientId: process.env.GITHUB_CLIENT_ID,
     githubClientSecret: process.env.GITHUB_CLIENT_SECRET,
+    contentFiles: resolveContentFiles('./src/content'),
     public: {
       githubClientId: process.env.GITHUB_CLIENT_ID,
       contentFiles: resolveContentFiles('./src/content'),
