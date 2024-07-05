@@ -53,3 +53,11 @@ Netlify 是一个用于部署和托管现代 Web 项目的平台。它特别适�
     - 提供网站访问和性能的详细分析和监控功能。
 
 Netlify 通过简化部署和管理流程，大大提高了开发者的工作效率，同时确保网站性能和安全性。
+
+
+
+### 本站部署
+
+https://vvll.netlify.app/
+
+https://vvll.vercel.app/
