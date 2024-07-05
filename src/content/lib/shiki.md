@@ -24,6 +24,4 @@ A beautiful syntax highlighter based on TextMate grammar, accurate and powerful.
 >
 > For legacy code, check the [v0.x branch](https://github.com/shikijs/shiki/tree/v0).
 
-## License
 
-[MIT](./LICENSE)
