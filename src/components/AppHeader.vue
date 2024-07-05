@@ -67,6 +67,14 @@ const toggle = () => {
       >
         <Icon name="i-simple-icons-github"></Icon>
       </a>
+      <a
+        href="https://buymeacoffee.com/zhongpei"
+        target="_blank"
+        ref="nofollow"
+      >
+        <Icon name="simple-icons:buymeacoffee" color="pink"></Icon>
+      </a>
+
       <Share />
       <MenuIcon
         @click="toggle"
