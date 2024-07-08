@@ -10,9 +10,10 @@ date: 2024-06-14
 
 https://vvll.net
 
-> q
->
-> ddd
+> https://buymeacoffee.com/zhongpei
 
 ### 送我杯奶茶
+
+buymeacoffee: https://buymeacoffee.com/zhongpei
+
 :Pay{}
