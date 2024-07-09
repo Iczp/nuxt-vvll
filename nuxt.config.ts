@@ -1,5 +1,7 @@
 import { resolve } from 'path';
 import { resolveContentFiles } from './src/utils/traverseDirectory';
+
+const contentFiles = resolveContentFiles('./src/content');
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devServer: {
@@ -39,10 +41,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubClientId: process.env.GITHUB_CLIENT_ID,
     githubClientSecret: process.env.GITHUB_CLIENT_SECRET,
-    contentFiles: resolveContentFiles('./src/content'),
+    contentFiles: contentFiles,
     public: {
       githubClientId: process.env.GITHUB_CLIENT_ID,
-      contentFiles: resolveContentFiles('./src/content'),
+      contentFiles: contentFiles,
     },
   },
   components: {
