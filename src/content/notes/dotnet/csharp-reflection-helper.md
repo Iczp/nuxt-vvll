@@ -11,7 +11,7 @@ date: 2024-07-13
 
 nuget 包：
 
-:neget{repo="https://www.nuget.org/packages?q=IczpNet.AbpCommons&includeComputedFrameworks=true&prerel=true&sortby=relevance" name=IczpNet.AbpCommons}
+:nuget{repo="https://www.nuget.org/packages?q=IczpNet.AbpCommons&includeComputedFrameworks=true&prerel=true&sortby=relevance" name=IczpNet.AbpCommons}
 
 ```c#
 using System;
