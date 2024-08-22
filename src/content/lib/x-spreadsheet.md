@@ -1,6 +1,8 @@
 ---
 title: x-spreadsheet
+description: x-spreadsheet 是一个轻量级的在线电子表格库，基于 JavaScript 构建，主要用于在 Web 应用中嵌入和操作电子表格。它支持多种功能，使开发者
 tags: excel,npm
+date: 2024-08-22
 ---
 
 :github{repo=https://github.com/goldfire/howler.js name=howler.js}
